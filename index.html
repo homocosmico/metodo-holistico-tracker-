@@ -1,0 +1,4688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#3A71B1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Método Holístico">
+<link rel="icon" href="https://metodoholistico.unchainedmovement.net/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="https://metodoholistico.unchainedmovement.net/favicon-32.png">
+<link rel="manifest" href="https://metodoholistico.unchainedmovement.net/manifest.json">
+<link rel="apple-touch-icon" href="https://metodoholistico.unchainedmovement.net/icon-192.png">
+<link rel="canonical" href="https://metodoholistico.unchainedmovement.net/">
+<title>Método Holístico · Código Atómico™</title>
+<meta name="description" content="Construye hábitos inquebrantables con el Código Atómico™. Parte del Método Holístico — programa de transformación de 28 días.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Método Holístico · Código Atómico™">
+<meta property="og:description" content="Construye hábitos inquebrantables. Track diario, niveles, soberanía mental.">
+<meta property="og:image" content="https://metodoholistico.unchainedmovement.net/og-image.png">
+<meta property="og:image:secure_url" content="https://metodoholistico.unchainedmovement.net/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Método Holístico · Código Atómico™">
+<meta property="og:url" content="https://metodoholistico.unchainedmovement.net">
+<meta property="og:site_name" content="Carlos Alberto">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Método Holístico · Código Atómico™">
+<meta name="twitter:description" content="Construye hábitos inquebrantables. Track diario, niveles, soberanía mental.">
+<meta name="twitter:image" content="https://metodoholistico.unchainedmovement.net/og-image.png">
+<meta name="twitter:image:alt" content="Método Holístico · Código Atómico™">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Zen+Kaku+Gothic+New:wght@300;400&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+" (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureFlagEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  posthog.init('phc_W3eR3Ok8bKEsh3xnV7y6S7NaiXJNayiooH9h69cHGVX', {
+    api_host: 'https://us.i.posthog.com',
+    person_profiles: 'identified_only',
+    capture_pageview: true,
+    capture_pageleave: true,
+  });
+</script>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* New palette — white/blue, consistent with rest of system */
+  --bg:           #f7f7f2;          /* off-white principal */
+  --bg-deep:      #eef0f3;          /* fondo de cards/celdas */
+  --bg-soft:      #ffffff;
+  --text:         #0f1923;          /* texto principal */
+  --text-mid:     #374151;
+  --dim:          rgba(15,25,35,0.55);
+  --faint:        rgba(58,113,177,0.14);
+  --ghost:        rgba(58,113,177,0.06);
+  --line:         rgba(58,113,177,0.18);
+
+  --blue:         #3A71B1;          /* PRIMARY brand accent */
+  --blue-deep:    #2a5a90;
+  --blue-bright:  #4d85c4;
+  --blue-bg:      rgba(58,113,177,0.07);
+  --blue-glow:    rgba(58,113,177,0.22);
+
+  /* SEMANTIC COLORS — for habit states */
+  --gold:         #F5C518;          /* DONE / success / star — bright yellow gold */
+  --gold-deep:    #D4A409;
+  --gold-bright:  #FFD93D;
+  --gold-bg:      rgba(245,197,24,0.15);
+  --gold-glow:    rgba(245,197,24,0.45);
+  --gold-line:    rgba(245,197,24,0.5);
+
+  --red:          #C44D4D;          /* FAIL / loss */
+  --red-deep:     #A03838;
+  --red-bg:       rgba(196,77,77,0.08);
+  --red-line:     rgba(196,77,77,0.32);
+
+  --neutral:      rgba(15,25,35,0.06);  /* N/A / future / pre-reg */
+  --neutral-line: rgba(15,25,35,0.14);
+
+  /* Aliases para mantener compat con código existente */
+  --ash:          var(--text);
+  --ash-dim:      var(--dim);
+  --ash-faint:    var(--line);
+  --ash-ghost:    var(--ghost);
+  --gold-dim:     var(--gold-bg);
+  --white:        var(--text);
+  --done-bg:      var(--gold-bg);
+  --done-color:   var(--gold);
+  --red-mid:      var(--red-deep);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 300;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 999; opacity: 0.18;
+}
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  background: 
+    radial-gradient(ellipse 90% 70% at 50% 0%, var(--blue-bg) 0%, transparent 50%),
+    radial-gradient(ellipse 120% 100% at 50% 100%, rgba(58,113,177,0.04) 0%, transparent 60%);
+  pointer-events: none; z-index: 0;
+}
+
+/* second radial merged into the one above */
+
+.zen-line {
+  position: fixed; top: 0; width: 1px; height: 100vh;
+  background: linear-gradient(to bottom, transparent, var(--ash-faint) 20%, var(--ash-faint) 80%, transparent);
+  opacity: 0; animation: fadeIn 2s 0.5s forwards;
+}
+.zen-line.left  { left: 32px; }
+.zen-line.right { right: 32px; }
+
+@keyframes fadeIn { to { opacity: 1; } }
+@keyframes rise   { to { opacity: 1; transform: translateY(0); } }
+@keyframes checkPop {
+  0%   { transform: scale(0.6); opacity: 0; }
+  70%  { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ── WRAPPER ── */
+.wrapper {
+  position: relative; z-index: 1;
+  max-width: 860px; margin: 0 auto;
+  padding: 64px 40px 120px;
+}
+.wrapper.atomic-power-glow {
+  border: 2px solid rgba(58,113,177,0.4);
+  border-radius: 12px;
+  box-shadow:
+    inset 0 0 80px rgba(58,113,177,0.15),
+    inset 0 0 160px rgba(58,113,177,0.06),
+    0 0 60px rgba(58,113,177,0.25),
+    0 0 120px rgba(58,113,177,0.12);
+  animation: wrapperGlow 2s ease-in-out infinite;
+}
+@keyframes wrapperGlow {
+  0%, 100% {
+    box-shadow: inset 0 0 80px rgba(58,113,177,0.15), 0 0 60px rgba(58,113,177,0.25), 0 0 120px rgba(58,113,177,0.12);
+    border-color: rgba(58,113,177,0.4);
+  }
+  50% {
+    box-shadow: inset 0 0 120px rgba(58,113,177,0.25), 0 0 100px rgba(58,113,177,0.35), 0 0 200px rgba(58,113,177,0.18);
+    border-color: rgba(58,113,177,0.6);
+  }
+}
+
+/* ── HEADER ── */
+.header {
+  display: flex; align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  opacity: 0; transform: translateY(16px);
+  animation: rise 1.2s 0.2s forwards;
+}
+.kana {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 10px; letter-spacing: 0.35em;
+  color: var(--ash-dim); text-transform: uppercase;
+  display: block; margin-bottom: 12px;
+}
+.header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 6vw, 44px);
+  font-weight: 300; line-height: 1.05;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.header h1 em { font-style: italic; color: var(--blue); font-weight: 300; }
+.header-sub {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 10px; letter-spacing: 0.35em;
+  color: var(--dim); text-transform: uppercase;
+  margin-top: 10px;
+}
+.month-display {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 9px; letter-spacing: 0.3em;
+  color: var(--ash-dim); text-transform: uppercase;
+  text-align: right;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--ash-faint) 30%, var(--ash-faint) 70%, transparent);
+  margin: 28px 0;
+}
+
+/* ── STATS ── */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+  opacity: 0; transform: translateY(12px);
+  animation: rise 1s 0.5s forwards;
+}
+.stat-card {
+  border: 1px solid var(--ash-faint);
+  border-top: 2px solid var(--gold);
+  padding: 14px 16px;
+  background: var(--ash-ghost);
+}
+.stat-label {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 8px; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 6px;
+}
+.stat-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px; font-weight: 300;
+  color: var(--white); line-height: 1;
+}
+.stat-sub { font-size: 11px; color: var(--ash-dim); margin-top: 4px; font-style: italic; }
+.progress-bar { height: 2px; background: var(--ash-faint); border-radius: 1px; overflow: hidden; margin-top: 8px; }
+.progress-fill { height: 100%; background: var(--gold); transition: width 0.6s cubic-bezier(0.4,0,0.2,1); }
+
+/* ── SECTION HEADER ── */
+.section-header {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 16px; margin-top: 36px;
+}
+.section-title {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 9px; letter-spacing: 0.4em;
+  text-transform: uppercase; color: var(--ash-dim);
+  white-space: nowrap;
+}
+.section-line { flex: 1; height: 1px; background: var(--ash-faint); }
+.section-kanji { font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 11px; color: var(--ash-faint); }
+
+/* ── MONTH TABS ── */
+.month-tabs {
+  display: flex; gap: 4px; flex-wrap: wrap;
+  margin-bottom: 28px;
+  opacity: 0; animation: rise 1s 0.7s forwards;
+}
+.tab {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase;
+  padding: 5px 10px; border: 1px solid var(--line);
+  background: none; color: var(--dim); cursor: pointer;
+  border-radius: 2px; transition: all 0.15s;
+}
+.tab:hover { border-color: var(--blue); color: var(--blue); }
+.tab.active { border-color: var(--blue); color: white; background: var(--blue); }
+
+/* ── WEEK NAVIGATOR (mobile) ── */
+.week-nav {
+  display: none;
+  align-items: center; justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 0 4px;
+}
+.week-nav-btn {
+  background: none; border: 1px solid var(--ash-faint);
+  color: var(--ash-dim); width: 36px; height: 36px;
+  border-radius: 2px; cursor: pointer; font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+}
+.week-nav-btn:hover { border-color: var(--gold); color: var(--gold); }
+.week-nav-btn:disabled { opacity: 0.2; cursor: default; }
+.week-label {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ── DESKTOP TABLE ── */
+.desktop-view { display: block; }
+.mobile-view  { display: none; }
+
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+}
+.table-scroll::-webkit-scrollbar { height: 2px; }
+.table-scroll::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
+
+.habit-table { width: max-content; min-width: 100%; border-collapse: collapse; }
+
+.day-header-row th {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 8px; letter-spacing: 0.15em;
+  color: var(--ash-dim); font-weight: 300;
+  padding: 6px 4px; text-align: center;
+}
+.day-header-row th.habit-col { text-align: left; padding-left: 0; font-size: 9px; letter-spacing: 0.3em; color: var(--ink-mute); }
+.day-header-row th.week-label {
+  color: var(--ink-mute); font-size: 8px; letter-spacing: 0.3em; font-weight: 500;
+  border-bottom: 1px solid var(--line); padding-bottom: 8px; padding-top: 4px;
+}
+.day-header-row th.stat-col { color: var(--ink-mute); font-size: 9px; letter-spacing: 0.3em; font-weight: 500; padding-left: 14px; }
+.week-sep { width: 8px; }
+.zero-day-header { color: rgba(196,77,77,0.45) !important; font-weight: 300 !important; }
+.future-day-header { opacity: 0.4 !important; }
+
+.habit-table thead tr th:first-child,
+.habit-table tbody tr td:first-child { position: sticky; left: 0; z-index: 2; background: var(--bg); }
+
+.habit-row td { padding: 3px 2px; vertical-align: middle; }
+.habit-row:last-child td { border-bottom: 1px solid var(--ash-faint); }
+.habit-row + .habit-row td { border-top: 1px solid var(--ash-ghost); }
+
+.habit-name { font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 300; color: var(--ash); white-space: nowrap; padding-right: 16px; min-width: 140px; }
+.habit-name-input {
+  background: transparent; border: none; border-bottom: 1px solid var(--ash-faint);
+  color: var(--ash); font-family: 'Cormorant Garamond', serif;
+  font-size: 13px; font-weight: 300; width: 120px; padding: 2px 0;
+  outline: none; transition: border-color 0.2s;
+}
+.habit-name-input:focus { border-color: var(--gold); }
+
+.check-cell { text-align: center; padding: 2px 1px; }
+.check-btn {
+  width: 22px; height: 22px; border-radius: 2px;
+  border: 1px solid var(--ash-faint);
+  background: var(--ash-ghost); cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: all 0.15s; position: relative; overflow: hidden;
+  color: transparent; font-size: 10px;
+}
+.check-btn:hover { border-color: var(--ash-dim); background: var(--ash-faint); }
+.check-btn.done {
+  background: var(--blue-bg);
+  border-color: var(--blue);
+  color: var(--gold);
+  animation: checkPop 0.4s cubic-bezier(0.34,1.56,0.64,1) forwards;
+}
+.check-btn.done::after { content: '★'; font-size: 13px; position: absolute; color: var(--gold); font-weight: 600; }
+.check-btn.future { opacity: 0.5; cursor: default; pointer-events: none; background: transparent; border-color: var(--neutral-line); border-style: dashed; }
+.check-btn-mobile.future { opacity: 0.5; cursor: default; pointer-events: none; background: transparent; border-color: var(--neutral-line); border-style: dashed; }
+.mobile-day-col.future-day .mobile-day-label { opacity: 0.45; }
+.future-day-header { opacity: 0.45 !important; }
+.check-btn.today { border-color: var(--blue); box-shadow: 0 0 0 1px var(--blue); }
+
+.streak-cell, .pct-cell { text-align: center; min-width: 44px; font-family: 'Cormorant Garamond', serif; }
+.streak-num { font-size: 18px; font-weight: 300; color: var(--white); display: block; }
+.streak-label { font-size: 8px; color: var(--ash-dim); letter-spacing: 0.1em; }
+.pct-num { font-size: 16px; color: var(--gold); display: block; }
+.pct-bar { width: 32px; height: 2px; background: var(--ash-faint); margin: 3px auto 0; border-radius: 1px; overflow: hidden; }
+.pct-fill { height: 100%; background: var(--gold); transition: width 0.4s; }
+
+.add-habit-btn {
+  background: none; border: none; border-bottom: 1px solid rgba(15,25,35,0.2);
+  color: rgba(15,25,35,0.4); font-family: 'Cormorant Garamond', serif;
+  font-size: 13px; font-style: italic; cursor: pointer; padding: 4px 0;
+  transition: all 0.2s; letter-spacing: 0.05em;
+}
+.add-habit-btn:hover { color: var(--gold); border-color: var(--gold); }
+.delete-habit-btn { background: none; border: none; color: var(--ash-faint); font-size: 16px; cursor: pointer; padding: 2px 6px; opacity: 0; transition: opacity 0.2s, color 0.2s; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); }
+@media (hover: none) { .delete-habit-btn { opacity: 0.4; } }
+.habit-name { position: relative; }
+.habit-row:hover .delete-habit-btn { opacity: 1; }
+.weekly-row:hover .delete-habit-btn { opacity: 1; }
+.delete-habit-btn:hover { color: #ff4444; }
+
+/* ── PERFECT DAY ── */
+.perfect-day-header { color: var(--gold-deep) !important; font-weight: 500 !important; padding-top: 4px !important; padding-bottom: 4px !important; line-height: 1.3 !important; }
+.perfect-day-header span { font-size: 9px !important; line-height: 1 !important; margin-bottom: 2px !important; }
+
+/* ── DAILY BRIEFING ── */
+.briefing-overlay {
+  position: fixed; inset: 0; z-index: 8000;
+  background: var(--bg-soft);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  animation: briefFadeIn 0.8s ease forwards;
+}
+.briefing-overlay.hidden { display: none; }
+.briefing-overlay.fade-out { animation: briefFadeOut 0.6s ease forwards; }
+.briefing-inner {
+  text-align: center; padding: 40px 24px;
+  max-width: 400px; width: 100%;
+}
+.briefing-kana {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 9px; letter-spacing: 0.5em;
+  color: rgba(15,25,35,0.25); text-transform: uppercase;
+  display: block; margin-bottom: 24px;
+  opacity: 0; animation: briefFadeIn 0.8s 0.2s forwards;
+}
+.briefing-level {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 11px; letter-spacing: 0.4em;
+  color: var(--gold); text-transform: uppercase;
+  margin-bottom: 32px;
+  opacity: 0; animation: briefFadeIn 0.8s 0.4s forwards;
+}
+.briefing-heatmap {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px; max-width: 280px; margin: 0 auto 16px;
+  opacity: 0; animation: briefFadeIn 0.8s 0.6s forwards;
+}
+.briefing-heatmap .hm-day {
+  aspect-ratio: 1; border-radius: 2px;
+  position: relative;
+}
+/* Perfect day - bright blue glow */
+.hm-day.hm-perfect {
+  background: var(--blue);
+  box-shadow: 0 0 8px rgba(245,197,24,0.5), 0 0 16px rgba(245,197,24,0.2);
+  animation: hmPulse 2.5s ease-in-out infinite;
+}
+@keyframes hmPulse { 0%, 100% { box-shadow: 0 0 6px rgba(245,197,24,0.3); } 50% { box-shadow: 0 0 14px rgba(245,197,24,0.6), 0 0 20px rgba(245,197,24,0.2); } }
+/* 75-99% - strong gold */
+.hm-day.hm-high {
+  background: rgba(58,113,177,0.55);
+}
+/* 50-74% - medium gold */
+.hm-day.hm-mid {
+  background: rgba(58,113,177,0.35);
+}
+/* 25-49% - faint gold */
+.hm-day.hm-low {
+  background: rgba(58,113,177,0.18);
+}
+/* 1-24% - barely visible gold */
+.hm-day.hm-minimal {
+  background: rgba(58,113,177,0.07);
+}
+/* Zero - subtle empty state */
+.hm-day.hm-zero {
+  background: var(--bg-deep);
+  box-shadow: inset 0 0 4px rgba(196,77,77,0.1);
+  border: 1px solid rgba(196,77,77,0.18);
+}
+/* Future - barely visible */
+.hm-day.hm-future {
+  background: rgba(15,25,35,0.03);
+  border: 1px solid rgba(15,25,35,0.04);
+}
+/* Today - gold ring */
+.hm-day.hm-today {
+  outline: 1.5px solid var(--gold);
+  outline-offset: 1px;
+}
+.hm-day .hm-star {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 8px; color: var(--text-mid);
+}
+.briefing-month {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 9px; letter-spacing: 0.4em;
+  color: rgba(15,25,35,0.2); text-transform: uppercase;
+  margin-bottom: 32px;
+  opacity: 0; animation: briefFadeIn 0.8s 0.8s forwards;
+}
+.briefing-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(15px, 3vw, 19px);
+  font-style: italic; font-weight: 300;
+  color: rgba(15,25,35,0.4);
+  line-height: 1.8;
+  max-width: 340px; margin: 0 auto 36px;
+  opacity: 0; animation: briefFadeIn 0.8s 1.0s forwards;
+}
+.briefing-enter {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 9px; letter-spacing: 0.4em;
+  color: rgba(15,25,35,0.12); text-transform: uppercase;
+  opacity: 0; animation: briefFadeIn 0.8s 1.4s forwards;
+}
+@keyframes briefFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes briefFadeOut { from { opacity: 1; } to { opacity: 0; } }
+
+/* == ATOMIC POWER MODE - light luminous == */
+.briefing-overlay.atomic-power-mode {
+  background: linear-gradient(135deg, #ffffff, #f0f6fd, #ffffff);
+  animation: briefFadeIn 0.8s ease forwards, atomicBgPulse 3s ease-in-out infinite;
+}
+@keyframes atomicBgPulse {
+  0%, 100% { background-color: #f6f9fd; }
+  50% { background-color: #eaf2fb; }
+}
+.atomic-power-mode .briefing-kana {
+  color: var(--blue) !important;
+  text-shadow: 0 0 12px rgba(58,113,177,0.4);
+}
+.atomic-power-mode .briefing-level {
+  color: var(--blue-deep) !important;
+  font-size: 13px !important;
+  text-shadow: 0 0 16px rgba(58,113,177,0.5), 0 0 30px rgba(58,113,177,0.18);
+  animation: briefFadeIn 0.8s 0.4s forwards, atomicTextPulse 1.8s ease-in-out infinite !important;
+}
+.atomic-power-mode .briefing-heatmap .hm-day.hm-perfect {
+  box-shadow: 0 0 10px rgba(58,113,177,0.55), 0 0 20px rgba(58,113,177,0.25);
+  animation: hmPulse 1.5s ease-in-out infinite;
+}
+.atomic-power-mode .briefing-month {
+  color: rgba(58,113,177,0.5) !important;
+  text-shadow: 0 0 8px rgba(58,113,177,0.25);
+}
+.atomic-power-mode .briefing-quote {
+  color: var(--blue-deep) !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  text-shadow: 0 0 14px rgba(58,113,177,0.35), 0 0 28px rgba(58,113,177,0.15);
+  animation: briefFadeIn 0.8s 1.0s forwards, atomicTextPulse 2.2s ease-in-out infinite !important;
+}
+.atomic-power-mode .briefing-author {
+  color: var(--blue) !important;
+  text-shadow: 0 0 8px rgba(58,113,177,0.3);
+}
+.atomic-power-mode .briefing-enter {
+  color: rgba(58,113,177,0.45) !important;
+}
+@keyframes atomicTextPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* ── ACHIEVEMENT BANNER ── */
+.achievement-banner {
+  position: fixed; top: -80px; left: 50%; transform: translateX(-50%);
+  z-index: 9999;
+  background: linear-gradient(135deg, var(--bg-soft) 0%, var(--bg) 50%, var(--bg-soft) 100%);
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  padding: 16px 36px;
+  text-align: center;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold);
+  box-shadow: 0 4px 30px rgba(58,113,177,0.25), 0 0 60px rgba(58,113,177,0.1);
+  transition: top 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  white-space: nowrap;
+}
+.achievement-banner.show { top: 20px; }
+.achievement-banner .star-icon { font-size: 14px; margin: 0 6px; }
+
+/* ── LEVEL DISPLAY ── */
+.level-display {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 10px; letter-spacing: 0.3em;
+  color: var(--ash-dim); text-transform: uppercase;
+  text-align: center; margin: 12px 0 0;
+}
+.level-display .level-title { color: var(--gold); font-weight: 400; }
+.level-display .level-tier { color: var(--ash-dim); font-weight: 300; }
+.level-display .level-star { color: var(--gold); }
+.level-display .level-blackhole { color: rgba(196,77,77,0.55); }
+.level-display .level-next { opacity: 0.5; font-size: 9px; }
+/* ── PERFECT DAY CELLS — living energy ── */
+.perfect-day-cell .check-btn.done {
+  background: var(--gold-bg); border-color: var(--gold); color: var(--gold);
+  animation: perfectCellBurst 1.2s ease-out, perfectCellPulse 2.2s ease-in-out 1.2s infinite;
+}
+.perfect-day-cell .check-btn.done::after {
+  content: '★'; color: var(--gold);
+  text-shadow: 0 0 8px var(--gold-glow), 0 0 4px rgba(255,255,255,0.8);
+}
+.perfect-day-cell .check-btn.skip { border-color: rgba(245,197,24,0.3); }
+
+@keyframes perfectCellBurst {
+  0% { box-shadow: 0 0 4px rgba(245,197,24,0.3); }
+  20% { box-shadow: 0 0 18px rgba(245,197,24,0.9), 0 0 30px rgba(245,197,24,0.4), inset 0 0 8px rgba(245,197,24,0.3); }
+  100% { box-shadow: 0 0 6px rgba(245,197,24,0.4), 0 0 12px rgba(245,197,24,0.15); }
+}
+@keyframes perfectCellPulse {
+  0%, 100% { box-shadow: 0 0 6px rgba(245,197,24,0.4), 0 0 12px rgba(245,197,24,0.15); }
+  50% { box-shadow: 0 0 12px rgba(245,197,24,0.7), 0 0 22px rgba(245,197,24,0.3), inset 0 0 4px rgba(245,197,24,0.15); }
+}
+
+/* Mobile perfect day cells */
+.mobile-day-col.perfect-day .check-btn-mobile.done {
+  background: var(--gold-bg); border-color: var(--gold); color: var(--gold);
+  animation: perfectCellBurst 1.2s ease-out, perfectCellPulse 2.2s ease-in-out 1.2s infinite;
+}
+.mobile-day-col.perfect-day .check-btn-mobile.done::after {
+  color: var(--gold);
+  text-shadow: 0 0 8px var(--gold-glow), 0 0 4px rgba(255,255,255,0.8);
+}
+.mobile-day-col.perfect-day .mobile-day-label { color: var(--gold) !important; font-weight: 600; animation: starPulseIntense 1.8s ease-in-out infinite; }
+
+/* Zero day cells - subtle red tint, never harsh on light bg */
+.zero-day-cell .check-btn:not(.done):not(.future):not(.skip) { background: rgba(196,77,77,0.04); border-color: rgba(196,77,77,0.2); }
+.mobile-day-col.zero-day .check-btn-mobile:not(.done):not(.future):not(.skip) { background: rgba(196,77,77,0.04); border-color: rgba(196,77,77,0.2); }
+.mobile-day-col.zero-day .mobile-day-label { color: rgba(196,77,77,0.55) !important; }
+
+/* ── MOBILE HABIT LIST ── */
+.mobile-habit-list { display: flex; flex-direction: column; gap: 2px; }
+
+.mobile-habit-row {
+  display: flex; align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--ash-ghost);
+  gap: 12px;
+}
+.mobile-habit-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px; font-weight: 300; color: var(--ash);
+  width: 92px; min-width: 92px; max-width: 92px;
+  flex-shrink: 0;
+  white-space: normal; word-break: normal; overflow-wrap: break-word; line-height: 1.15;
+  background: transparent; border: none;
+  border-bottom: 1px solid transparent;
+  outline: none; padding: 2px 0;
+  transition: border-color 0.2s;
+}
+.mobile-habit-name:empty::before {
+  content: attr(data-placeholder);
+  color: var(--ash-faint);
+  font-style: italic;
+}
+.mobile-habit-name:focus { border-bottom-color: var(--gold); }
+.mobile-days {
+  display: flex; gap: 3px; align-items: center; flex-shrink: 0;
+}
+.mobile-day-col { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.mobile-day-label {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 9px; letter-spacing: 0.1em; color: var(--ash-dim);
+}
+.mobile-day-label.today-label { color: var(--gold); }
+
+/* Mobile checkboxes — big for touch */
+.check-btn-mobile {
+  width: 36px; height: 36px; border-radius: 3px;
+  border: 1px solid var(--ash-faint);
+  background: var(--ash-ghost); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s; position: relative;
+  color: transparent; font-size: 18px;
+  -webkit-tap-highlight-color: transparent;
+}
+.check-btn-mobile.done {
+  background: var(--blue-bg);
+  border-color: var(--blue);
+  color: var(--gold);
+  animation: checkPop 0.4s cubic-bezier(0.34,1.56,0.64,1) forwards;
+}
+.check-btn-mobile.done::after { content: '★'; position: absolute; color: var(--gold); font-weight: 600; }
+.check-btn-mobile.today { border-color: var(--gold); box-shadow: 0 0 10px var(--gold-glow); }
+
+/* Mobile streak + pct badge - column on right side */
+.mobile-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  flex-shrink: 0;
+  padding-left: 6px;
+}
+.mobile-pct {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.mobile-pct-zero { color: var(--text-light); opacity: 0.5; }
+.mobile-streak-mini {
+  font-family: 'DM Sans', 'Cormorant Garamond', sans-serif;
+  font-size: 9px;
+  color: var(--dim);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 4px;
+  text-align: center;
+}
+.mobile-streak-mini b { font-weight: 500; color: var(--text); font-size: 11px; }
+
+/* Legacy mobile-streak — keep but hide; replaced by mobile-stats */
+.mobile-streak { display: none; }
+.mobile-streak span { display: block; font-size: 9px; color: var(--ash-faint); letter-spacing: 0.1em; }
+.mobile-delete-btn { background: none; border: 1px solid rgba(255,60,60,0.3); color: #ff6666; font-size: 16px; cursor: pointer; padding: 6px 10px; opacity: 0; transition: opacity 0.2s, color 0.2s; flex-shrink: 0; border-radius: 4px; position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
+.mobile-delete-btn:active { opacity: 1; color: #ff4444; background: rgba(255,0,0,0.1); }
+.mobile-habit-row { position: relative; }
+.mobile-habit-row.show-delete .mobile-delete-btn { opacity: 1; }
+
+/* Mobile add habit */
+.mobile-add-btn {
+  background: none; border: none; border-bottom: 1px solid var(--ash-faint);
+  color: rgba(15,25,35,0.45); font-family: 'Cormorant Garamond', serif;
+  font-size: 16px; font-style: italic; cursor: pointer; padding: 12px 0;
+  transition: all 0.2s; width: 100%; text-align: left; border-bottom: 1px solid rgba(15,25,35,0.2);
+}
+.mobile-add-btn:hover { color: var(--gold); border-color: var(--gold); }
+
+/* ── WEEKLY TABLE ── */
+.weekly-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+.weekly-row td { padding: 8px 4px; border-top: 1px solid var(--ash-ghost); }
+.weekly-name { font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 300; color: var(--ash); min-width: 140px; padding-right: 16px; }
+.week-check-cell { text-align: center; min-width: 60px; }
+.week-check-btn {
+  width: 44px; height: 36px; border-radius: 2px;
+  border: 1px solid var(--ash-faint);
+  background: var(--ash-ghost); cursor: pointer;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 8px; letter-spacing: 0.15em; color: var(--ash-dim);
+  transition: all 0.15s;
+}
+.week-check-btn:hover { border-color: var(--ash-dim); color: var(--ash); }
+.week-check-btn.done { background: var(--done-bg); border-color: var(--done-color); color: var(--done-color); font-size: 16px; letter-spacing: 0; }
+
+/* ── QUOTE FOOTER ── */
+.quote-section {
+  margin-top: 64px; text-align: center;
+  border-top: 1px solid var(--ash-faint); padding-top: 40px;
+  opacity: 0; animation: fadeIn 2s 1.5s forwards;
+}
+.quote-text { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-style: italic; font-weight: 300; color: var(--ash-dim); line-height: 1.7; max-width: 440px; margin: 0 auto 16px; }
+.quote-author { font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold); }
+.quote-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: lowercase;
+  color: var(--dim);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.quote-link:hover { color: var(--blue); border-bottom-color: var(--blue); }
+.kanji-footer { font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 22px; color: var(--blue); opacity: 0.55; margin-top: 16px; letter-spacing: 0.25em; }
+.footer-tagline { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-style: italic; color: var(--dim); margin-top: 6px; letter-spacing: 0.05em; }
+.footer-tagline em { color: var(--blue); font-style: italic; }
+
+/* ── FAILED STATE (default for past days) ── */
+.check-btn.failed::after { content: '×'; font-size: 11px; position: absolute; color: var(--red); font-weight: 600; }
+.check-btn-mobile.failed::after { content: '×'; font-size: 16px; position: absolute; color: var(--red); font-weight: 600; }
+.check-btn.failed, .check-btn-mobile.failed {
+  background: var(--red-bg); border-color: var(--red-line);
+}
+
+/* ── SKIP STATE ── */
+.check-btn.skip::after { content: '–'; font-size: 11px; position: absolute; color: var(--ash-dim); }
+.check-btn-mobile.skip::after { content: '–'; font-size: 16px; position: absolute; color: var(--ash-dim); }
+.check-btn.skip, .check-btn-mobile.skip {
+  background: var(--ash-ghost); border-color: rgba(15,25,35,0.15);
+  color: var(--ash-dim);
+}
+
+/* ── CELEBRATION FLASH (perfect day) ── */
+.celebration-overlay {
+  position: fixed; inset: 0; z-index: 9998; pointer-events: none;
+  opacity: 0;
+}
+.celebration-overlay.perfect-flash {
+  background: radial-gradient(circle at center, rgba(58,113,177,0.5) 0%, rgba(58,113,177,0.15) 35%, transparent 70%);
+  animation: perfectFlash 1.6s ease-out forwards;
+}
+@keyframes perfectFlash {
+  0% { opacity: 0; }
+  12% { opacity: 1; }
+  40% { opacity: 0.6; }
+  100% { opacity: 0; }
+}
+
+/* ── CELEBRATION FLASH (level up) ── */
+.celebration-overlay.levelup-flash {
+  background:
+    radial-gradient(circle at center, rgba(255,230,150,0.6) 0%, transparent 50%),
+    radial-gradient(circle at 30% 40%, rgba(245,197,24,0.3) 0%, transparent 40%),
+    radial-gradient(circle at 70% 60%, rgba(245,197,24,0.3) 0%, transparent 40%);
+  animation: levelupFlash 2.4s ease-out forwards;
+}
+@keyframes levelupFlash {
+  0% { opacity: 0; transform: scale(0.8); }
+  10% { opacity: 1; transform: scale(1.05); }
+  30% { opacity: 0.8; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1); }
+}
+
+/* ── CELEBRATION FLASH (ATOMIC POWER — 100% month) ── */
+.celebration-overlay.atomicpower-flash {
+  background:
+    radial-gradient(circle at center, rgba(255,220,100,0.7) 0%, rgba(58,113,177,0.3) 30%, transparent 60%),
+    radial-gradient(circle at 20% 30%, rgba(255,200,80,0.4) 0%, transparent 35%),
+    radial-gradient(circle at 80% 70%, rgba(255,200,80,0.4) 0%, transparent 35%),
+    radial-gradient(circle at 50% 50%, rgba(255,255,200,0.15) 0%, transparent 70%);
+  animation: atomicPowerFlash 2.8s ease-out forwards;
+}
+@keyframes atomicPowerFlash {
+  0% { opacity: 0; transform: scale(0.6); }
+  8% { opacity: 1; transform: scale(1.1); }
+  15% { opacity: 0.9; transform: scale(1); }
+  25% { opacity: 1; transform: scale(1.03); }
+  50% { opacity: 0.7; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1); }
+}
+
+/* ── STREAK MILESTONE PULSE on cell ── */
+.streak-milestone-pulse {
+  animation: milestonePulse 0.6s ease-out;
+}
+@keyframes milestonePulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 rgba(58,113,177,0); }
+  40% { transform: scale(1.3); box-shadow: 0 0 20px rgba(245,197,24,0.8); }
+  100% { transform: scale(1); box-shadow: 0 0 0 rgba(58,113,177,0); }
+}
+
+/* ── PERFECT DAY HEADER — intensified pulse ── */
+.perfect-day-header-glow {
+  animation: starPulseIntense 1.8s ease-in-out infinite !important;
+  text-shadow: 0 0 12px rgba(245,197,24,0.8) !important;
+}
+@keyframes starPulseIntense {
+  0%, 100% { text-shadow: 0 0 8px rgba(245,197,24,0.5), 0 0 20px rgba(245,197,24,0.2); }
+  50% { text-shadow: 0 0 20px rgba(245,197,24,1), 0 0 40px rgba(245,197,24,0.5), 0 0 60px rgba(245,197,24,0.2); }
+}
+
+/* ── MONTH PROGRESS BAR ── */
+.month-bar-wrap {
+  margin: 8px 0 28px;
+  opacity: 0; animation: rise 1s 0.6s forwards;
+}
+.month-bar-label {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--ash-dim); margin-bottom: 6px;
+  text-align: center;
+}
+.month-bar-label .bar-pct { color: var(--gold); }
+.month-bar {
+  height: 6px; background: var(--neutral); border-radius: 3px;
+  overflow: hidden; display: flex;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+}
+.month-bar-done {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+  transition: width 0.8s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 0 8px rgba(245,197,24,0.4);
+}
+.month-bar-failed {
+  height: 100%;
+  background: var(--red);
+  opacity: 0.6;
+  transition: width 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Progressive bar intensity — 11 levels (yellow brillante always, glow grows) */
+.month-bar-wrap.bar-level-0 .month-bar-done { background: var(--gold); box-shadow: none; }
+.month-bar-wrap.bar-level-1 .month-bar-done { background: var(--gold); box-shadow: none; }
+.month-bar-wrap.bar-level-2 .month-bar-done { background: var(--gold); box-shadow: none; }
+.month-bar-wrap.bar-level-3 .month-bar-done { background: var(--gold); box-shadow: 0 0 4px rgba(245,197,24,0.3); }
+.month-bar-wrap.bar-level-4 .month-bar-done { background: linear-gradient(90deg, var(--gold), var(--gold-bright)); box-shadow: 0 0 6px rgba(245,197,24,0.4); }
+.month-bar-wrap.bar-level-5 .month-bar-done { background: linear-gradient(90deg, var(--gold), var(--gold-bright)); box-shadow: 0 0 8px rgba(245,197,24,0.5); }
+.month-bar-wrap.bar-level-6 .month-bar-done { background: linear-gradient(90deg, var(--gold), var(--gold-bright)); box-shadow: 0 0 10px rgba(245,197,24,0.6); }
+.month-bar-wrap.bar-level-7 .month-bar-done { background: linear-gradient(90deg, var(--gold), var(--gold-bright)); box-shadow: 0 0 12px rgba(245,197,24,0.7); animation: barPulse7 2.5s ease-in-out infinite; }
+.month-bar-wrap.bar-level-8 .month-bar-done { background: linear-gradient(90deg, var(--gold-bright), #FFE066); box-shadow: 0 0 16px rgba(245,197,24,0.8); animation: barPulse8 2s ease-in-out infinite; }
+.month-bar-wrap.bar-level-9 .month-bar-done { background: linear-gradient(90deg, var(--gold-bright), #FFE066); box-shadow: 0 0 22px rgba(245,197,24,0.9); animation: barPulse9 1.8s ease-in-out infinite; }
+.month-bar-wrap.bar-level-10 { position: relative; }
+.month-bar-wrap.bar-level-10 .month-bar {
+  height: 10px; border-radius: 5px; overflow: visible;
+  box-shadow: 0 0 30px rgba(245,197,24,0.5);
+  animation: barContainerPulse 1.5s ease-in-out infinite;
+}
+.month-bar-wrap.bar-level-10 .month-bar-done {
+  background: linear-gradient(90deg, var(--gold), var(--gold-bright), #FFE066, #FFD93D, var(--gold-bright), var(--gold));
+  background-size: 400% 100%; height: 10px !important; border-radius: 5px; position: relative;
+  box-shadow: 0 0 14px rgba(245,197,24,0.6), 0 0 28px rgba(245,197,24,0.3);
+  animation: barFullPower 1.2s linear infinite, barPulse10 1s ease-in-out infinite;
+}
+.month-bar-wrap.bar-level-10 .month-bar-label {
+  color: var(--text); font-weight: 700; font-size: 11px; letter-spacing: 0.4em;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.8), 0 0 8px rgba(255,220,120,0.6);
+  position: relative; z-index: 5;
+}
+@keyframes barContainerPulse {
+  0%, 100% { box-shadow: 0 0 30px rgba(245,197,24,0.5); }
+  50% { box-shadow: 0 0 60px rgba(255,220,120,0.6), 0 0 100px rgba(245,197,24,0.3); }
+}
+
+@keyframes barPulse7 {
+  0%, 100% { box-shadow: 0 0 10px rgba(245,197,24,0.55); }
+  50% { box-shadow: 0 0 14px rgba(245,197,24,0.7); }
+}
+@keyframes barPulse8 {
+  0%, 100% { box-shadow: 0 0 14px rgba(245,197,24,0.65); }
+  50% { box-shadow: 0 0 20px rgba(245,197,24,0.85); }
+}
+@keyframes barPulse9 {
+  0%, 100% { box-shadow: 0 0 18px rgba(245,197,24,0.75); }
+  50% { box-shadow: 0 0 26px rgba(245,197,24,0.95), inset 0 0 4px rgba(255,240,200,0.15); }
+}
+@keyframes barPulse10 {
+  0%, 100% { box-shadow: 0 0 20px rgba(255,220,120,1), 0 0 40px rgba(245,197,24,0.9), 0 0 80px rgba(245,197,24,0.5), inset 0 0 10px rgba(255,255,220,0.5); }
+  50% { box-shadow: 0 0 35px rgba(255,240,150,1), 0 0 70px rgba(255,220,120,0.9), 0 0 120px rgba(245,197,24,0.6), 0 0 160px rgba(245,197,24,0.25), inset 0 0 15px rgba(255,255,230,0.6); }
+}
+@keyframes barFullPower {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 400% 50%; }
+}
+/* ATOMIC SPARKS */
+.atomic-spark {
+  position: fixed; border-radius: 50%;
+  background: radial-gradient(circle, #fff5c0, #e8d090, rgba(245,197,24,0));
+  box-shadow: 0 0 6px rgba(255,220,120,0.9), 0 0 12px rgba(245,197,24,0.5);
+  pointer-events: none; z-index: 9000;
+  animation: sparkRise var(--dur, 1s) ease-out forwards;
+}
+@keyframes sparkRise {
+  0% { opacity: 1; transform: translateY(0) translateX(0) scale(1); }
+  30% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-60px) translateX(var(--drift, 0px)) scale(0.3); }
+}
+
+/* ── SAVE INDICATOR ── */
+.save-indicator {
+  position: fixed; bottom: 24px; right: 24px; z-index: 100;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--gold); padding: 8px 16px;
+  border: 1px solid var(--gold-dim); background: var(--bg);
+  opacity: 0; transition: opacity 0.3s; pointer-events: none;
+}
+.save-indicator.show { opacity: 1; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--ash-faint); border-radius: 2px; }
+
+/* ── AUTH SCREEN ── */
+#authScreen {
+  position: fixed; inset: 0; z-index: 500;
+  display: flex; align-items: center; justify-content: center;
+  background: transparent;
+}
+#authScreen.hidden { display: none; }
+#trackerApp.hidden { display: none; }
+
+.auth-box {
+  width: min(360px, calc(100vw - 48px));
+  text-align: center;
+  opacity: 0; transform: translateY(20px);
+  animation: rise 1s 0.2s forwards;
+}
+.auth-kana {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 10px; letter-spacing: 0.4em;
+  color: var(--ash-dim); text-transform: uppercase;
+  display: block; margin-bottom: 32px;
+}
+.auth-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px; font-weight: 300; line-height: 0.9;
+  color: var(--ash); margin-bottom: 8px;
+}
+.auth-title em { font-style: italic; color: var(--blue); }
+.auth-kanji {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 12px; letter-spacing: 0.4em;
+  color: var(--ash-faint); display: block; margin-bottom: 48px;
+}
+.auth-stroke {
+  width: 1px; height: 32px;
+  background: linear-gradient(to bottom, transparent, var(--ash-dim), transparent);
+  margin: 0 auto 40px;
+}
+.auth-tab-row {
+  display: flex; gap: 0; margin-bottom: 32px;
+  border-bottom: 1px solid var(--ash-faint);
+}
+.auth-tab {
+  flex: 1; background: none; border: none;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--ash-dim); padding: 10px; cursor: pointer;
+  border-bottom: 1px solid transparent; margin-bottom: -1px;
+  transition: all 0.2s;
+}
+.auth-tab.active { color: var(--blue); border-bottom-color: var(--blue); }
+
+.auth-field {
+  margin-bottom: 20px; text-align: left;
+}
+.auth-input {
+  width: 100%; background: transparent;
+  border: none; border-bottom: 1px solid var(--ash-dim);
+  color: var(--ash); font-family: 'Cormorant Garamond', serif;
+  font-size: 17px; font-weight: 300;
+  padding: 10px 0; outline: none;
+  transition: border-color 0.2s;
+}
+.auth-input::placeholder { color: var(--ash-faint); font-style: italic; }
+.auth-input:focus { border-bottom-color: var(--ash-dim); }
+
+.auth-btn {
+  width: 100%; margin-top: 32px;
+  background: var(--blue);
+  border: 1px solid var(--blue);
+  color: white;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 11px; letter-spacing: 0.4em; text-transform: uppercase;
+  padding: 16px; cursor: pointer;
+  transition: all 0.3s;
+}
+.auth-btn:hover { background: var(--blue-deep); border-color: var(--blue-deep); color: white; }
+.auth-btn:disabled { opacity: 0.4; cursor: default; }
+
+.auth-error {
+  margin-top: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px; font-style: italic;
+  color: rgba(15,25,35,0.5);
+  min-height: 20px;
+}
+
+/* Logout button */
+.logout-btn {
+  background: none; border: none;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 8px; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--ash-faint); cursor: pointer;
+  padding: 4px 0; transition: color 0.2s;
+}
+.logout-btn:hover { color: var(--ash-dim); }
+
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width: 640px) {
+  .wrapper { padding: 40px 16px 100px; }
+  .zen-line { display: none; }
+
+  /* Show mobile, hide desktop */
+  .desktop-view { display: none; }
+  .mobile-view  { display: block; }
+  .week-nav     { display: flex; }
+
+  /* Month tabs scroll horizontally */
+  .month-tabs { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; gap: 6px; }
+  .month-tabs::-webkit-scrollbar { display: none; }
+  .tab { flex-shrink: 0; padding: 6px 12px; font-size: 9px; }
+
+  /* Stats stack 2x2 */
+  .stats-row { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .stat-value { font-size: 24px; }
+
+  /* Header compact */
+  .header { flex-direction: column; gap: 8px; margin-bottom: 28px; }
+  .header h1 { font-size: 26px; }
+  .month-display { text-align: left; }
+
+  /* Weekly table mobile */
+  .week-check-btn { width: 44px; height: 44px; }
+  .weekly-name { font-size: 17px; min-width: 110px; }
+
+  /* ── MOBILE FONT SIZE BOOST — everything proportional ── */
+  
+  /* Header */
+  .brand { font-size: 12px; }
+  .header h1 { font-size: 28px; }
+  .header .sub { font-size: 16px; }
+  .month-display { font-size: 11px; }
+  
+  /* Month tabs */
+  .tab { font-size: 11px; padding: 7px 14px; }
+  
+  /* Stats */
+  .stat-label { font-size: 10px; }
+  .stat-value { font-size: 28px; }
+  .stat-sub { font-size: 13px; }
+  
+  /* Level & month bar */
+  .level-display { font-size: 12px; }
+  .level-display .level-tier { font-size: 11px; }
+  .month-bar-label { font-size: 11px; }
+  .bar-pct { font-size: 11px; }
+  
+  /* Section headers */
+  .section-title { font-size: 11px; }
+  .section-kanji { font-size: 13px; }
+  
+  /* Week nav */
+  .week-label { font-size: 13px; }
+  .week-nav-btn { font-size: 20px; width: 46px; height: 46px; }
+  
+  /* Habit rows — fit 393px viewport */
+  .mobile-habit-row { gap: 6px; flex-wrap: nowrap; overflow: hidden; }
+  .mobile-habit-name { font-size: 14px; width: 80px; min-width: 80px; max-width: 80px; line-height: 1.15; }
+  .mobile-days { gap: 2px; }
+  .mobile-day-label { font-size: 10px; }
+  .check-btn-mobile { width: 30px; height: 30px; font-size: 16px; }
+  .check-btn-mobile.done::after { font-size: 13px; }
+  .check-btn-mobile.failed::after { font-size: 13px; }
+  .check-btn-mobile.skip::after { font-size: 14px; }
+  .mobile-stats { min-width: 38px; padding-left: 4px; }
+  .mobile-pct { font-size: 19px; }
+  .mobile-streak-mini { font-size: 8px; margin-top: 2px; }
+  .mobile-streak-mini b { font-size: 10px; }
+  /* mobile-streak deprecated, replaced by mobile-stats */
+  .mobile-delete-btn { display: block; min-width: 44px; min-height: 44px; }
+  
+  /* Add habit */
+  .add-habit-btn, .mobile-add-btn { font-size: 16px; }
+  
+  /* Weekly section */
+  .weekly-table th { font-size: 9px; }
+
+  /* ── MOBILE CONTRAST FIX — increase readability on light bg ── */
+  :root {
+    --ash-dim:    rgba(15,25,35,0.65);
+    --ash-faint:  rgba(245,197,24,0.22);
+    --ash-ghost:  rgba(245,197,24,0.05);
+    --gold-dim:   rgba(245,197,24,0.45);
+  }
+  .mobile-habit-name { color: var(--ash); }
+  .mobile-day-label { color: var(--ash-dim); font-weight: 400; }
+  .mobile-day-label.today-label { color: var(--gold); font-weight: 600; }
+  .stat-label { color: var(--ash-dim); }
+  .stat-sub { color: var(--ash-dim); }
+  .month-bar-label { color: var(--ash-dim); }
+}
+
+/* ════════════════════════════════════════════════════════
+   ÍNDICE DE EVOLUCIÓN — métrica prominente con comparación
+   ════════════════════════════════════════════════════════ */
+.evolution-card {
+  margin: 0 0 16px;
+  padding: 18px 24px 16px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+.evolution-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 0%, var(--gold-bg) 0%, transparent 70%);
+  opacity: 0.5;
+}
+.evolution-card.is-up {
+  border-color: var(--gold-line);
+  box-shadow: 0 4px 16px var(--gold-glow);
+}
+.evolution-card.is-down {
+  border-color: var(--red-line);
+}
+.evolution-card.is-down::before {
+  background: radial-gradient(ellipse at 50% 0%, var(--red-bg) 0%, transparent 70%);
+}
+.evolution-card.is-flat::before { opacity: 0; }
+
+.evolution-card > * { position: relative; z-index: 1; }
+
+.evolution-comparison {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  margin-bottom: 14px;
+}
+.evolution-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.evolution-side-label {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.evolution-side-pct {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--text);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.evolution-divider {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  color: var(--dim);
+  font-weight: 300;
+  padding: 0 8px;
+}
+
+.evolution-bottom {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  text-align: center;
+}
+.evolution-eyebrow {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.evolution-main {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+}
+.evolution-arrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--dim);
+  transition: color 0.3s ease;
+}
+.evolution-card.is-up .evolution-arrow { color: var(--gold); }
+.evolution-card.is-down .evolution-arrow { color: var(--red); }
+
+.evolution-delta {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+.evolution-card.is-up .evolution-delta { color: var(--gold); }
+.evolution-card.is-down .evolution-delta { color: var(--red); }
+.evolution-card.is-flat .evolution-delta { color: var(--dim); }
+
+.evolution-subcopy {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 6px;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 480px) {
+  .evolution-card { padding: 14px 16px 12px; }
+  .evolution-side-pct { font-size: 26px; }
+  .evolution-divider { font-size: 18px; padding: 0 4px; }
+  .evolution-arrow { font-size: 22px; }
+  .evolution-delta { font-size: 28px; }
+}
+
+/* ════════════════════════════════════════════════════════
+   NICOTINE HABIT ROW — sutil highlight (nombre + borde)
+   Las celdas se ven igual que el resto (estrella blanca sobre dorado)
+   ════════════════════════════════════════════════════════ */
+.mobile-habit-row.is-nicotine,
+.habit-table .habit-row.is-nicotine {
+  background: linear-gradient(90deg, var(--gold-bg) 0%, transparent 60%);
+  border-left: 2px solid var(--gold);
+  padding-left: 8px;
+  margin-left: -8px;
+  border-radius: 3px;
+}
+.mobile-habit-row.is-nicotine .mobile-habit-name,
+.habit-table .habit-row.is-nicotine .habit-name {
+  color: var(--gold-deep);
+  font-weight: 500;
+}
+
+/* ════════════════════════════════════════════════════════
+   NICOTINE COUNTER — celda principal, top of tracker
+   ════════════════════════════════════════════════════════ */
+.nicotine-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 22px 24px;
+  margin: 0 0 16px;
+  background: var(--bg-soft);
+  border: 1px solid var(--blue);
+  border-radius: 4px;
+  box-shadow: 0 4px 16px var(--blue-glow);
+  position: relative;
+  overflow: hidden;
+}
+.nicotine-counter::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, var(--blue-bg) 0%, transparent 70%);
+  pointer-events: none;
+  opacity: 0.7;
+}
+.nicotine-counter > * { position: relative; z-index: 1; }
+
+.nicotine-counter .nc-count {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 300;
+  color: var(--blue);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+.nicotine-counter .nc-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nicotine-counter .nc-label {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  color: var(--blue);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.nicotine-counter .nc-sublabel {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--dim);
+  margin-top: 4px;
+}
+.nicotine-counter.is-zero {
+  opacity: 0.7;
+  border-style: dashed;
+  box-shadow: none;
+}
+.nicotine-counter.is-zero .nc-count { color: var(--dim); }
+
+/* Milestone celebration glow when at a philosophical checkpoint */
+.nicotine-counter.is-milestone {
+  animation: ncGlow 3s ease-in-out infinite;
+}
+@keyframes ncGlow {
+  0%, 100% { box-shadow: 0 4px 16px var(--blue-glow); }
+  50% { box-shadow: 0 6px 28px rgba(245,197,24,0.45); }
+}
+
+.nicotine-milestone-label {
+  position: absolute;
+  top: -1px; right: -1px;
+  background: var(--blue);
+  color: white;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 0 4px 0 4px;
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .nicotine-counter { padding: 18px 20px; }
+  .nicotine-counter .nc-count { font-size: 48px; }
+}
+/* ════════════════════════════════════════════════════════
+   ★ DESIGN HANDOFF · Top Dashboard Redesign
+   ────────────────────────────────────────────────────────
+   - Brand-band azul global (reemplaza el header actual)
+   - Hero del contador de nicotina con 3 estados
+   - Línea de horizonte (no progress bar)
+   - 3 stat cards en lugar de 4
+   - Índice de Evolución con AMBOS valores
+   ════════════════════════════════════════════════════════ */
+
+:root {
+  --ink-soft:  rgba(15,25,35,0.62);
+  --ink-mute:  rgba(15,25,35,0.42);
+  --ink-faint: rgba(15,25,35,0.16);
+}
+
+/* ── BRAND BAND · azul de marca, ancla global ─────────── */
+.brand-band {
+  background: var(--blue);
+  color: #fff;
+  padding: 32px 22px 24px;
+  margin: -20px -20px 0;  /* overflow hacia los bordes del container */
+  position: relative;
+  border-radius: 0;
+}
+.brand-band::after {
+  content: '';
+  position: absolute;
+  left: 22px; right: 22px; bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
+.brand-band-row1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 14px;
+}
+.brand-band h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: 28px;
+  margin: 0;
+  letter-spacing: -0.005em;
+  color: #fff;
+  line-height: 1.05;
+}
+.brand-band h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: #fff;
+}
+.brand-band h1 .brand-tm {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 0.36em;
+  font-weight: 400;
+  font-style: normal;
+  vertical-align: super;
+  margin-left: 2px;
+  letter-spacing: 0;
+  opacity: 0.85;
+}
+.brand-band .day-meta {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  margin-top: 8px;
+  opacity: 0.7;
+}
+
+/* ── HERO · Contador de nicotina ─────────────────────── */
+.nicotine-hero {
+  background: var(--bg-soft);
+  padding: 44px 28px 36px;
+  margin: 0 -20px 16px;  /* overflow para que se sienta full-width */
+  position: relative;
+  text-align: center;
+}
+.nicotine-hero .nh-eyebrow {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 18px;
+}
+.nicotine-hero .nh-count {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: 132px;
+  line-height: 1;
+  color: var(--text);
+  letter-spacing: -0.04em;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 4px;
+}
+.nicotine-hero .nh-count-unit {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 17px;
+  color: var(--ink-soft);
+  margin-top: 8px;
+}
+.nicotine-hero .nh-quote {
+  margin-top: 14px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--ink-soft);
+  line-height: 1.4;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nicotine-hero .nh-milestone {
+  margin-top: 28px;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+.nicotine-hero .nh-milestone strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ── Línea de horizonte ── */
+.horizon {
+  margin: 28px auto 0;
+  max-width: 280px;
+}
+.horizon__line {
+  height: 1px;
+  background: var(--ink-faint);
+  position: relative;
+}
+.horizon__progress {
+  position: absolute;
+  left: 0; top: -1px;
+  height: 3px;
+  background: var(--blue);
+  border-radius: 2px;
+  transition: width 0.6s ease;
+}
+.horizon__marks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 8px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+.horizon__marks .now {
+  color: var(--blue);
+  font-weight: 500;
+}
+.horizon__marks .next {
+  color: var(--ink-soft);
+}
+
+/* ── Estado A · Día 0 (silencio contemplativo) ── */
+.nicotine-hero.is-day-zero {
+  padding: 56px 28px 48px;
+}
+.nicotine-hero.is-day-zero .nh-count {
+  font-size: 92px;
+  color: var(--ink-mute);
+}
+.nicotine-hero.is-day-zero .nh-count-unit {
+  color: var(--ink-mute);
+}
+.nicotine-hero.is-day-zero .nh-invitation {
+  margin-top: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 19px;
+  color: var(--ink-soft);
+  line-height: 1.45;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nicotine-hero.is-day-zero .nh-signature {
+  margin-top: 22px;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+/* ── Estado C · Milestone (celebratorio sutil) ── */
+.nicotine-hero.is-milestone {
+  background: linear-gradient(180deg, #FFFEF7 0%, var(--bg-soft) 60%);
+}
+.nicotine-hero.is-milestone::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 1px solid var(--gold);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.6), inset 0 0 80px rgba(245,197,24,0.18);
+}
+.nicotine-hero.is-milestone .nh-eyebrow {
+  color: var(--gold-deep);
+}
+.nicotine-hero.is-milestone .nh-milestone strong {
+  color: var(--gold-deep);
+  letter-spacing: 0.5em;
+}
+.nicotine-hero.is-milestone .horizon__progress {
+  background: var(--gold);
+}
+.nicotine-hero.is-milestone .horizon__marks .now {
+  color: var(--gold-deep);
+}
+
+/* ── Stats grid · 3 cards ── */
+.stats-row.is-three {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 10px;
+}
+@media (max-width: 480px) {
+  .stats-row.is-three {
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 8px;
+  }
+}
+
+/* ── Mobile responsive ── */
+@media (max-width: 480px) {
+  .brand-band { padding: 24px 18px 20px; }
+  .brand-band h1 { font-size: 26px; }
+  .nicotine-hero { padding: 32px 20px 28px; }
+  .nicotine-hero .nh-count { font-size: 96px; }
+  .nicotine-hero.is-day-zero { padding: 40px 20px 36px; }
+  .nicotine-hero.is-day-zero .nh-count { font-size: 72px; }
+  .nicotine-hero.is-day-zero .nh-invitation { font-size: 17px; }
+  .horizon { max-width: 240px; }
+}
+
+/* ════════════════════════════════════════════════════════
+   ★ DESIGN HANDOFF · Grid de hábitos refinado
+   ────────────────────────────────────────────────────────
+   Adopta el lenguaje visual del rediseño:
+   - Done: ★ azul sobre fondo azul tenue (no amarillo sólido)
+   - Failed: × rojo apagado (opacity 0.65, fondo 6%)
+   - Día perfecto: veil dorado vertical en columna entera
+   - Fila Sin Nicotina: azul tenue + ★ amarilla brillante (mix)
+   - Tipografía editorial sobre data-grid
+   ════════════════════════════════════════════════════════ */
+
+:root {
+  --gold-veil: rgba(245,197,24,0.07);
+  --pre-reg-bg: rgba(15,25,35,0.04);
+}
+
+/* ── DESKTOP · vista mensual con veil dorado vertical ── */
+@media (min-width: 768px) {
+  /* Hide week nav on desktop — full month view doesn't need it */
+  .week-nav { display: none !important; }
+  .mobile-view { display: none !important; }
+  .desktop-view { display: block; }
+  
+  /* Refinar headers de día con perfect-day highlight */
+  .habit-table thead .perfect-day-header {
+    background: var(--gold-veil) !important;
+    color: var(--gold-deep) !important;
+  }
+  .habit-table thead .perfect-day-header::before {
+    content: '★';
+    display: block;
+    font-size: 9px;
+    color: var(--gold);
+    margin-bottom: 2px;
+  }
+  
+  /* Veil dorado vertical en celdas perfect day */
+  .habit-table .perfect-day-cell {
+    background: var(--gold-veil);
+  }
+  
+  /* Done normal: azul sobre azul-bg */
+  .habit-table .check-btn.done {
+    background: var(--blue-bg) !important;
+    border-color: var(--blue) !important;
+    color: var(--blue) !important;
+  }
+  .habit-table .check-btn.done::after {
+    content: '★';
+    color: var(--blue) !important;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  /* Día perfecto: ★ dorada con shadow sutil */
+  .habit-table .perfect-day-cell .check-btn.done {
+    background: rgba(245,197,24,0.12) !important;
+    border-color: var(--gold-line) !important;
+  }
+  .habit-table .perfect-day-cell .check-btn.done::after {
+    content: '★';
+    color: var(--gold-deep) !important;
+    text-shadow: 0 0 10px rgba(245,197,24,0.4);
+  }
+  
+  /* Fila Sin Nicotina: fondo azul tenue + ★ amarilla brillante */
+  .habit-table .habit-row.is-nicotine {
+    background: var(--blue-bg) !important;
+    border-left: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+  .habit-table .habit-row.is-nicotine .habit-name {
+    color: var(--blue-deep) !important;
+    font-style: italic;
+    font-weight: 500;
+    background: linear-gradient(90deg, transparent 0%, transparent 100%) !important;
+  }
+  .habit-table .habit-row.is-nicotine .check-btn.done {
+    background: rgba(58,113,177,0.14) !important;
+    border-color: var(--blue) !important;
+  }
+  .habit-table .habit-row.is-nicotine .check-btn.done::after {
+    content: '★';
+    color: var(--gold) !important;
+  }
+  /* Sin nicotina + perfect day: ★ amarilla brillante con glow */
+  .habit-table .habit-row.is-nicotine .perfect-day-cell .check-btn.done {
+    background: rgba(245,197,24,0.18) !important;
+    border-color: var(--gold) !important;
+  }
+  .habit-table .habit-row.is-nicotine .perfect-day-cell .check-btn.done::after {
+    color: var(--gold) !important;
+    text-shadow: 0 0 12px rgba(245,197,24,0.6);
+  }
+  
+  /* Fail: × rojo apagado */
+  .habit-table .check-btn.failed {
+    background: rgba(196,77,77,0.06) !important;
+    border-color: var(--red-line) !important;
+  }
+  .habit-table .check-btn.failed::after {
+    content: '×';
+    color: var(--red);
+    opacity: 0.65;
+    font-size: 13px;
+  }
+  
+  /* Future: dashed gris */
+  .habit-table .check-btn.future {
+    background: transparent !important;
+    border: 1px dashed var(--ink-faint) !important;
+  }
+  
+  /* Hover lift */
+  .habit-table .check-btn {
+    transition: transform 0.12s, border-color 0.12s, background 0.12s;
+  }
+  .habit-table .check-btn:not(.future):not(.skip):hover {
+    transform: scale(1.08);
+  }
+  
+  /* % cell editorial */
+  .habit-table .pct-cell .pct-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text);
+  }
+  .habit-table .habit-row.is-nicotine .pct-cell .pct-num {
+    color: var(--blue);
+  }
+}
+
+/* ── MOBILE · vista semanal con lenguaje refinado ── */
+@media (max-width: 767px) {
+  .desktop-view { display: none !important; }
+  .mobile-view { display: block; }
+  .week-nav { display: flex !important; }
+  
+  /* Done normal: ★ azul sobre azul-bg */
+  .check-btn-mobile.done {
+    background: var(--blue-bg) !important;
+    border-color: var(--blue) !important;
+    color: var(--blue) !important;
+  }
+  .check-btn-mobile.done::after {
+    content: '★';
+    color: var(--blue) !important;
+    font-weight: 600;
+  }
+  
+  /* Día perfecto mobile: veil dorado en TODA la columna del día */
+  .mobile-day-col.perfect-day {
+    position: relative;
+  }
+  .mobile-day-col.perfect-day::before {
+    content: '';
+    position: absolute;
+    inset: -8px -2px;
+    background: var(--gold-veil);
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: -1;
+  }
+  .mobile-day-col.perfect-day .check-btn-mobile.done {
+    background: rgba(245,197,24,0.12) !important;
+    border-color: var(--gold-line) !important;
+  }
+  .mobile-day-col.perfect-day .check-btn-mobile.done::after {
+    color: var(--gold-deep) !important;
+    text-shadow: 0 0 10px rgba(245,197,24,0.5);
+    animation: none !important;
+  }
+  .mobile-day-col.perfect-day .mobile-day-label {
+    color: var(--gold-deep) !important;
+    animation: none !important;
+  }
+  .mobile-day-col.perfect-day .mobile-day-label::before {
+    content: '★ ';
+    color: var(--gold);
+    font-size: 9px;
+  }
+  
+  /* Fila Sin Nicotina mobile: azul tenue + ★ amarilla brillante */
+  .mobile-habit-row.is-nicotine {
+    background: var(--blue-bg) !important;
+    border-left: none !important;
+    padding-left: 12px !important;
+    margin-left: -12px !important;
+    padding-right: 12px !important;
+    margin-right: -12px !important;
+  }
+  .mobile-habit-row.is-nicotine .mobile-habit-name {
+    color: var(--blue-deep) !important;
+    font-style: italic;
+    font-weight: 500;
+  }
+  .mobile-habit-row.is-nicotine .check-btn-mobile.done {
+    background: rgba(58,113,177,0.14) !important;
+    border-color: var(--blue) !important;
+  }
+  .mobile-habit-row.is-nicotine .check-btn-mobile.done::after {
+    color: var(--gold) !important;
+  }
+  /* Sin nicotina + perfect day: ★ amarilla brillante con glow */
+  .mobile-habit-row.is-nicotine .mobile-day-col.perfect-day .check-btn-mobile.done {
+    background: rgba(245,197,24,0.18) !important;
+    border-color: var(--gold) !important;
+  }
+  .mobile-habit-row.is-nicotine .mobile-day-col.perfect-day .check-btn-mobile.done::after {
+    color: var(--gold) !important;
+    text-shadow: 0 0 12px rgba(245,197,24,0.6);
+  }
+  .mobile-habit-row.is-nicotine .mobile-pct {
+    color: var(--blue) !important;
+  }
+  
+  /* Fail: × rojo apagado */
+  .check-btn-mobile.failed {
+    background: rgba(196,77,77,0.06) !important;
+    border-color: var(--red-line) !important;
+  }
+  .check-btn-mobile.failed::after {
+    content: '×';
+    color: var(--red);
+    opacity: 0.65;
+    font-weight: 400;
+  }
+  
+  /* Future: dashed gris */
+  .check-btn-mobile.future {
+    background: transparent !important;
+    border: 1px dashed var(--ink-faint) !important;
+    border-style: dashed !important;
+  }
+  
+  /* % editorial */
+  .mobile-pct {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-style: italic;
+    color: var(--text);
+  }
+}
+
+/* ════════════════════════════════════════════════════════
+   ★ DESIGN GRID — Mobile scroll-horizontal por fila + Desktop mensual
+   ════════════════════════════════════════════════════════ */
+
+/* Section header (reemplaza el viejo "HÁBITOS DIARIOS · 毎日") */
+.m-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 22px 0 14px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 4px;
+}
+.m-section-label {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+.m-section-day {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--blue);
+}
+
+/* m-rows container */
+.m-rows { display: flex; flex-direction: column; }
+
+/* m-row (each habit) */
+.m-row {
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0 16px;
+  position: relative;
+}
+.m-row.is-anchor { background: var(--blue-bg); }
+
+.m-row-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 4px;
+  margin-bottom: 8px;
+}
+.m-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  outline: none;
+  padding: 2px 0;
+  flex: 1;
+  margin-right: 12px;
+  transition: border-color 0.2s;
+}
+.m-name:focus { border-bottom-color: var(--blue); }
+.m-name:empty::before {
+  content: attr(data-placeholder);
+  color: var(--ink-faint);
+  font-style: italic;
+}
+.m-row.is-anchor .m-name {
+  color: var(--blue-deep);
+  font-style: italic;
+  font-weight: 500;
+}
+.m-pct {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ink-soft);
+  flex-shrink: 0;
+}
+.m-row.is-anchor .m-pct {
+  color: var(--blue);
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* m-cells: scroll horizontal */
+.m-cells {
+  display: flex;
+  gap: 4px;
+  padding: 0 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 60%;
+}
+.m-cells::-webkit-scrollbar { display: none; }
+
+/* m-cell base */
+.m-cell {
+  flex: 0 0 36px;
+  height: 36px;
+  border-radius: 3px;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  scroll-snap-align: center;
+  transition: transform 0.12s, border-color 0.12s, background 0.12s;
+}
+.m-cell:not([data-state="future"]):not([data-state="pre"]):hover { transform: scale(1.08); }
+.m-cell[data-state="future"], .m-cell[data-state="pre"] { cursor: default; }
+
+.m-cell .m-num {
+  position: absolute;
+  top: 2px;
+  left: 0; right: 0;
+  text-align: center;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 7px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--ink-mute);
+  pointer-events: none;
+}
+
+/* States */
+.m-cell[data-state="done"] { background: var(--blue-bg); border-color: var(--blue); }
+.m-cell[data-state="done"]::after {
+  content: '★';
+  color: var(--blue);
+  font-size: 13px;
+  padding-top: 8px;
+  font-weight: 600;
+}
+.m-cell[data-state="fail"] { background: var(--red-bg); border-color: var(--red-line); }
+.m-cell[data-state="fail"]::after {
+  content: '×';
+  color: var(--red);
+  opacity: 0.65;
+  padding-top: 8px;
+  font-size: 14px;
+}
+.m-cell[data-state="future"] {
+  border: 1px dashed var(--ink-faint);
+  background: transparent;
+}
+.m-cell[data-state="pre"] {
+  background: rgba(15,25,35,0.04);
+  border-color: transparent;
+}
+
+/* Today highlight */
+.m-cell.is-today {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue);
+}
+.m-cell.is-today .m-num { color: var(--blue); font-weight: 600; }
+
+/* Perfect day column (gold veil) */
+.m-cell.is-perfect-col {
+  background: var(--gold-bg);
+  border-color: var(--gold-line);
+}
+.m-cell.is-perfect-col.is-today {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 1px var(--gold);
+}
+.m-cell.is-perfect-col .m-num {
+  color: var(--gold-deep);
+  font-weight: 600;
+}
+.m-cell.is-perfect-col[data-state="done"] {
+  background: var(--gold-bg);
+  border-color: var(--gold);
+}
+.m-cell.is-perfect-col[data-state="done"]::after {
+  color: var(--gold-deep);
+  text-shadow: 0 0 8px rgba(245,197,24,0.5);
+}
+
+/* Anchor row + perfect day combo: ★ amarilla brillante */
+.m-row.is-anchor .m-cell[data-state="done"]::after { color: var(--gold); }
+.m-row.is-anchor .m-cell.is-perfect-col[data-state="done"]::after {
+  color: var(--gold);
+  text-shadow: 0 0 12px rgba(245,197,24,0.6);
+}
+
+/* Add habit button */
+.mobile-add-btn {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--ink-mute);
+  padding: 18px 4px;
+  cursor: pointer;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  transition: color 0.2s;
+}
+.mobile-add-btn:hover { color: var(--blue); }
+
+/* Hide week-nav legacy completely */
+.week-nav { display: none !important; }
+
+/* Hide legacy mobile-habit-list styles by overriding */
+.mobile-habit-list { display: none; }
+
+/* Hide perfect-day double star bug — only one star per perfect day cell */
+.mobile-day-col.perfect-day::before { display: none !important; }
+
+</style>
+</head>
+<body>
+
+<div class="zen-line left"></div>
+<div class="zen-line right"></div>
+<div class="save-indicator" id="saveIndicator">Saved</div>
+
+<!-- LOADING SCREEN -->
+<div id="loadingScreen" style="position:fixed;inset:0;z-index:600;display:flex;align-items:center;justify-content:center;background:var(--bg);">
+  <div style="text-align:center;">
+    <div style="font-family:'Zen Kaku Gothic New',sans-serif;font-size:9px;letter-spacing:0.4em;color:var(--dim);margin-bottom:14px;text-transform:uppercase;">習慣 武道 · Carlos Alberto</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--text);line-height:1;">Método<br><em style="color:var(--blue);font-style:italic;">Holístico</em></div>
+    <div style="font-family:'Zen Kaku Gothic New',sans-serif;font-size:10px;letter-spacing:0.35em;color:var(--dim);margin-top:18px;text-transform:uppercase;">Código Atómico™</div>
+  </div>
+</div>
+
+<!-- AUTH SCREEN -->
+<div id="authScreen">
+  <div class="auth-box">
+    <span class="auth-kana">習慣 武道 · Carlos Alberto</span>
+    <div class="auth-title">Método<br><em>Holístico</em></div>
+    <span class="auth-kanji">Código Atómico™</span>
+    <div class="auth-stroke"></div>
+
+    <div class="auth-tab-row">
+      <button class="auth-tab active" onclick="switchTab('login')">Entrar</button>
+      <button class="auth-tab" onclick="switchTab('register')">Crear cuenta</button>
+    </div>
+
+    <div class="auth-field">
+      <input class="auth-input" type="email" id="authEmail" placeholder="tu email" autocomplete="email"/>
+    </div>
+    <div class="auth-field">
+      <input class="auth-input" type="password" id="authPassword" placeholder="contraseña" autocomplete="current-password"/>
+    </div>
+
+    <button class="auth-btn" id="authSubmitBtn" onclick="handleAuth()">Entrar</button>
+    <div class="auth-error" id="authError"></div>
+  </div>
+</div>
+
+<!-- DAILY BRIEFING OVERLAY -->
+<div id="dailyBriefing" class="briefing-overlay hidden">
+  <div class="briefing-inner">
+    <span class="briefing-kana">習慣 武道 · Método Holístico</span>
+    <div class="briefing-level" id="briefingLevel"></div>
+    <div class="briefing-heatmap" id="briefingHeatmap"></div>
+    <div class="briefing-month" id="briefingMonth"></div>
+    <div class="briefing-quote" id="briefingQuote"></div>
+    <div class="briefing-author" id="briefingAuthor" style="font-family:'Zen Kaku Gothic New',sans-serif;font-size:9px;letter-spacing:0.4em;text-transform:uppercase;color:var(--blue);margin-top:8px;"></div>
+    <div class="briefing-enter">toca para continuar</div>
+  </div>
+</div>
+
+<!-- TRACKER APP -->
+<div id="trackerApp" class="wrapper hidden">
+
+  <!-- ACHIEVEMENT BANNER -->
+  <div id="achievementBanner" class="achievement-banner">
+    <span id="achievementText"></span>
+  </div>
+
+  <!-- BRAND BAND — header global azul -->
+  <div class="brand-band">
+    <div class="brand-band-row1">
+      <span>Carlos Alberto · 習慣 武道</span>
+    </div>
+    <h1>Método <em>Holístico</em><span class="brand-tm">™</span></h1>
+    <div class="day-meta">Código Atómico™</div>
+  </div>
+
+  <!-- NOTIFICATION TOGGLE (prominent) -->
+  <!-- NICOTINE HERO — contador rediseñado por Design -->
+  <div class="nicotine-hero is-day-zero" id="nicotineHero" style="display:none;">
+    <!-- contenido se renderiza dinámicamente por renderNicotineHero() -->
+  </div>
+
+  <!-- LEGACY counter (oculto, se queda por compat de funciones que lo referencian) -->
+  <div class="nicotine-counter is-zero" id="nicotineCounter" style="display:none;">
+    <span class="nc-count" id="ncCount">0</span>
+    <div class="nc-text">
+      <div class="nc-label" id="ncLabel">DÍAS LIBRE DE NICOTINA</div>
+    </div>
+  </div>
+
+  <!-- MONTH TABS -->
+  <div class="month-tabs" id="monthTabs"></div>
+
+  <!-- ÍNDICE DE EVOLUCIÓN — métrica destacada -->
+  <div class="evolution-card" id="evolutionCard">
+    <div class="evolution-comparison">
+      <div class="evolution-side">
+        <div class="evolution-side-label">MES ANTERIOR</div>
+        <div class="evolution-side-pct" id="evolutionPrevPct">—</div>
+      </div>
+      <div class="evolution-divider">→</div>
+      <div class="evolution-side">
+        <div class="evolution-side-label">ESTE MES</div>
+        <div class="evolution-side-pct" id="evolutionCurrentPct">0%</div>
+      </div>
+    </div>
+    <div class="evolution-bottom">
+      <div class="evolution-eyebrow">Índice de Evolución</div>
+      <div class="evolution-main">
+        <span class="evolution-arrow" id="evolutionArrow">·</span>
+        <span class="evolution-delta" id="evolutionDelta">—</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS — 3 cards (Mes Actual eliminada — vive en el Índice) -->
+  <div class="stats-row is-three">
+    <div class="stat-card">
+      <div class="stat-label">Progreso de hoy</div>
+      <div class="stat-value" id="statToday">0%</div>
+      <div class="stat-sub" id="statTodaySub">0 de 0 hábitos completados</div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Días perfectos · Mes</div>
+      <div class="stat-value" id="statPerfectMonth">0 <span style="font-size:18px;color:var(--gold);opacity:0.7;">★</span></div>
+      <div class="stat-sub">este mes</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Días perfectos · Total</div>
+      <div class="stat-value" id="statPerfectTotal">0 <span style="font-size:18px;color:var(--gold);opacity:0.7;">★</span></div>
+      <div class="stat-sub">acumulado histórico</div>
+    </div>
+  </div>
+
+  <!-- Level display -->
+  <div class="level-display" id="levelDisplay"></div>
+
+  <!-- MONTH PROGRESS BAR -->
+  <div class="month-bar-wrap">
+    <div class="month-bar-label">
+      <span id="barLabel">0% Completado</span>
+
+    </div>
+    <div class="month-bar">
+      <div class="month-bar-done" id="barDone" style="width:0%"></div>
+      <div class="month-bar-failed" id="barFailed" style="width:0%"></div>
+    </div>
+  </div>
+
+  <!-- DAILY HABITS SECTION (Design layout) -->
+  <div class="m-section-header">
+    <span class="m-section-label">HÁBITOS · <span id="mSectionMonth">ABRIL</span></span>
+    <span class="m-section-day"><em>día <span id="mSectionDay">14</span> de <span id="mSectionTotal">30</span></em></span>
+  </div>
+
+  <!-- MOBILE view: scroll-horizontal por fila (Design pattern) -->
+  <div class="mobile-view">
+    <div class="m-rows" id="mobileHabitList"></div>
+    <button class="mobile-add-btn" onclick="addHabit()">+ agregar hábito</button>
+  </div>
+
+  <!-- DESKTOP view -->
+  <div class="desktop-view">
+    <div class="table-scroll">
+      <table class="habit-table" id="dailyTable">
+        <thead>
+          <tr class="day-header-row" id="dayHeaders">
+            <th class="habit-col">HÁBITO</th>
+            <th class="stat-col">RACHA</th>
+            <th class="stat-col">HECHOS</th>
+          </tr>
+        </thead>
+        <tbody id="dailyBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- QUOTE -->
+  <div class="quote-section">
+    <p class="quote-text">"Nemo liber est qui sui non est compos."</p>
+    <div class="quote-author" style="color: var(--blue);">Epicteto</div>
+    <a href="https://carlosalberto.mx" target="_blank" rel="noopener" class="quote-link">carlosalberto.mx</a>
+    <br>
+    <button class="logout-btn" onclick="handleResetHabits()" style="font-size: 8px; opacity: 0.45;">Resetear hábitos</button>
+    <button class="logout-btn" onclick="handleLogout()">Cerrar sesión</button>
+  </div>
+
+</div><!-- end trackerApp -->
+
+<script>
+// ── SUPABASE SETUP ───────────────────────────────────────────
+const SUPABASE_URL = 'https://tzwrotzvbvqvxgtqmkis.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_pcXElQoNvOgKRKVUAU6cTw_J3zsN016';
+const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY, {
+  auth: {
+    persistSession: true,
+    storageKey: 'atomic-auth',
+    autoRefreshToken: true,
+    detectSessionInUrl: true
+  }
+});
+
+let currentUser = null;
+let authMode = 'login'; // 'login' | 'register'
+
+function switchTab(mode) {
+  authMode = mode;
+  document.querySelectorAll('.auth-tab').forEach((t,i) => {
+    t.classList.toggle('active', (mode==='login' && i===0) || (mode==='register' && i===1));
+  });
+  document.getElementById('authSubmitBtn').textContent = mode === 'login' ? 'Entrar' : 'Crear cuenta';
+  document.getElementById('authError').textContent = '';
+  document.getElementById('authPassword').value = '';
+  document.getElementById('authPassword').setAttribute('autocomplete', mode === 'login' ? 'current-password' : 'new-password');
+}
+
+async function handleAuth() {
+  const email = document.getElementById('authEmail').value.trim();
+  const password = document.getElementById('authPassword').value;
+  const btn = document.getElementById('authSubmitBtn');
+  const errEl = document.getElementById('authError');
+
+  if (!email || !password) { errEl.textContent = 'Ingresa tu email y contraseña.'; return; }
+
+  btn.disabled = true;
+  btn.textContent = '...';
+  errEl.textContent = '';
+
+  try {
+    let error;
+    if (authMode === 'login') {
+      const res = await supabaseClient.auth.signInWithPassword({ email, password });
+      error = res.error;
+    } else {
+      const res = await supabaseClient.auth.signUp({ email, password });
+      error = res.error;
+      if (!error) { errEl.textContent = 'Revisa tu email para confirmar tu cuenta.'; btn.disabled = false; btn.textContent = 'Crear cuenta'; return; }
+    }
+
+    if (error) {
+      // Mapear errores comunes de Supabase a español
+      const errMap = {
+        'Invalid login credentials': 'Email o contraseña incorrecta',
+        'User already registered': 'Ya tienes cuenta. Cambia a "Entrar".',
+        'Email rate limit exceeded': 'Espera unos segundos antes de reintentar',
+        'Email not confirmed': 'Confirma tu email primero (revisa tu bandeja)',
+        'Password should be at least 6 characters': 'La contraseña debe tener al menos 6 caracteres',
+        'Signup requires a valid password': 'La contraseña no es válida',
+        'Unable to validate email address: invalid format': 'El email tiene formato inválido',
+        'For security purposes, you can only request this once every 60 seconds': 'Por seguridad, espera 60 segundos antes de reintentar',
+      };
+      errEl.textContent = errMap[error.message] || error.message;
+      btn.disabled = false;
+      btn.textContent = authMode === 'login' ? 'Entrar' : 'Crear cuenta';
+    }
+    // On success, onAuthStateChange handles the UI transition
+  } catch(e) {
+    errEl.textContent = 'Error de conexión. Intenta de nuevo.';
+    btn.disabled = false;
+    btn.textContent = authMode === 'login' ? 'Entrar' : 'Crear cuenta';
+  }
+}
+
+async function handleResetHabits() {
+  const confirmed = confirm('¿Resetear tus hábitos a los 7 default? Esto reemplaza tus hábitos actuales pero conserva las marcas de los días pasados.');
+  if (!confirmed) return;
+  
+  // Replace dailyHabits with the 7 defaults, preserving any existing day marks for matching habit names
+  const daysCount = getDaysInMonth(currentMonth, currentYear);
+  const oldHabits = state.dailyHabits || [];
+  
+  state.dailyHabits = DEFAULT_DAILY.map(name => {
+    // Try to match existing habit by similar name (case insensitive, partial match)
+    const norm = (s) => (s||'').toLowerCase().trim();
+    const match = oldHabits.find(h => {
+      const n = norm(h.name);
+      const target = norm(name);
+      return n === target || n.includes(target) || target.includes(n);
+    });
+    return {
+      name: name,
+      days: match && match.days ? match.days.slice(0, daysCount).concat(Array(Math.max(0, daysCount - (match.days.length||0))).fill(0)) : Array(daysCount).fill(0)
+    };
+  });
+  
+  saveState();
+  render();
+  if (typeof renderNicotineHero === 'function') renderNicotineHero();
+  alert('Hábitos reseteados a los 7 defaults.');
+}
+
+async function handleLogout() {
+  await supabaseClient.auth.signOut();
+  currentUser = null;
+  appInitialized = false;
+  state = {};
+  // Clear user habit data from localStorage
+  const keysToRemove = [];
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (key && key.startsWith('atomic_')) keysToRemove.push(key);
+  }
+  keysToRemove.forEach(k => localStorage.removeItem(k));
+  document.getElementById('dailyBriefing').classList.add('hidden');
+  document.getElementById('authScreen').classList.remove('hidden');
+  document.getElementById('trackerApp').classList.add('hidden');
+}
+
+// Allow Enter key to submit
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !document.getElementById('authScreen').classList.contains('hidden')) {
+    handleAuth();
+  }
+});
+
+// One-time cleanup: remove corrupted data from all months except current
+async function cleanupCorruptedData() {
+  const cleanupKey = 'atomic_cleanup_v3';
+  if (localStorage.getItem(cleanupKey)) return;
+  if (!currentUser) return;
+  
+  try {
+    const today = getToday();
+    const curYear = today.getFullYear();
+    const curMonth = today.getMonth();
+    
+    // Get all months
+    const { data: allMonths } = await supabaseClient
+      .from('habits')
+      .select('year,month')
+      .eq('user_id', currentUser.id)
+      .neq('year', 9999);
+    
+    // SAFETY: Never delete months from Supabase — only clean localStorage
+    // Previous code deleted all non-current months from Supabase which
+    // caused permanent data loss when sessions expired and state was empty
+    
+    // Clean localStorage
+    const keysToRemove = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && /^atomic_\d+_\d+$/.test(key)) {
+        const parts = key.split('_');
+        const y = parseInt(parts[1]);
+        const m = parseInt(parts[2]);
+        if (y !== curYear || m !== curMonth) keysToRemove.push(key);
+      }
+    }
+    keysToRemove.forEach(k => localStorage.removeItem(k));
+    
+    // Only mark as done if we got this far without errors
+    localStorage.setItem(cleanupKey, '1');
+  } catch(e) { console.error('Cleanup error:', e); }
+}
+
+let appInitialized = false;
+
+// Precache all months from Supabase into localStorage so global stars/blackholes work on new devices
+async function precacheAllMonths() {
+  if (!currentUser) return;
+  try {
+    const { data: allRows } = await supabaseClient
+      .from('habits')
+      .select('year,month,data')
+      .eq('user_id', currentUser.id)
+      .neq('year', 9999);
+    if (allRows) {
+      allRows.forEach(row => {
+        if (row.data && row.data.dailyHabits) {
+          const key = `atomic_${row.year}_${row.month}`;
+          // Don't overwrite current month (loadState already handled it)
+          if (row.year === currentYear && row.month === currentMonth) return;
+          localStorage.setItem(key, JSON.stringify(row.data));
+        }
+      });
+    }
+  } catch(e) { console.error('Precache error:', e); }
+}
+
+// Safety net: if initApp hangs (Supabase slow/unreachable), force-show auth after 8s
+function _forceShowAuth() {
+  const loading = document.getElementById('loadingScreen');
+  const auth = document.getElementById('authScreen');
+  if (loading && loading.style.display !== 'none') {
+    loading.style.display = 'none';
+    if (auth && !appInitialized) auth.classList.remove('hidden');
+  }
+}
+const _initTimeout = setTimeout(_forceShowAuth, 8000);
+
+// On app open - restore session aggressively
+async function initApp() {
+  try {
+    // First try to refresh the session (handles expired tokens)
+    const { data: refreshData } = await supabaseClient.auth.refreshSession();
+    if (refreshData?.session?.user) {
+      currentUser = refreshData.session.user;
+      try {
+        await loadStartDate();
+        await loadState();
+      } catch(e) { console.error('Load failed:', e); }
+      if (!state.dailyHabits || state.dailyHabits.length === 0) initState();
+      await cleanupCorruptedData();
+      await precacheAllMonths();
+      initCurrentWeek();
+      render();
+      appInitialized = true;
+      clearTimeout(_initTimeout);
+      posthog.identify(currentUser.id, { email: currentUser.email });
+      posthog.capture('app_opened', { method: 'session_refresh' });
+      document.getElementById('authScreen').classList.add('hidden');
+      document.getElementById('trackerApp').classList.remove('hidden');
+      document.getElementById('loadingScreen').style.display = 'none';
+      showDailyBriefing();
+      maybePromptNotifications();
+      return;
+    }
+  } catch(e) {}
+
+  // Fallback to getSession
+  try {
+    const { data: { session } } = await supabaseClient.auth.getSession();
+    if (session?.user) {
+      currentUser = session.user;
+      try {
+        await loadStartDate();
+        await loadState();
+      } catch(e) { console.error('Load failed:', e); }
+      if (!state.dailyHabits || state.dailyHabits.length === 0) initState();
+      await cleanupCorruptedData();
+      await precacheAllMonths();
+      initCurrentWeek();
+      render();
+      appInitialized = true;
+      clearTimeout(_initTimeout);
+      posthog.identify(currentUser.id, { email: currentUser.email });
+      posthog.capture('app_opened', { method: 'get_session' });
+      document.getElementById('authScreen').classList.add('hidden');
+      document.getElementById('trackerApp').classList.remove('hidden');
+    } else {
+      clearTimeout(_initTimeout);
+      document.getElementById('authScreen').classList.remove('hidden');
+    }
+  } catch(e) {
+    clearTimeout(_initTimeout);
+    document.getElementById('authScreen').classList.remove('hidden');
+  }
+  document.getElementById('loadingScreen').style.display = 'none';
+  if (appInitialized) {
+    showDailyBriefing();
+    maybePromptNotifications();
+  }
+}
+
+const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+const MONTH_NAMES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+const DEFAULT_DAILY = ['Libre de Nicotina','Dominus','Meditación','Lectura matutina','Ejercicio','Siddarta','Journaling'];
+const DEFAULT_WEEKLY = ['Ir al gym 3x','Revisar metas','Planear la semana','Compromiso social'];
+
+let state = {};
+let isLoading = false;
+let currentMonth = new Date().getMonth();
+let currentYear  = new Date().getFullYear();
+let currentWeek  = 0; // 0-indexed week for mobile view
+function getToday() { return new Date(); }
+
+initApp();
+
+// Listen for auth state changes (login/logout)
+supabaseClient.auth.onAuthStateChange(async (event, session) => {
+  clearTimeout(_initTimeout);
+  document.getElementById('loadingScreen').style.display = 'none';
+  if (session?.user) {
+    currentUser = session.user;
+    if (!appInitialized) {
+      appInitialized = true;
+      try {
+        await loadStartDate();
+        await loadState();
+      } catch(e) {
+        console.error('Load failed:', e);
+      }
+      // Safety: ensure defaults if nothing loaded
+      if (!state.dailyHabits || state.dailyHabits.length === 0) initState();
+      // One-time cleanup of corrupted data from old addHabit bug
+      await cleanupCorruptedData();
+      await precacheAllMonths();
+      initCurrentWeek();
+      render();
+      posthog.identify(currentUser.id, { email: currentUser.email });
+      posthog.capture('app_opened', { method: event });
+      document.getElementById('authScreen').classList.add('hidden');
+      document.getElementById('trackerApp').classList.remove('hidden');
+      showDailyBriefing();
+      maybePromptNotifications();
+    } else {
+      // Already initialized (e.g. duplicate event) - just ensure UI is correct
+      document.getElementById('authScreen').classList.add('hidden');
+      document.getElementById('trackerApp').classList.remove('hidden');
+    }
+  } else {
+    currentUser = null;
+    appInitialized = false;
+    state = {};
+    document.getElementById('authScreen').classList.remove('hidden');
+    document.getElementById('trackerApp').classList.add('hidden');
+  }
+});
+
+function initState() {
+  const days = getDaysInMonth(currentMonth, currentYear);
+  state = {
+    dailyHabits:  DEFAULT_DAILY.map(n => ({ name: n, days: Array(days).fill(0) })),
+    weeklyHabits: DEFAULT_WEEKLY.map(n => ({ name: n, weeks: [false,false,false,false] }))
+  };
+}
+
+async function loadState() {
+  isLoading = true;
+  const localKey = `atomic_${currentYear}_${currentMonth}`;
+  
+  // Auto-clean corrupted localStorage entries
+  try {
+    const raw = localStorage.getItem(localKey);
+    if (raw) {
+      const test = JSON.parse(raw);
+      if (!test || typeof test !== 'object' || (!test.dailyHabits && !test.weeklyHabits)) {
+        localStorage.removeItem(localKey);
+      }
+    }
+  } catch(e) { localStorage.removeItem(localKey); }
+
+  try {
+    if (!currentUser) {
+      const local = localStorage.getItem(localKey);
+      if (local) {
+        try {
+          const parsed = JSON.parse(local);
+          if (parsed.dailyHabits && parsed.dailyHabits.length > 0) {
+            state = parsed;
+            return;
+          }
+        } catch(e) {}
+      }
+      initState();
+      return;
+    }
+
+    // Load localStorage immediately so UI shows fast
+    let hasLocalMonth = false;
+    const local = localStorage.getItem(localKey);
+    if (local) {
+      try {
+        const parsed = JSON.parse(local);
+        if (parsed.dailyHabits && parsed.dailyHabits.length > 0) {
+          state = parsed;
+          hasLocalMonth = true; render();
+        }
+      } catch(e) {}
+    }
+
+    const fetchPromise = supabaseClient
+      .from('habits')
+      .select('data')
+      .eq('user_id', currentUser.id)
+      .eq('year', currentYear)
+      .eq('month', currentMonth)
+      .maybeSingle();
+    
+    const timeoutPromise = new Promise((_, reject) =>
+      setTimeout(() => reject(new Error('timeout')), 6000)
+    );
+    
+    const { data, error } = await Promise.race([fetchPromise, timeoutPromise]);
+    if (data?.data && data.data.dailyHabits && data.data.dailyHabits.length > 0) {
+      const serverState = data.data;
+      const days = getDaysInMonth(currentMonth, currentYear);
+      serverState.dailyHabits.forEach(h => {
+        if (!h.days) h.days = [];
+        if (h.days.length < days) h.days = h.days.concat(Array(days - h.days.length).fill(0));
+        if (h.days.length > days) h.days = h.days.slice(0, days);
+      });
+      if (!serverState.weeklyHabits) serverState.weeklyHabits = DEFAULT_WEEKLY.map(n => ({ name: n, weeks: [false,false,false,false] }));
+      // MERGE: if we had local data, combine with server (OR logic, by habit name)
+      if (hasLocalMonth && state.dailyHabits && state.dailyHabits.length > 0) {
+        const localByName = {};
+        state.dailyHabits.forEach(h => { if (h.name) localByName[h.name] = h; });
+        for (const serverH of serverState.dailyHabits) {
+          const localH = localByName[serverH.name];
+          if (localH && localH.days && serverH.days) {
+            for (let d = 0; d < serverH.days.length && d < localH.days.length; d++) {
+              if (localH.days[d] && !serverH.days[d]) {
+                serverH.days[d] = localH.days[d];
+              }
+            }
+          }
+        }
+        // Add local habits that don't exist on server
+        const serverNames = new Set(serverState.dailyHabits.map(h => h.name));
+        for (const localH of state.dailyHabits) {
+          if (localH.name && !serverNames.has(localH.name)) {
+            serverState.dailyHabits.push(localH);
+          }
+        }
+      }
+      state = serverState;
+    } else if (!hasLocalMonth) {
+      // Only carry over if we don't already have valid local data
+      await _carryOverHabits();
+    }
+  } catch(e) {
+    if (!state.dailyHabits || state.dailyHabits.length === 0) {
+      await _carryOverHabits();
+    }
+  } finally {
+    isLoading = false;
+    // ALWAYS trigger nicotine cross-month preload after loadState completes.
+    // This ensures the streak counter accumulates across month boundaries
+    // regardless of which path loadState took (local-only, server-only, merged).
+    if (currentUser) {
+      preloadPreviousNicotineMonths().catch(e => console.warn('preload err:', e));
+    }
+  }
+}
+
+async function _carryOverHabits() {
+  const days = getDaysInMonth(currentMonth, currentYear);
+  if (!currentUser) { initState(); return; }
+  // Try to get previous month's habits
+  let prevMonth = currentMonth - 1;
+  let prevYear = currentYear;
+  if (prevMonth < 0) { prevMonth = 11; prevYear--; }
+  
+  try {
+    const { data } = await supabaseClient
+      .from('habits')
+      .select('data')
+      .eq('user_id', currentUser.id)
+      .eq('year', prevYear)
+      .eq('month', prevMonth)
+      .maybeSingle();
+    if (data?.data?.dailyHabits?.length > 0) {
+      state = {
+        dailyHabits: data.data.dailyHabits.map(h => ({ name: h.name, days: Array(days).fill(0) })),
+        weeklyHabits: (data.data.weeklyHabits || DEFAULT_WEEKLY.map(n => ({ name: n }))).map(h => ({ name: h.name, weeks: [false,false,false,false] }))
+      };
+      // Trigger nicotine streak preload (cross-month)
+      preloadPreviousNicotineMonths().catch(e => console.warn('preload err:', e));
+      return;
+    }
+  } catch(e) {}
+  
+  // Fallback to defaults
+  initState();
+  // Even on fallback, preload prev months (in case user has data there)
+  preloadPreviousNicotineMonths().catch(e => console.warn('preload err:', e));
+}
+
+let saveTimer = null;
+function saveState() {
+  // Snapshot everything to prevent stale writes
+  const month = currentMonth;
+  const year = currentYear;
+  const payload = JSON.stringify(state);
+  localStorage.setItem(`atomic_${year}_${month}`, payload);
+  // Cloud save with short debounce — pass snapshot
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(() => _saveToCloud(month, year, payload), 300);
+}
+
+// Save to cloud when app goes to background or closes
+document.addEventListener('visibilitychange', async () => {
+  if (document.visibilityState === 'hidden') {
+    _saveToCloud();
+  } else {
+    // Coming back to foreground — check if month changed
+    const now = new Date();
+    if (now.getMonth() !== currentMonth || now.getFullYear() !== currentYear) {
+      // Save current month data first
+      await _saveToCloud();
+      currentMonth = now.getMonth();
+      currentYear = now.getFullYear();
+      currentWeek = 0;
+      await loadState();
+      render();
+    }
+  }
+});
+window.addEventListener('pagehide', () => {
+  // On page close, only save to localStorage (reliable).
+  // Cloud sync happens on next app open via loadState merge.
+  if (state.dailyHabits) {
+    localStorage.setItem(`atomic_${currentYear}_${currentMonth}`, JSON.stringify(state));
+  }
+});
+
+async function _saveToCloud(snapshotMonth, snapshotYear, snapshotPayload) {
+  // Use snapshot if provided (from debounced saveState), otherwise capture now
+  const month = snapshotMonth !== undefined ? snapshotMonth : currentMonth;
+  const year = snapshotYear !== undefined ? snapshotYear : currentYear;
+  const payload = snapshotPayload || JSON.stringify(state);
+  
+  localStorage.setItem(`atomic_${year}_${month}`, payload);
+  
+  if (!currentUser) return;
+  try {
+    const parsed = JSON.parse(payload);
+    // SAFETY: Never upsert empty state — prevents overwriting real data
+    // when session refreshes with empty localStorage
+    const hasCompletions = parsed.dailyHabits && parsed.dailyHabits.some(h => {
+      const comps = h.completions || {};
+      return Object.values(comps).some(v => v);
+    });
+    const hasDays = parsed.dailyHabits && parsed.dailyHabits.some(h => {
+      return h.days && h.days.some(d => d !== 0 && d !== 3);
+    });
+    if (!hasCompletions && !hasDays) {
+      console.warn('Skipping cloud save: state has no completions (safety check)');
+      return;
+    }
+    // SAFETY: read-before-write only once per session per month
+    const syncKey = `_synced_${year}_${month}`;
+    if (!window[syncKey]) {
+    // Check if Supabase has MORE completions than local
+    // This prevents a partial state from wiping a fuller state
+    try {
+      const { data: existing } = await supabaseClient.from('habits')
+        .select('data')
+        .eq('user_id', currentUser.id)
+        .eq('year', year)
+        .eq('month', month)
+        .maybeSingle();
+      if (existing?.data?.dailyHabits) {
+        const existingDone = existing.data.dailyHabits.reduce((sum, h) =>
+          sum + (h.days ? h.days.filter(d => d !== 0).length : 0), 0);
+        const localDone = parsed.dailyHabits.reduce((sum, h) =>
+          sum + (h.days ? h.days.filter(d => d !== 0).length : 0), 0);
+        if (existingDone > localDone + 3) {
+          console.warn('Skipping cloud save: Supabase has more completions (' + existingDone + ') than local (' + localDone + ')');
+          return;
+        }
+        // MERGE: combine local + server completions (OR logic by habit name)
+        if (existing.data.dailyHabits && parsed.dailyHabits) {
+          const serverByName = {};
+          existing.data.dailyHabits.forEach(h => { if (h.name) serverByName[h.name] = h; });
+          for (const localH of parsed.dailyHabits) {
+            const serverH = serverByName[localH.name];
+            if (serverH && serverH.days && localH.days) {
+              for (let d = 0; d < localH.days.length && d < serverH.days.length; d++) {
+                if (serverH.days[d] && !localH.days[d]) {
+                  localH.days[d] = serverH.days[d];
+                }
+              }
+            }
+          }
+          // Add server habits that don't exist locally
+          const localNames = new Set(parsed.dailyHabits.map(h => h.name));
+          for (const serverH of existing.data.dailyHabits) {
+            if (serverH.name && !localNames.has(serverH.name)) {
+              parsed.dailyHabits.push(serverH);
+            }
+          }
+        }
+      }
+    } catch(e) { /* proceed with save if check fails */ }
+    window[syncKey] = true;
+    }
+    const { error } = await supabaseClient.from('habits').upsert({
+      user_id: currentUser.id,
+      year: year,
+      month: month,
+      data: parsed
+    }, { onConflict: 'user_id,year,month' });
+    if (error) { console.error('Supabase error:', error); }
+    else { flashSave(); }
+  } catch(e) { console.error('Save failed:', e); }
+}
+
+function flashSave() {
+  const el = document.getElementById('saveIndicator');
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 1200);
+}
+
+function getDaysInMonth(m, y) { return new Date(y, m+1, 0).getDate(); }
+
+function getWeekGroups(daysCount) {
+  const weeks = []; let week = [];
+  for (let d = 1; d <= daysCount; d++) {
+    week.push(d);
+    if (week.length === 7 || d === daysCount) { weeks.push(week); week = []; }
+  }
+  return weeks;
+}
+
+function calcStreak(days, todayDay, floor) {
+  let streak = 0;
+  const end = todayDay > 0 ? todayDay - 1 : days.length - 1;
+  const stop = floor || 0;
+  for (let i = end; i >= stop; i--) {
+    const v = days[i];
+    if (v === 1 || v === true) streak++;
+    else if (v === 2 || v === 3) continue; // skip or n/a — doesn't break
+    else break; // 0, false, undefined = failed
+  }
+  return streak;
+}
+
+function escHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+// Migrate boolean days → numeric (true→1, false→0). Idempotent.
+function migrateDays(habits) {
+  if (!habits) return;
+  habits.forEach(h => {
+    if (!h.days) return;
+    h.days = h.days.map(d => d === true ? 1 : d === false ? 0 : (typeof d === 'number' ? d : 0));
+  });
+}
+
+
+// ── DAILY QUOTES ────────────────────────────────────────────
+const DAILY_QUOTES = [
+  { text: "Somos lo que repetidamente hacemos. La excelencia, entonces, no es un acto sino un hábito.", author: "Aristóteles" },
+  { text: "El obstáculo es el camino. Lo que se interpone en tu avance, avanza tu avance.", author: "Marco Aurelio" },
+  { text: "Ningún hombre es libre si no es dueño de sí mismo.", author: "Epicteto" },
+  { text: "Tienes poder sobre tu mente, no sobre los eventos externos. Comprende esto y encontrarás la fuerza.", author: "Marco Aurelio" },
+  { text: "El alma se tiñe con el color de sus pensamientos.", author: "Marco Aurelio" },
+  { text: "El que se conquista a sí mismo es el guerrero más poderoso.", author: "Confucio" },
+  { text: "La disciplina es el puente entre las metas y el logro.", author: "Jim Rohn" },
+  { text: "La mente lo es todo. En lo que piensas, te conviertes.", author: "Buda" },
+  { text: "Primero dite a ti mismo quién quieres ser; luego haz lo que tengas que hacer.", author: "Epicteto" },
+  { text: "Una mente disciplinada trae felicidad.", author: "Buda" },
+  { text: "Las pequeñas disciplinas repetidas con consistencia cada día llevan a grandes logros.", author: "John C. Maxwell" },
+  { text: "La única persona en quien estás destinado a convertirte es la persona que decides ser.", author: "Ralph Waldo Emerson" },
+  { text: "No importa qué tan lento vayas, siempre que no te detengas.", author: "Confucio" },
+  { text: "Lo que haces cada día importa más que lo que haces de vez en cuando.", author: "Gretchen Rubin" },
+  { text: "Las cadenas del hábito son demasiado ligeras para sentirse hasta que son demasiado pesadas para romperse.", author: "Warren Buffett" },
+  { text: "Sé tolerante con los demás y estricto contigo mismo.", author: "Marco Aurelio" },
+  { text: "Hasta que no hagas consciente lo inconsciente, dirigirá tu vida y lo llamarás destino.", author: "Carl Jung" },
+  { text: "Cada acción que tomas es un voto por el tipo de persona en que deseas convertirte.", author: "James Clear" },
+  { text: "Dominar a los demás es fuerza. Dominarte a ti mismo es poder verdadero.", author: "Lao Tzu" },
+  { text: "Cuanto más sudas en la práctica, menos sangras en combate.", author: "Richard Marcinko" },
+  { text: "El que tiene un por qué para vivir puede soportar casi cualquier cómo.", author: "Friedrich Nietzsche" },
+  { text: "Tu valor para el mundo generalmente se determina por lo que queda después de restar tus malos hábitos de los buenos.", author: "Benjamin Franklin" },
+  { text: "El guerrero exitoso es el hombre promedio con enfoque de láser.", author: "Bruce Lee" },
+  { text: "No pierdas más tiempo discutiendo cómo debe ser un buen hombre. Sé uno.", author: "Marco Aurelio" },
+  { text: "Gobierna tu mente o ella te gobernará a ti.", author: "Horacio" },
+  { text: "La mayor gloria en vivir no está en nunca caer, sino en levantarnos cada vez que caemos.", author: "Nelson Mandela" },
+  { text: "Una vida sin examen no merece ser vivida.", author: "Sócrates" },
+  { text: "Saber no es suficiente, debemos aplicar. Querer no es suficiente, debemos hacer.", author: "Bruce Lee" },
+  { text: "La libertad es el único objetivo digno en la vida. Se gana ignorando las cosas que están fuera de nuestro control.", author: "Epicteto" },
+  { text: "Gota a gota se llena el cántaro. Así el sabio, reuniendo poco a poco, se llena de bien.", author: "Buda" }
+];
+
+function getDailyQuote() {
+  const today = getToday();
+  const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000);
+  return DAILY_QUOTES[dayOfYear % DAILY_QUOTES.length];
+}
+
+// ── DAILY BRIEFING ──────────────────────────────────────────
+function showDailyBriefing() {
+  const briefingKey = 'atomic_last_briefing';
+  const today = getToday();
+  const todayStr = today.getFullYear() + '-' + (today.getMonth()+1) + '-' + today.getDate();
+  
+  // Only show once per day
+  const lastBriefing = localStorage.getItem(briefingKey);
+  if (lastBriefing === todayStr) return;
+  localStorage.setItem(briefingKey, todayStr);
+  
+  const overlay = document.getElementById('dailyBriefing');
+  const daysCount = getDaysInMonth(currentMonth, currentYear);
+  const todayDay = today.getDate();
+  const total = state.dailyHabits ? state.dailyHabits.length : 0;
+  
+  // Level
+  const stars = getGlobalStars();
+  const blackHoles = getGlobalBlackHoles();
+  const { current } = getLevel(stars);
+  let briefLevel = current.tier + ' · ' + current.title + ' · ' + stars + ' ★';
+  if (blackHoles > 0) briefLevel += ' · ' + blackHoles + ' ◉';
+  document.getElementById('briefingLevel').innerHTML = briefLevel;
+  
+  // Heat map
+  const heatmap = document.getElementById('briefingHeatmap');
+  heatmap.innerHTML = '';
+  const briefingStart = getUserStartDay();
+  for (let d = 1; d <= daysCount; d++) {
+    const idx = d - 1;
+    const div = document.createElement('div');
+    div.className = 'hm-day';
+    const isFuture = d > todayDay;
+    const isToday = d === todayDay;
+    const isPreReg = d < briefingStart;
+    
+    if (isFuture || isPreReg) {
+      div.classList.add('hm-future');
+    } else if (total === 0) {
+      div.classList.add(isToday ? 'hm-future' : 'hm-zero');
+      if (!isToday) div.innerHTML = '<span class="hm-star" style="color:rgba(196,77,77,0.65);">◉</span>';
+    } else {
+      const vals = state.dailyHabits.map(h => (h.days && h.days[idx]) || 0);
+      const doneCount = vals.filter(v => v === 1).length;
+      const decidedCount = vals.filter(v => v === 0 || v === 1).length; // exclude skips
+      const pct = decidedCount > 0 ? Math.round((doneCount / decidedCount) * 100) : -1;
+      const isPerfect = vals.some(v => v === 1) && !vals.some(v => v === 0);
+      
+      if (isPerfect) {
+        div.classList.add('hm-perfect');
+        div.innerHTML = '<span class="hm-star">★</span>';
+      } else if (pct < 0) {
+        // All skips — neutral day
+        div.classList.add('hm-future');
+      } else if (pct >= 75) {
+        div.classList.add('hm-high');
+      } else if (pct >= 50) {
+        div.classList.add('hm-mid');
+      } else if (pct >= 25) {
+        div.classList.add('hm-low');
+      } else if (pct > 0) {
+        div.classList.add('hm-minimal');
+      } else {
+        div.classList.add(isToday ? 'hm-future' : 'hm-zero');
+        if (!isToday) div.innerHTML = '<span class="hm-star" style="color:rgba(196,77,77,0.65);">◉</span>';
+      }
+    }
+    
+    if (isToday) div.classList.add('hm-today');
+    heatmap.appendChild(div);
+  }
+  
+  // Month label
+  document.getElementById('briefingMonth').textContent = MONTH_NAMES[currentMonth] + ' ' + currentYear;
+  
+  // Check if ATOMIC POWER (100% this month)
+  let apDone = 0, apFailed = 0;
+  const apStart = getUserStartDay() - 1;
+  if (state.dailyHabits) {
+    state.dailyHabits.forEach(h => {
+      for (let d = apStart; d < todayDay; d++) {
+        const v = (h.days && h.days[d]) || 0;
+        if (v === 1) apDone++;
+        else if (v === 0) apFailed++;
+      }
+    });
+  }
+  const apDecided = apDone + apFailed;
+  const isAtomicPower = apDecided > 0 && apDone === apDecided;
+  
+  if (isAtomicPower) {
+    overlay.classList.add('atomic-power-mode');
+    document.getElementById('briefingQuote').textContent = '⚡ ATOMIC POWER ⚡';
+    document.getElementById('briefingAuthor').textContent = 'Tu disciplina es absoluta.';
+  } else {
+    overlay.classList.remove('atomic-power-mode');
+    const quote = getDailyQuote();
+    document.getElementById('briefingQuote').textContent = '"' + quote.text + '"';
+    document.getElementById('briefingAuthor').textContent = '— ' + quote.author;
+  }
+  
+  // Show
+  overlay.classList.remove('hidden');
+  
+  // Dismiss on tap
+  if (overlay._dismissHandler) overlay.removeEventListener('click', overlay._dismissHandler);
+  overlay._dismissHandler = () => {
+    overlay.classList.add('fade-out');
+    setTimeout(() => {
+      overlay.classList.add('hidden');
+      overlay.classList.remove('fade-out');
+    }, 600);
+  };
+  overlay.addEventListener('click', overlay._dismissHandler, { once: true });
+}
+
+// ── LEVELS ──────────────────────────────────────────────────
+const LEVELS = (function() {
+  const names = [
+    // Bronce
+    { tier: 'Bronce', title: 'Sin Despertar' },
+    { tier: 'Bronce', title: 'Dormido' },
+    { tier: 'Bronce', title: 'Iniciado' },
+    { tier: 'Bronce', title: 'Comprometido' },
+    { tier: 'Bronce', title: 'Guerrero' },
+    { tier: 'Bronce', title: 'Ronin' },
+    // Plata
+    { tier: 'Plata', title: 'Ascendente' },
+    { tier: 'Plata', title: 'Forjado' },
+    { tier: 'Plata', title: 'Samurai' },
+    { tier: 'Plata', title: 'Determinado' },
+    { tier: 'Plata', title: 'Filo' },
+    { tier: 'Plata', title: 'Espartano' },
+    // Oro
+    { tier: 'Oro', title: 'Disciplinado' },
+    { tier: 'Oro', title: 'Guerrero' },
+    { tier: 'Oro', title: 'Modo Sabio' },
+    { tier: 'Oro', title: 'Voluntad de Hierro' },
+    { tier: 'Oro', title: 'Vikingo' },
+    { tier: 'Oro', title: 'Centinela' },
+    // Platino
+    { tier: 'Platino', title: 'Soberano' },
+    { tier: 'Platino', title: 'Super Saiyan' },
+    { tier: 'Platino', title: 'Conquistador' },
+    { tier: 'Platino', title: 'Dominus' },
+    { tier: 'Platino', title: 'Shogun' },
+    { tier: 'Platino', title: 'Inquebrantable' },
+    // Diamante
+    { tier: 'Diamante', title: 'Titán' },
+    { tier: 'Diamante', title: 'Bankai' },
+    { tier: 'Diamante', title: 'Faraón' },
+    { tier: 'Diamante', title: 'Atómico' },
+    { tier: 'Diamante', title: 'Legendario' },
+    { tier: 'Diamante', title: 'Olímpico' },
+    // Obsidiana
+    { tier: 'Obsidiana', title: 'Maestro' },
+    { tier: 'Obsidiana', title: 'Ultra Instinct' },
+    { tier: 'Obsidiana', title: 'Nuclear' },
+    { tier: 'Obsidiana', title: 'Supernova' },
+    { tier: 'Obsidiana', title: 'Materia Oscura' },
+    { tier: 'Obsidiana', title: 'Horizonte de Eventos' },
+    // Cósmico
+    { tier: 'Cósmico', title: 'Singularidad' },
+    { tier: 'Cósmico', title: 'Agujero Negro' },
+    { tier: 'Cósmico', title: 'Trascendente' },
+    { tier: 'Cósmico', title: 'Prestigio' },
+    { tier: 'Cósmico', title: 'Final Boss' },
+    { tier: 'Cósmico', title: 'Unchained' },
+    // Eterno
+    { tier: 'Eterno', title: 'Ascendido' },
+    { tier: 'Eterno', title: 'Inmortal' },
+    { tier: 'Eterno', title: 'Nivel Máximo' },
+    { tier: 'Eterno', title: 'Modo Dios' }
+  ];
+  const increments = [4, 5, 6];
+  let stars = 0;
+  return names.map((n, i) => {
+    const entry = { stars: stars, tier: n.tier, title: n.title };
+    if (i < names.length - 1) stars += increments[i % 3];
+    return entry;
+  });
+})();
+
+let _globalStatsCache = null;
+let _globalStatsCacheKey = null;
+let _globalStatsLastPerfectCount = -1;
+
+function getGlobalStats() {
+  // Only recalculate when perfect days count changes (not every toggle)
+  // This avoids scanning all of localStorage on every single click
+  const today = getToday();
+  const todayDay = (today.getMonth() === currentMonth && today.getFullYear() === currentYear) ? today.getDate() : getDaysInMonth(currentMonth, currentYear);
+  const userStart = getUserStartDay();
+  let perfectCount = 0;
+  if (state.dailyHabits) {
+    for (let d = Math.max(userStart - 1, 0); d < todayDay; d++) {
+      const vals = state.dailyHabits.map(h => (h.days && h.days[d]) || 0);
+      if (vals.some(v => v === 1) && !vals.some(v => v === 0)) perfectCount++;
+    }
+  }
+  const cacheKey = currentMonth + '_' + currentYear + '_' + perfectCount;
+  if (_globalStatsCache && _globalStatsCacheKey === cacheKey) return _globalStatsCache;
+  const result = { stars: _calcGlobalStars(), blackHoles: _calcGlobalBlackHoles() };
+  _globalStatsCache = result;
+  _globalStatsCacheKey = cacheKey;
+  return result;
+}
+
+function getGlobalStars() { return getGlobalStats().stars; }
+
+function getStreakAtRisk() {
+  const today = getToday();
+  const todayIdx = today.getDate() - 1;
+  const isCurrentMonth = today.getMonth() === currentMonth && today.getFullYear() === currentYear;
+  if (!isCurrentMonth || !state.dailyHabits) return { atRisk: false };
+  const todayDone = state.dailyHabits.some(h => h.days && h.days[todayIdx] === 1);
+  if (todayDone) return { atRisk: false };
+  const userStart = getUserStartDay();
+  let bestStreak = 0;
+  state.dailyHabits.forEach(h => {
+    const streak = calcStreak(h.days, today.getDate(), Math.max(userStart - 1, 0));
+    if (streak > bestStreak) bestStreak = streak;
+  });
+  return { atRisk: bestStreak >= 3, streak: bestStreak, hoursLeft: 24 - today.getHours() };
+}
+function getGlobalBlackHoles() { return getGlobalStats().blackHoles; }
+
+function _calcGlobalBlackHoles() {
+  let total = 0;
+  try {
+    const sd = getStartDateParsed();
+    if (!sd) return 0;
+    const today = getToday();
+    const curYear = today.getFullYear();
+    const curMonth = today.getMonth();
+    const curDay = today.getDate();
+
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && key.startsWith('atomic_')) {
+        if (!/^atomic_\d+_\d+$/.test(key)) continue;
+        const raw = localStorage.getItem(key);
+        if (raw) {
+          let d;
+          try { d = JSON.parse(raw); } catch(e) { continue; }
+          if (d.dailyHabits && d.dailyHabits.length > 0) {
+            const keyParts = key.split('_');
+            const mYear = parseInt(keyParts[1]);
+            const mMonth = parseInt(keyParts[2]);
+            if (isNaN(mYear) || isNaN(mMonth)) continue;
+
+            if (mYear < sd.year || (mYear === sd.year && mMonth < sd.month)) continue;
+            if (mYear > curYear || (mYear === curYear && mMonth > curMonth)) continue;
+
+            const mDays = getDaysInMonth(mMonth, mYear);
+            const isCur = curMonth === mMonth && curYear === mYear;
+            const upTo = isCur ? curDay - 1 : mDays;
+            const from = (mYear === sd.year && mMonth === sd.month) ? sd.day - 1 : 0;
+
+            for (let dd = from; dd < upTo; dd++) {
+              const vals = d.dailyHabits.map(h => h.days && h.days[dd] !== undefined ? (h.days[dd] === true ? 1 : h.days[dd] === false ? 0 : h.days[dd]) : 0);
+              if (!vals.some(v => v === 1) && vals.some(v => v === 0)) total++;
+            }
+          }
+        }
+      }
+    }
+  } catch(e) {}
+  return total;
+}
+
+function _calcGlobalStars() {
+  let total = 0;
+  try {
+    const sd = getStartDateParsed();
+    const today = getToday();
+    const curYear = today.getFullYear();
+    const curMonth = today.getMonth();
+    const curDay = today.getDate();
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && key.startsWith('atomic_')) {
+        if (!/^atomic_\d+_\d+$/.test(key)) continue;
+        const raw = localStorage.getItem(key);
+        if (raw) {
+          let d;
+          try { d = JSON.parse(raw); } catch(e) { continue; }
+          if (d.dailyHabits && d.dailyHabits.length > 0) {
+            const keyParts = key.split('_');
+            const mYear = parseInt(keyParts[1]);
+            const mMonth = parseInt(keyParts[2]);
+            if (isNaN(mYear) || isNaN(mMonth)) continue;
+            // Skip months before registration
+            if (sd && (mYear < sd.year || (mYear === sd.year && mMonth < sd.month))) continue;
+            // Skip future months
+            if (mYear > curYear || (mYear === curYear && mMonth > curMonth)) continue;
+            const mDays = getDaysInMonth(mMonth, mYear);
+            const isCur = curMonth === mMonth && curYear === mYear;
+            const upTo = isCur ? curDay : mDays;
+            const from = (sd && mYear === sd.year && mMonth === sd.month) ? sd.day - 1 : 0;
+            for (let dd = from; dd < upTo; dd++) {
+              const vals = d.dailyHabits.map(h => h.days && h.days[dd] !== undefined ? (h.days[dd] === true ? 1 : h.days[dd] === false ? 0 : h.days[dd]) : 0);
+              if (vals.some(v => v === 1) && !vals.some(v => v === 0)) total++;
+            }
+          }
+        }
+      }
+    }
+  } catch(e) {}
+  return total;
+}
+
+function getLevel(stars) {
+  let level = LEVELS[0];
+  for (let i = LEVELS.length - 1; i >= 0; i--) {
+    if (stars >= LEVELS[i].stars) { level = LEVELS[i]; break; }
+  }
+  return { current: level };
+}
+
+let _achievementTimer = null;
+function showAchievement(text) {
+  const banner = document.getElementById('achievementBanner');
+  document.getElementById('achievementText').innerHTML = text;
+  banner.classList.add('show');
+  clearTimeout(_achievementTimer);
+  _achievementTimer = setTimeout(() => banner.classList.remove('show'), 3500);
+}
+
+function renderLevelDisplay() {
+  const stars = getGlobalStars();
+  const blackHoles = getGlobalBlackHoles();
+  const { current } = getLevel(stars);
+  const el = document.getElementById('levelDisplay');
+  if (stars === 0 && blackHoles === 0) {
+    el.innerHTML = '';
+    return;
+  }
+  let html = '<span class="level-tier">' + current.tier + '</span> · <span class="level-title">' + current.title + '</span> · ' + stars + ' <span class="level-star">★</span>';
+  if (blackHoles > 0) {
+    html += ' · <span class="level-blackhole">' + blackHoles + ' ◉</span>';
+  }
+  el.innerHTML = html;
+}
+
+function renderMonthBar() {
+  const today = getToday();
+  const isCurrentMonth = today.getMonth() === currentMonth && today.getFullYear() === currentYear;
+  const isFutureMonth = !isCurrentMonth && (currentYear > today.getFullYear() || (currentYear === today.getFullYear() && currentMonth > today.getMonth()));
+  const daysCount = getDaysInMonth(currentMonth, currentYear);
+  const upTo = isCurrentMonth ? today.getDate() : (isFutureMonth ? 0 : daysCount);
+  const from = Math.max(getUserStartDay() - 1, 0);
+  
+  let done = 0, failed = 0;
+  if (state.dailyHabits) {
+    for (let d = from; d < upTo; d++) {
+      state.dailyHabits.forEach(h => {
+        const v = (h.days && h.days[d]) || 0;
+        if (v === 1 || v === true) done++;
+        else if (v === 0 || v === false) failed++;
+        // skip (2) ignored
+      });
+    }
+  }
+  
+  const decided = done + failed;
+  const pctDone = decided > 0 ? Math.round((done / decided) * 100) : 0;
+  const pctFailed = decided > 0 ? Math.round((failed / decided) * 100) : 0;
+  
+  // Progressive bar label
+  const label = pctDone === 100 ? '⚡ ATOMIC POWER ⚡' : pctDone + '% Completado';
+  document.getElementById('barLabel').textContent = label;
+  document.getElementById('barDone').style.width = pctDone + '%';
+  document.getElementById('barFailed').style.width = pctFailed + '%';
+  
+  // Apply bar intensity level (0-10)
+  const wrap = document.querySelector('.month-bar-wrap');
+  for (let i = 0; i <= 10; i++) wrap.classList.remove('bar-level-' + i);
+  const barLevel = pctDone >= 100 ? 10 : Math.floor(pctDone / 10);
+  wrap.classList.add('bar-level-' + barLevel);
+  
+  // Atomic Power glow on entire dashboard
+  const tracker = document.getElementById('trackerApp');
+  if (barLevel === 10) {
+    tracker.classList.add('atomic-power-glow');
+    startAtomicSparks();
+  } else {
+    tracker.classList.remove('atomic-power-glow');
+    stopAtomicSparks();
+  }
+  
+  // Flash only on TRANSITION to 100% (not on page load)
+  if (pctDone === 100 && decided > 0) {
+    if (typeof renderMonthBar._prevPct === 'number' && renderMonthBar._prevPct < 100) {
+      showCelebration('atomicpower');
+    }
+  }
+  renderMonthBar._prevPct = pctDone;
+}
+
+let _perfectDaysCache = null;
+let _zeroDaysCache = null;
+
+function buildPerfectDaysCache() {
+  const daysCount = getDaysInMonth(currentMonth, currentYear);
+  _perfectDaysCache = new Array(daysCount);
+  _zeroDaysCache = new Array(daysCount);
+  if (!state.dailyHabits || state.dailyHabits.length === 0) {
+    _perfectDaysCache.fill(false);
+    _zeroDaysCache.fill(true);
+    return;
+  }
+  for (let d = 0; d < daysCount; d++) {
+    const vals = state.dailyHabits.map(h => (h.days && h.days[d]) || 0);
+    const hasDone = vals.some(v => v === 1);
+    const hasFailed = vals.some(v => v === 0);
+    // Perfect: at least one done, no failures (skip is ok)
+    _perfectDaysCache[d] = hasDone && !hasFailed;
+    // Zero: no done at all among non-skipped
+    _zeroDaysCache[d] = !hasDone && hasFailed;
+  }
+}
+
+function isDayPerfect(dayIndex) {
+  if (_perfectDaysCache) return _perfectDaysCache[dayIndex] || false;
+  if (!state.dailyHabits || state.dailyHabits.length === 0) return false;
+  const vals = state.dailyHabits.map(h => (h.days && h.days[dayIndex]) || 0);
+  return vals.some(v => v === 1) && !vals.some(v => v === 0);
+}
+
+function isDayZero(dayIndex) {
+  if (_zeroDaysCache) return _zeroDaysCache[dayIndex] || false;
+  if (!state.dailyHabits || state.dailyHabits.length === 0) return true;
+  const vals = state.dailyHabits.map(h => (h.days && h.days[dayIndex]) || 0);
+  return !vals.some(v => v === 1) && vals.some(v => v === 0);
+}
+
+// ── GLOBAL START DATE ───────────────────────────────────────
+// Stored independently from monthly state
+const START_DATE_KEY = 'atomic_start_date';
+
+function getStartDate() {
+  const stored = localStorage.getItem(START_DATE_KEY);
+  if (stored) return stored;
+  return null;
+}
+
+function setStartDate() {
+  if (getStartDate()) return; // already set
+  const t = getToday();
+  const val = t.getFullYear() + '-' + (t.getMonth()+1) + '-' + t.getDate();
+  localStorage.setItem(START_DATE_KEY, val);
+  // Also save to Supabase as a special record
+  if (currentUser) {
+    supabaseClient.from('habits').upsert({
+      user_id: currentUser.id,
+      year: 9999,
+      month: 0,
+      data: { startDate: val }
+    }, { onConflict: 'user_id,year,month' }).then(() => {});
+  }
+}
+
+async function loadStartDate() {
+  // Try localStorage first
+  if (getStartDate()) return;
+  // Try Supabase - look for saved startDate
+  if (currentUser) {
+    try {
+      const { data } = await supabaseClient
+        .from('habits')
+        .select('data')
+        .eq('user_id', currentUser.id)
+        .eq('year', 9999)
+        .eq('month', 0)
+        .maybeSingle();
+      if (data?.data?.startDate) {
+        localStorage.setItem(START_DATE_KEY, data.data.startDate);
+        return;
+      }
+    } catch(e) {}
+    // No startDate saved — check if user has ANY historical habit data
+    try {
+      const { data: oldest } = await supabaseClient
+        .from('habits')
+        .select('year,month')
+        .eq('user_id', currentUser.id)
+        .neq('year', 9999)
+        .order('year', { ascending: true })
+        .order('month', { ascending: true })
+        .limit(1);
+      if (oldest && oldest.length > 0) {
+        // User has existing data — set startDate to 1st of their oldest month
+        const val = oldest[0].year + '-' + (oldest[0].month + 1) + '-1';
+        localStorage.setItem(START_DATE_KEY, val);
+        // Save to cloud
+        supabaseClient.from('habits').upsert({
+          user_id: currentUser.id,
+          year: 9999,
+          month: 0,
+          data: { startDate: val }
+        }, { onConflict: 'user_id,year,month' }).then(() => {});
+        return;
+      }
+    } catch(e) {}
+  }
+  // Truly first time ever — set now
+  setStartDate();
+}
+
+function getUserStartDay() {
+  return getUserStartDayFor(currentMonth, currentYear);
+}
+
+// Returns the day-of-month from which the user is considered "active" in a given month
+// 1 = full month, 999 = month is before user joined (no activity expected), N = joined on day N
+function getUserStartDayFor(month, year) {
+  const sd = getStartDate();
+  if (!sd) return 1;
+  const parts = sd.split('-');
+  const sYear = parseInt(parts[0]);
+  const sMonth = parseInt(parts[1]) - 1;
+  const sDay = parseInt(parts[2]);
+
+  if (year < sYear || (year === sYear && month < sMonth)) return 999;
+  if (year === sYear && month === sMonth) return sDay;
+  return 1;
+}
+
+function getStartDateParsed() {
+  const sd = getStartDate();
+  if (!sd) return null;
+  const parts = sd.split('-');
+  return { year: parseInt(parts[0]), month: parseInt(parts[1]) - 1, day: parseInt(parts[2]) };
+}
+
+// ── RENDER ──────────────────────────────────────────────────
+
+function render() {
+  if (!state.dailyHabits && !state.weeklyHabits) initState();
+  if (!state.dailyHabits || state.dailyHabits.length === 0) state.dailyHabits = DEFAULT_DAILY.map(n => ({ name: n, days: Array(getDaysInMonth(currentMonth, currentYear)).fill(0) }));
+  if (!state.weeklyHabits || state.weeklyHabits.length === 0) state.weeklyHabits = DEFAULT_WEEKLY.map(n => ({ name: n, weeks: [false,false,false,false] }));
+  // Auto-add "Sin nicotina" as first habit if missing (migration for existing users)
+  ensureNicotineHabit();
+  migrateDays(state.dailyHabits);
+  const daysCount = getDaysInMonth(currentMonth, currentYear);
+  const monthDisplay = document.getElementById('currentMonthDisplay');
+  if (monthDisplay) monthDisplay.textContent = `${MONTH_NAMES[currentMonth].toUpperCase()} ${currentYear}`;
+
+  // Ensure habit days arrays match current month length
+  state.dailyHabits.forEach(h => {
+    if (!h.days) h.days = [];
+    if (h.days.length < daysCount) h.days = h.days.concat(Array(daysCount - h.days.length).fill(0));
+    if (h.days.length > daysCount) h.days = h.days.slice(0, daysCount);
+  });
+
+  buildPerfectDaysCache();
+
+  // Clamp currentWeek
+  const weeks = getWeekGroups(daysCount);
+  if (currentWeek >= weeks.length) currentWeek = weeks.length - 1;
+
+  renderMonthTabs();
+  renderStats();
+  renderMonthBar();
+  renderDesktopTable();
+  renderMobileView();
+  // Nicotine counter (defined further below, may not exist yet on first call)
+  if (typeof renderNicotineCounter === 'function') {
+    try { renderNicotineCounter(); } catch(e) {}
+  }
+}
+
+function renderMonthTabs() {
+  const tabs = document.getElementById('monthTabs');
+  tabs.innerHTML = '';
+  MONTHS.forEach((m, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'tab' + (i === currentMonth ? ' active' : '');
+    btn.textContent = m;
+    btn.onclick = async () => {
+      btn.style.opacity = '0.4';
+      // Save current month to localStorage immediately (non-blocking)
+      if (state.dailyHabits) {
+        localStorage.setItem(`atomic_${currentYear}_${currentMonth}`, JSON.stringify(state));
+      }
+      // Cloud save in background — don't block month switch
+      _saveToCloud().catch(e => console.warn('Background save error:', e));
+      // Switch month immediately
+      currentMonth = i;
+      currentWeek = 0;
+      // Invalidate prev-month-pct cache (depende del mes actual)
+      Object.keys(_prevMonthPctCache).forEach(k => delete _prevMonthPctCache[k]);
+      // Auto-scroll to today's week if switching to current month
+      const _now = getToday();
+      if (i === _now.getMonth() && currentYear === _now.getFullYear()) {
+        const _weeks = getWeekGroups(getDaysInMonth(i, currentYear));
+        _weeks.forEach((w, wi) => { if (w.includes(_now.getDate())) currentWeek = wi; });
+      }
+      try {
+        await loadState();
+        if (!state.dailyHabits || state.dailyHabits.length === 0) initState();
+      } catch(e) {
+        console.error('Month load error:', e);
+        initState();
+      }
+      render();
+      btn.style.opacity = '';
+    };
+    tabs.appendChild(btn);
+  });
+}
+
+function renderStats() {
+  const daysCount = getDaysInMonth(currentMonth, currentYear);
+  const today = getToday();
+  const isCurrentMonth = today.getMonth() === currentMonth && today.getFullYear() === currentYear;
+  const isFutureMonth = !isCurrentMonth && (currentYear > today.getFullYear() || (currentYear === today.getFullYear() && currentMonth > today.getMonth()));
+  const todayDay = isCurrentMonth ? today.getDate() : daysCount;
+  const todayIdx = isCurrentMonth ? todayDay - 1 : -1;
+  const total = state.dailyHabits.length;
+  
+  // Today's Progress — only meaningful for current month
+  if (isCurrentMonth) {
+    const doneToday = state.dailyHabits.filter(h => h.days[todayIdx] === 1).length;
+    const skipsToday = state.dailyHabits.filter(h => h.days[todayIdx] === 2).length;
+    const decidedToday = total - skipsToday;
+    const pctToday = decidedToday > 0 ? Math.round((doneToday/decidedToday)*100) : 0;
+    document.getElementById('statToday').textContent = pctToday + '%';
+    document.getElementById('statTodaySub').textContent = `${doneToday} de ${decidedToday} hábitos completados`;
+    document.getElementById('progressFill').style.width = pctToday + '%';
+  } else {
+    document.getElementById('statToday').textContent = '—';
+    document.getElementById('statTodaySub').textContent = 'mes no activo';
+    document.getElementById('progressFill').style.width = '0%';
+  }
+
+  let checks = 0, decided = 0;
+  const monthStart = getUserStartDay() - 1;
+  const monthEnd = isCurrentMonth ? todayDay : (isFutureMonth ? 0 : daysCount);
+  state.dailyHabits.forEach(h => { for(let d=monthStart;d<monthEnd;d++){ const v = h.days[d] || 0; if(v !== 2 && v !== 3){ decided++; if(v === 1) checks++; } } });
+  const monthlyEl = document.getElementById('statMonthly');
+  if (monthlyEl) monthlyEl.textContent = decided > 0 ? Math.round((checks/decided)*100)+'%' : '0%';
+
+  // ─── DÍAS PERFECTOS — mes actual + total acumulado ───
+  let perfectCount = 0;
+  const userStart = getUserStartDay();
+  const countFrom = userStart - 1;
+  const countUpTo = isCurrentMonth ? todayDay : (isFutureMonth ? 0 : daysCount);
+  for(let d=countFrom;d<countUpTo;d++) { if(isDayPerfect(d)) perfectCount++; }
+  const globalStars = getGlobalStars();
+  const monthEl = document.getElementById('statPerfectMonth');
+  if (monthEl) monthEl.innerHTML = perfectCount + ' <span style="font-size:18px;color:var(--gold);opacity:0.7;">★</span>';
+  const totalEl = document.getElementById('statPerfectTotal');
+  if (totalEl) totalEl.innerHTML = globalStars + ' <span style="font-size:18px;color:var(--gold);opacity:0.7;">★</span>';
+
+  // ─── ÍNDICE DE EVOLUCIÓN — current month vs previous month ───
+  renderEvolution(decided > 0 ? Math.round((checks/decided)*100) : 0);
+
+  renderLevelDisplay();
+}
+
+// Calculate the previous month's completion %
+// Cache para previo mes (evita llamadas repetidas a Supabase)
+const _prevMonthPctCache = {};
+
+function getPreviousMonthPct() {
+  let prevMonth = currentMonth - 1;
+  let prevYear = currentYear;
+  if (prevMonth < 0) { prevMonth = 11; prevYear--; }
+  
+  const cacheKey = `${prevYear}_${prevMonth}`;
+  if (_prevMonthPctCache[cacheKey] !== undefined) {
+    return _prevMonthPctCache[cacheKey];
+  }
+  
+  // Try localStorage first (fast)
+  const key = `atomic_${prevYear}_${prevMonth}`;
+  let prevState = null;
+  try {
+    const raw = localStorage.getItem(key);
+    if (raw) prevState = JSON.parse(raw);
+  } catch(e) {}
+  
+  // If not in localStorage, try Supabase (async, will populate cache for next render)
+  if (!prevState && currentUser) {
+    supabaseClient
+      .from('habits')
+      .select('data')
+      .eq('user_id', currentUser.id)
+      .eq('year', prevYear)
+      .eq('month', prevMonth)
+      .maybeSingle()
+      .then(({ data }) => {
+        if (data?.data?.dailyHabits) {
+          // Populate localStorage so next call works
+          localStorage.setItem(key, JSON.stringify(data.data));
+          // Clear cache and re-render
+          delete _prevMonthPctCache[cacheKey];
+          // renderStats() recalculates currentPct internally and calls renderEvolution()
+          if (typeof renderStats === 'function') renderStats();
+        }
+      })
+      .catch(() => {});
+  }
+  
+  if (!prevState || !prevState.dailyHabits) {
+    _prevMonthPctCache[cacheKey] = null;
+    return null;
+  }
+
+  const prevDays = getDaysInMonth(prevMonth, prevYear);
+
+  // Only count days from when the user actually started using the tracker
+  // If user started on Apr 28, prev month should evaluate days 28..30, not 1..30
+  const userStartDay = getUserStartDayFor(prevMonth, prevYear);
+  if (userStartDay === 999) {
+    _prevMonthPctCache[cacheKey] = null;
+    return null; // user wasn't active that month yet
+  }
+  const startIdx = Math.max(userStartDay - 1, 0);
+
+  let checks = 0, decided = 0;
+  prevState.dailyHabits.forEach(h => {
+    if (!h.days) return;
+    for (let d = startIdx; d < prevDays; d++) {
+      const v = h.days[d];
+      const norm = (v === true ? 1 : v === false ? 0 : v) || 0;
+      if (norm !== 2 && norm !== 3) {
+        decided++;
+        if (norm === 1) checks++;
+      }
+    }
+  });
+  const pct = decided > 0 ? Math.round((checks/decided)*100) : null;
+  _prevMonthPctCache[cacheKey] = pct;
+  return pct;
+}
+
+function getEvolutionCopy(prevPct, currentPct, relDelta) {
+  // relDelta es el cambio RELATIVO en porcentaje (no absoluto)
+  // Ej: 14% → 43% es +207% relativo (3.07x), no +29 absoluto
+  if (prevPct === null) return 'primer mes en curso';
+
+  if (relDelta >= 200) return 'tres veces tu mes anterior';
+  if (relDelta >= 150) return 'más del doble · estás en otro plano';
+  if (relDelta >= 100) return 'el doble de tu mes anterior';
+  if (relDelta >= 50) return 'salto firme · sigue así';
+  if (relDelta >= 25) return 'mejor mes que el anterior';
+  if (relDelta >= 10) return 'la tendencia va contigo';
+  if (relDelta > 0)   return 'apenas mejor · sigue ajustando';
+  if (relDelta === 0) return 'sostienes el ritmo';
+  if (relDelta >= -10) return 'apenas debajo · recalibra';
+  if (relDelta >= -25) return 'el camino tiene baches';
+  if (relDelta >= -50) return 'mes difícil · vuelve al método';
+  return 'reinicio honesto · empieza de nuevo';
+}
+
+function renderEvolution(currentPct) {
+  const card = document.getElementById('evolutionCard');
+  if (!card) return;
+  const arrowEl = document.getElementById('evolutionArrow');
+  const deltaEl = document.getElementById('evolutionDelta');
+  const prevEl = document.getElementById('evolutionPrevPct');
+  const currentEl = document.getElementById('evolutionCurrentPct');
+
+  const prevPct = getPreviousMonthPct();
+
+  card.classList.remove('is-up', 'is-down', 'is-flat');
+
+  if (currentEl) currentEl.textContent = currentPct + '%';
+
+  if (prevPct === null) {
+    if (prevEl) prevEl.textContent = '—';
+    arrowEl.textContent = '·';
+    deltaEl.textContent = 'primera medición';
+    deltaEl.style.fontSize = '15px';
+    deltaEl.style.fontStyle = 'italic';
+    card.classList.add('is-flat');
+    return;
+  }
+
+  deltaEl.style.fontSize = '';
+  deltaEl.style.fontStyle = '';
+
+  if (prevEl) prevEl.textContent = prevPct + '%';
+
+  // Relative delta: 14% → 43% is +207% (3.07x), not +29 absolute
+  let relDelta;
+  if (prevPct === 0) {
+    relDelta = currentPct > 0 ? 999 : 0;
+  } else {
+    relDelta = Math.round(((currentPct - prevPct) / prevPct) * 100);
+  }
+
+  if (relDelta > 0) {
+    arrowEl.textContent = '↑';
+    deltaEl.textContent = '+' + relDelta + '%';
+    card.classList.add('is-up');
+  } else if (relDelta < 0) {
+    arrowEl.textContent = '↓';
+    deltaEl.textContent = relDelta + '%';
+    card.classList.add('is-down');
+  } else {
+    arrowEl.textContent = '→';
+    deltaEl.textContent = '0%';
+    card.classList.add('is-flat');
+  }
+}
+
+function renderDesktopTable() {
+  const daysCount = getDaysInMonth(currentMonth, currentYear);
+  const today = getToday();
+  const todayDay = (today.getMonth()===currentMonth && today.getFullYear()===currentYear) ? today.getDate() : -1;
+  const weeks = getWeekGroups(daysCount);
+
+  // Headers
+  const headerRow = document.getElementById('dayHeaders');
+  let html = '<th class="habit-col">HÁBITO</th>';
+  weeks.forEach((w, wi) => {
+    html += `<th class="week-label" colspan="${w.length}">SEMANA ${wi+1}</th>`;
+    if (wi < weeks.length-1) html += '<th class="week-sep"></th>';
+  });
+  html += '<th class="stat-col">MES</th>';
+  headerRow.innerHTML = html;
+
+  // Day numbers row
+  const old = document.getElementById('dayNumRow');
+  if (old) old.remove();
+  const thead = document.querySelector('#dailyTable thead');
+  const dayRow = document.createElement('tr');
+  dayRow.id = 'dayNumRow'; dayRow.className = 'day-header-row';
+  let dHtml = '<th class="habit-col"></th>';
+  const userStart = getUserStartDay();
+  const isFutureMonth = todayDay === -1 && (currentYear > today.getFullYear() || (currentYear === today.getFullYear() && currentMonth > today.getMonth()));
+  weeks.forEach((w, wi) => {
+    w.forEach(d => {
+      const isT = d === todayDay;
+      const isFuture = (d > todayDay && todayDay !== -1) || isFutureMonth;
+      const isPreReg = d < userStart;
+      const perfect = isDayPerfect(d-1) && !isFutureMonth && !isFuture && !isPreReg;
+      // Zero day solo si es PASADO (no futuro, no hoy)
+      const zero = isDayZero(d-1) && !isFuture && !isPreReg && !isFutureMonth && d < todayDay;
+      
+      if (isPreReg) {
+        dHtml += `<th class="future-day-header" style="font-size:9px;color:var(--ash-dim);font-weight:300">${d}</th>`;
+      } else if (perfect) {
+        // Día perfecto: ★ pequeña arriba + número
+        dHtml += `<th class="perfect-day-header" style="font-size:9px;line-height:1.1;"><span style="display:block;font-size:9px;color:var(--gold);">★</span>${d}</th>`;
+      } else if (zero) {
+        // Solo aparece para días pasados con CERO hábitos hechos
+        dHtml += `<th class="zero-day-header" style="font-size:9px;font-weight:300">${d}</th>`;
+      } else if (isFuture) {
+        dHtml += `<th class="future-day-header" style="font-size:9px;color:var(--ash-dim);font-weight:300">${d}</th>`;
+      } else {
+        dHtml += `<th style="font-size:9px;color:${isT?'var(--blue)':'var(--ash-dim)'};font-weight:${isT?'600':'300'}">${d}</th>`;
+      }
+    });
+    if (wi < weeks.length-1) dHtml += '<th class="week-sep"></th>';
+  });
+  dHtml += '<th></th>';
+  dayRow.innerHTML = dHtml;
+  thead.appendChild(dayRow);
+
+  // Body
+  const tbody = document.getElementById('dailyBody');
+  tbody.innerHTML = '';
+  state.dailyHabits.forEach((habit, hi) => {
+    const row = document.createElement('tr');
+    const isNicotine = findNicotineHabit() === habit;
+    row.className = 'habit-row' + (isNicotine ? ' is-nicotine' : '');
+    row.innerHTML = `<td class="habit-name"><input class="habit-name-input" value="${escHtml(habit.name)}" placeholder="Agregar hábito..." onchange="renameHabit(${hi},this.value)"/><button class="delete-habit-btn" onclick="removeHabit(${hi})" title="Remove habit">×</button></td>`;
+    weeks.forEach((week, wi) => {
+      week.forEach(d => {
+        const idx = d-1;
+        const val = habit.days[idx] || 0;
+        const isFuture = (d > todayDay && todayDay !== -1) || isFutureMonth;
+        const isPreReg = d < userStart;
+        const isToday = d === todayDay;
+        const perfect = isDayPerfect(idx) && !isFuture && !isPreReg;
+        const isPast = !isFutureMonth && (todayDay === -1 || (d < todayDay));
+        const zero = isDayZero(idx) && !isFuture && !isPreReg && isPast;
+        const td = document.createElement('td'); td.className = 'check-cell' + (perfect ? ' perfect-day-cell' : '') + (zero ? ' zero-day-cell' : '');
+        const btn = document.createElement('button');
+        let cls = 'check-btn';
+        if (isFuture || isPreReg) cls += ' future';
+        else if (val === 1) cls += ' done';
+        else if (val === 2) cls += ' skip';
+        else if (isPast) cls += ' failed';
+        if (isToday && val === 0 && !isFuture && !isPreReg) cls += ' today';
+        btn.className = cls;
+        btn.onclick = () => toggleDay(hi, idx);
+        td.appendChild(btn); row.appendChild(td);
+      });
+      if (wi < weeks.length-1) { const sep = document.createElement('td'); sep.className='week-sep'; row.appendChild(sep); }
+    });
+    const possStart = Math.max(userStart - 1, 0);
+    const possEnd = todayDay > 0 ? Math.min(todayDay, daysCount) : (isFutureMonth ? 0 : daysCount);
+    const slice = habit.days.slice(possStart, possEnd);
+    const doneCount = slice.filter(v => v === 1 || v === true).length;
+    const decidedCount = slice.filter(v => v === 0 || v === false || v === 1 || v === true).length;
+    const pct = decidedCount > 0 ? Math.round((doneCount/decidedCount)*100) : 0;
+    const pctTd = document.createElement('td'); pctTd.className='pct-cell';
+    pctTd.innerHTML = `<span class="pct-num">${pct}%</span>`;
+    row.appendChild(pctTd);
+    tbody.appendChild(row);
+  });
+  const addRow = document.createElement('tr');
+  addRow.innerHTML = `<td colspan="99" style="padding:8px 0"><button class="add-habit-btn" onclick="addHabit()">+ agregar hábito</button></td>`;
+  tbody.appendChild(addRow);
+}
+
+function renderMobileView() {
+  const daysCount = getDaysInMonth(currentMonth, currentYear);
+  const today = getToday();
+  const todayDay = (today.getMonth()===currentMonth && today.getFullYear()===currentYear) ? today.getDate() : -1;
+  const userStart = getUserStartDay();
+  const isFutureMonth = todayDay === -1 && (currentYear > today.getFullYear() || (currentYear === today.getFullYear() && currentMonth > today.getMonth()));
+
+  // Update section header: HÁBITOS · ABRIL · día X de Y
+  const monthEl = document.getElementById('mSectionMonth');
+  if (monthEl) monthEl.textContent = MONTH_NAMES[currentMonth].toUpperCase();
+  const dayEl = document.getElementById('mSectionDay');
+  if (dayEl) dayEl.textContent = todayDay > 0 ? todayDay : (isFutureMonth ? '—' : daysCount);
+  const totalEl = document.getElementById('mSectionTotal');
+  if (totalEl) totalEl.textContent = daysCount;
+
+  const list = document.getElementById('mobileHabitList');
+  if (!list) return;
+  list.innerHTML = '';
+
+  // DEFENSE: Si state.dailyHabits está vacío, undefined o malformado, force defaults
+  if (!state.dailyHabits || !Array.isArray(state.dailyHabits) || state.dailyHabits.length === 0) {
+    console.warn('[renderMobileView] dailyHabits empty/invalid, forcing defaults');
+    state.dailyHabits = DEFAULT_DAILY.map(n => ({ name: n, days: Array(daysCount).fill(0) }));
+  }
+
+  state.dailyHabits.forEach((habit, hi) => {
+    // DEFENSE: Si el habit es null/undefined o no tiene name, skip o reparar
+    if (!habit) return;
+    if (!habit.name || typeof habit.name !== 'string') {
+      habit.name = DEFAULT_DAILY[hi] || `Hábito ${hi+1}`;
+    }
+    // DEFENSE: Si days no es array o no tiene la longitud correcta, repararlo
+    if (!Array.isArray(habit.days)) {
+      habit.days = Array(daysCount).fill(0);
+    } else if (habit.days.length !== daysCount) {
+      // Padear con ceros si falta, truncar si sobra
+      while (habit.days.length < daysCount) habit.days.push(0);
+      if (habit.days.length > daysCount) habit.days = habit.days.slice(0, daysCount);
+    }
+    
+    const isAnchor = findNicotineHabit() === habit;
+
+    // Row container
+    const row = document.createElement('div');
+    row.className = 'm-row' + (isAnchor ? ' is-anchor' : '');
+
+    // Row head (name + percentage)
+    const head = document.createElement('div');
+    head.className = 'm-row-head';
+
+    const name = document.createElement('div');
+    name.className = 'm-name';
+    name.contentEditable = 'true';
+    name.spellcheck = false;
+    name.textContent = habit.name;
+    name.dataset.placeholder = 'Agregar hábito...';
+    name.addEventListener('blur', () => renameHabit(hi, name.textContent.trim()));
+    name.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); name.blur(); } });
+    head.appendChild(name);
+
+    // Calculate %
+    const possStart = Math.max(userStart - 1, 0);
+    const possEnd = todayDay > 0 ? Math.min(todayDay, daysCount) : (isFutureMonth ? 0 : daysCount);
+    const slice = habit.days.slice(possStart, possEnd);
+    const doneCount = slice.filter(v => v === 1 || v === true).length;
+    const decidedCount = slice.filter(v => v === 0 || v === false || v === 1 || v === true).length;
+    const pct = decidedCount > 0 ? Math.round((doneCount/decidedCount)*100) : 0;
+
+    const pctEl = document.createElement('div');
+    pctEl.className = 'm-pct';
+    pctEl.textContent = pct + '%';
+    head.appendChild(pctEl);
+
+    row.appendChild(head);
+
+    // Cells container (scroll horizontal)
+    const cells = document.createElement('div');
+    cells.className = 'm-cells';
+    cells.id = `m-cells-${hi}`;
+
+    for (let d = 1; d <= daysCount; d++) {
+      const idx = d - 1;
+      const val = habit.days[idx] || 0;
+      const isFuture = (d > todayDay && todayDay !== -1) || isFutureMonth;
+      const isPreReg = d < userStart;
+      const isToday = d === todayDay;
+      const perfect = isDayPerfect(idx) && !isFuture && !isPreReg;
+      const isPast = !isFutureMonth && (todayDay === -1 || d < todayDay);
+
+      const cell = document.createElement('div');
+      cell.className = 'm-cell';
+      if (perfect) cell.classList.add('is-perfect-col');
+      if (isToday) cell.classList.add('is-today');
+
+      // Determine state
+      let state_ = 'empty';
+      if (isPreReg) state_ = 'pre';
+      else if (isFuture) state_ = 'future';
+      else if (val === 1) state_ = 'done';
+      else if (isPast && val === 0) state_ = 'fail';
+
+      cell.dataset.state = state_;
+
+      // Day number label inside cell
+      const num = document.createElement('span');
+      num.className = 'm-num';
+      num.textContent = d;
+      cell.appendChild(num);
+
+      // Click handler — allow click on pre-reg in current month (retroactive)
+      if (state_ !== 'future') {
+        cell.addEventListener('click', () => toggleDay(hi, idx));
+      }
+
+      cells.appendChild(cell);
+    }
+
+    row.appendChild(cells);
+
+    // Long-press delete (mobile)
+    let _lp = null;
+    function _startPress() {
+      _lp = setTimeout(() => {
+        if (confirm(`¿Eliminar el hábito "${habit.name}"?`)) {
+          removeHabit(hi);
+        }
+      }, 700);
+    }
+    function _cancelPress() { clearTimeout(_lp); }
+    head.addEventListener('touchstart', _startPress, { passive: true });
+    head.addEventListener('touchend', _cancelPress);
+    head.addEventListener('touchmove', _cancelPress);
+
+    list.appendChild(row);
+
+    // Auto-scroll to today's cell after render
+    requestAnimationFrame(() => {
+      if (todayDay > 0) {
+        const todayCell = cells.children[todayDay - 1];
+        if (todayCell) {
+          const cellLeft = todayCell.offsetLeft;
+          const cellWidth = todayCell.offsetWidth;
+          const containerWidth = cells.offsetWidth;
+          cells.scrollLeft = cellLeft - (containerWidth / 2) + (cellWidth / 2);
+        }
+      }
+    });
+  });
+}
+
+function renderWeeklyTable() {
+  // Weekly habits removed in v2 — no-op
+  return;
+}
+
+// ── ACTIONS ──────────────────────────────────────────────────
+
+// Toast pequeño para feedback de "no puedes marcar"
+let _cannotMarkToastTimer = null;
+function _showCannotMarkToast(message) {
+  // Vibración corta de "rechazo"
+  if (navigator.vibrate) navigator.vibrate([10, 60, 10]);
+  // Reusar toast si ya existe
+  let toast = document.getElementById('cannotMarkToast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'cannotMarkToast';
+    toast.style.cssText = `
+      position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%);
+      background: rgba(26, 35, 50, 0.92); color: #f4ece0;
+      padding: 12px 20px; border-radius: 4px;
+      font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15px;
+      z-index: 99999; pointer-events: none;
+      transition: opacity 0.3s ease;
+      max-width: 80%; text-align: center;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    `;
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.style.opacity = '1';
+  if (_cannotMarkToastTimer) clearTimeout(_cannotMarkToastTimer);
+  _cannotMarkToastTimer = setTimeout(() => {
+    toast.style.opacity = '0';
+  }, 2000);
+}
+
+function toggleDay(hi, di) {
+  _globalStatsCache = null; // Invalidate cache
+  // Guard: validar índices
+  if (typeof hi !== 'number' || typeof di !== 'number' || hi < 0 || di < 0) return;
+  if (!state.dailyHabits || !state.dailyHabits[hi]) return;
+  const daysInThisMonth = getDaysInMonth(currentMonth, currentYear);
+  if (di >= daysInThisMonth) return; // día no existe en este mes (ej: día 31 en febrero)
+  
+  // Guard: prevent toggling future days and future months
+  const today = getToday();
+  const isCurrentMonth = today.getMonth() === currentMonth && today.getFullYear() === currentYear;
+  const isFutureMonth = currentYear > today.getFullYear() || (currentYear === today.getFullYear() && currentMonth > today.getMonth());
+  if (isFutureMonth) { _showCannotMarkToast('No puedes marcar meses futuros'); return; }
+  if (isCurrentMonth && di > today.getDate() - 1) { _showCannotMarkToast('Solo puedes marcar hasta el día de hoy'); return; }
+  const userStart = getUserStartDay();
+  // Allow user to retroactively mark days BEFORE their start date in the current month
+  // (they may want to add data for the start of the month even if they joined mid-month)
+  if (userStart === 999) { _showCannotMarkToast('Este mes es anterior a tu registro'); return; }
+  
+  // Mobile: simple done/undone toggle. Desktop: 3-state cycle.
+  const current = state.dailyHabits[hi].days[di] || 0;
+  let next;
+  const isMobile = window.innerWidth <= 640;
+  if (isMobile) {
+    next = current === 1 ? 0 : 1;
+  } else {
+    next = (current + 1) % 3;
+  }
+  state.dailyHabits[hi].days[di] = next;
+  if (navigator.vibrate) navigator.vibrate(next === 1 ? 15 : 8);
+  buildPerfectDaysCache();
+  // Invalidate nicotine cache for this month if user is editing a past month
+  // (cache is for previous months, so this only matters if currentMonth/Year is in cache)
+  const _editKey = `${currentYear}_${currentMonth}`;
+  if (_nicotineMonthCache[_editKey]) {
+    delete _nicotineMonthCache[_editKey];
+    // Also invalidate all months earlier than this one — the chain might extend differently
+    Object.keys(_nicotineMonthCache).forEach(k => {
+      const [yk, mk] = k.split('_').map(Number);
+      if (yk < currentYear || (yk === currentYear && mk < currentMonth)) {
+        delete _nicotineMonthCache[k];
+      }
+    });
+    // Re-trigger preload
+    preloadPreviousNicotineMonths().catch(()=>{});
+  }
+  posthog.capture('habit_toggled', { state: next === 1 ? 'done' : next === 2 ? 'skip' : 'failed', type: 'daily' });
+  
+  // Celebrations when marking as DONE
+  if (next === 1) {
+    // Check NICOTINE MILESTONE FIRST (más importante emocionalmente que día perfecto)
+    // Solo si el hábito que acaba de marcarse es el de nicotina
+    const habitName = state.dailyHabits[hi].name || '';
+    const _nlow = habitName.toLowerCase().trim();
+    const isNicotine = (
+      _nlow === 'libre de nicotina' || _nlow === 'libre' || _nlow.startsWith('libre ') ||
+      _nlow.includes('sin nicotina') || _nlow.includes('no fumar') ||
+      _nlow.includes('sin tabaco') || _nlow.includes('sin vape') || _nlow.includes('no vapeo')
+    );
+    if (isNicotine) {
+      const totalStreak = (typeof getNicotineCleanDays === 'function') ? getNicotineCleanDays() : 0;
+      const milestone = NICOTINE_MILESTONES.find(m => m.day === totalStreak);
+      if (milestone) {
+        // Celebración escalada según importancia del milestone
+        const isBig = milestone.day >= 28; // 28+ días = milestone "grande"
+        showCelebration(isBig ? 'atomicpower' : 'perfect');
+        if (navigator.vibrate) navigator.vibrate(isBig ? [50, 100, 50, 100, 100] : [30, 80, 30]);
+        showAchievement(
+          '<span class="star-icon">' + (isBig ? '🌟' : '🔥') + '</span> Día ' + totalStreak + ' · ' + milestone.name + ' <span class="star-icon">' + (isBig ? '🌟' : '🔥') + '</span>'
+        );
+        // Si está integración Telegram (en futuro): mandar mensaje
+        // (placeholder, se conectará con Edge Function en Fase 3 del roadmap)
+        saveState();
+        renderDesktopTable(); renderMobileView(); renderStats(); renderMonthBar();
+        if (typeof renderNicotineCounter === 'function') { try { renderNicotineCounter(); } catch(e) {} }
+        if (typeof renderNicotineHero === 'function') { try { renderNicotineHero(); } catch(e) {} }
+        return;
+      }
+    }
+    
+    // Check perfect day SECOND (takes priority over generic streak)
+    if (isDayPerfect(di)) {
+      saveState();
+      const stars = getGlobalStars();
+      const { current: lvl } = getLevel(stars);
+      const prevLevel = getLevel(stars - 1);
+      
+      if (prevLevel.current.title !== lvl.title) {
+        showCelebration('levelup');
+        const tierChanged = prevLevel.current.tier !== lvl.tier;
+        const msg = tierChanged 
+          ? '<span class="star-icon">★</span> ' + lvl.tier + ' · ' + lvl.title + ' <span class="star-icon">★</span>'
+          : '<span class="star-icon">★</span> Nivel → ' + lvl.title + ' <span class="star-icon">★</span>';
+        showAchievement(msg);
+      } else {
+        showCelebration('perfect');
+        showAchievement('<span class="star-icon">★</span> Día Perfecto <span class="star-icon">★</span>');
+      }
+      renderDesktopTable(); renderMobileView(); renderStats(); renderMonthBar();
+      if (typeof renderNicotineCounter === 'function') { try { renderNicotineCounter(); } catch(e) {} }
+      return;
+    }
+    
+    // No perfect day — check streak milestones (use today, not clicked day)
+    const streakEnd = (today.getMonth() === currentMonth && today.getFullYear() === currentYear) ? today.getDate() : getDaysInMonth(currentMonth, currentYear);
+    const streak = calcStreak(state.dailyHabits[hi].days, streakEnd, Math.max(userStart - 1, 0));
+    const milestones = [5,7,10,14,21,30,60,90,100,150,200,365];
+    if (milestones.includes(streak)) {
+      showCelebration('perfect');
+      showAchievement('<span class="star-icon">🔥</span> Racha de ' + streak + ' días <span class="star-icon">🔥</span>');
+    }
+  }
+  
+  saveState(); renderDesktopTable(); renderMobileView(); renderStats(); renderMonthBar();
+  if (typeof renderNicotineCounter === 'function') { try { renderNicotineCounter(); } catch(e) {} }
+}
+
+// ── CELEBRATIONS ──────────────────────────────────────────────
+function showCelebration(type) {
+  const overlay = document.createElement('div');
+  if (type === 'atomicpower') {
+    overlay.className = 'celebration-overlay atomicpower-flash';
+  } else {
+    overlay.className = 'celebration-overlay ' + (type === 'levelup' ? 'levelup-flash' : 'perfect-flash');
+  }
+  document.body.appendChild(overlay);
+  const dur = type === 'atomicpower' ? 2800 : type === 'levelup' ? 2400 : 1600;
+  setTimeout(() => overlay.remove(), dur);
+}
+function toggleWeek(hi, wi) {
+  state.weeklyHabits[hi].weeks[wi] = !state.weeklyHabits[hi].weeks[wi];
+  saveState(); renderWeeklyTable();
+}
+function renameHabit(i, v) {
+  // Sanitizar: quitar HTML/scripts y limitar longitud
+  const sanitized = (v || '').toString()
+    .replace(/<[^>]*>/g, '')      // strip HTML tags
+    .replace(/[<>]/g, '')          // strip stray angle brackets
+    .trim()
+    .slice(0, 50);                 // max 50 chars
+  if (!sanitized) return;          // no permitir nombre vacío
+  state.dailyHabits[i].name = sanitized;
+  _globalStatsCache = null;        // Invalidate cache
+  saveState();
+  render();
+}
+function renameWeekly(i, v) { state.weeklyHabits[i].name = v; saveState(); render(); }
+function addHabit() {
+  const days = getDaysInMonth(currentMonth, currentYear);
+  const today = getToday();
+  const isCurrentMonth = today.getMonth() === currentMonth && today.getFullYear() === currentYear;
+  const todayIdx = isCurrentMonth ? today.getDate() - 1 : days;
+  // Fill past days with skip (2) so new habit doesn't retroactively fail
+  const daysArr = Array(days).fill(0);
+  for (let d = 0; d < todayIdx; d++) daysArr[d] = 3; // 3=n/a (habit didn't exist yet)
+  state.dailyHabits.push({ name: '', days: daysArr });
+  _globalStatsCache = null; // Invalidate cache
+  posthog.capture('habit_added', { type: 'daily', total: state.dailyHabits.length });
+  saveState(); render();
+}
+function removeHabit(i) {
+  if (state.dailyHabits.length <= 1) return;
+  state.dailyHabits.splice(i, 1);
+  _globalStatsCache = null; // Invalidate cache
+  posthog.capture('habit_removed', { type: 'daily', total: state.dailyHabits.length });
+  saveState(); render();
+}
+function addWeeklyHabit() {
+  state.weeklyHabits.push({ name: '', weeks: [false,false,false,false] });
+  saveState(); renderWeeklyTable();
+}
+function removeWeeklyHabit(i) {
+  if (state.weeklyHabits.length <= 1) return;
+  state.weeklyHabits.splice(i, 1);
+  saveState(); renderWeeklyTable();
+}
+function changeWeek(dir) {
+  const weeks = getWeekGroups(getDaysInMonth(currentMonth, currentYear));
+  currentWeek = Math.max(0, Math.min(weeks.length-1, currentWeek+dir));
+  renderMobileView();
+  document.getElementById('weekLabel').textContent = `SEMANA ${currentWeek+1}`;
+  document.getElementById('prevWeekBtn').disabled = currentWeek===0;
+  document.getElementById('nextWeekBtn').disabled = currentWeek>=weeks.length-1;
+}
+
+// ── INIT ──────────────────────────────────────────────────────
+// Set current week to the week containing today
+function initCurrentWeek() {
+  const today = getToday();
+  if (today.getMonth() === currentMonth && today.getFullYear() === currentYear) {
+    const weeks = getWeekGroups(getDaysInMonth(currentMonth, currentYear));
+    weeks.forEach((w, i) => { if (w.includes(today.getDate())) currentWeek = i; });
+  }
+}
+
+
+// ATOMIC SPARKS
+var _sparkInterval = null;
+function startAtomicSparks() {
+  if (_sparkInterval) return;
+  _sparkInterval = setInterval(function() {
+    var bar = document.querySelector('.month-bar-wrap');
+    if (!bar || !bar.classList.contains('bar-level-10')) { stopAtomicSparks(); return; }
+    var rect = bar.getBoundingClientRect();
+    for (var s = 0; s < 2 + Math.floor(Math.random()*2); s++) {
+      var spark = document.createElement('div');
+      spark.className = 'atomic-spark';
+      spark.style.left = (rect.left + Math.random() * rect.width) + 'px';
+      spark.style.top = (rect.top + rect.height/2) + 'px';
+      var size = 2 + Math.random() * 3;
+      spark.style.width = size + 'px';
+      spark.style.height = size + 'px';
+      spark.style.setProperty('--drift', ((Math.random()-0.5)*40) + 'px');
+      var dur = 0.8 + Math.random() * 1.2;
+      spark.style.animationDuration = dur + 's';
+      document.body.appendChild(spark);
+      (function(el,d){ setTimeout(function(){ el.remove(); }, d*1000); })(spark,dur);
+    }
+  }, 150);
+}
+function stopAtomicSparks() {
+  if (_sparkInterval) { clearInterval(_sparkInterval); _sparkInterval = null; }
+  document.querySelectorAll('.atomic-spark').forEach(function(s){ s.remove(); });
+}
+
+// ════════════════════════════════════════════════════════
+// NICOTINE COUNTER — celda principal (días sin nicotina)
+// ════════════════════════════════════════════════════════
+// Single source of truth: the streak of the habit "Sin nicotina".
+// The user marks the cell as done each day = streak grows = counter
+// counts up. If they don't mark = previous day was failed = streak
+// resets next day. No "I relapsed" button — the absence of the mark
+// IS the relapse.
+//
+// Philosophical milestones (named stars):
+//   1: La Decisión · 3: El Primer Vacío · 7: La Semana
+//   14: Hábito Roto · 21: Identidad Nueva · 28: Libertad
+//   60: Maestría · 90: Soberanía · 365: Renacimiento
+const NICOTINE_HABIT_NAME = 'Libre de Nicotina';
+const NICOTINE_MILESTONES = [
+  { day: 1,   name: 'La Decisión' },
+  { day: 3,   name: 'El Primer Vacío' },
+  { day: 7,   name: 'La Semana' },
+  { day: 14,  name: 'Hábito Roto' },
+  { day: 21,  name: 'Identidad Nueva' },
+  { day: 28,  name: 'Libertad' },
+  { day: 60,  name: 'Maestría' },
+  { day: 90,  name: 'Soberanía' },
+  { day: 365, name: 'Renacimiento' }
+];
+
+function findNicotineHabit() {
+  if (!state || !state.dailyHabits) return null;
+  const norm = (s) => (s||'').toString().toLowerCase().trim();
+  return state.dailyHabits.find(h => {
+    const n = norm(h.name);
+    return n === 'libre de nicotina' || n === 'libre' || n.startsWith('libre ') || n.includes('sin nicotina') || n.includes('no fumar') || n.includes('sin tabaco') || n.includes('sin vape') || n.includes('no vapeo');
+  }) || null;
+}
+
+function ensureNicotineHabit() {
+  if (!state || !state.dailyHabits) return;
+  const existing = findNicotineHabit();
+  if (existing) {
+    // Existe — respetar el orden que el usuario haya elegido.
+    // (Antes lo reordenábamos a primera posición en cada render, lo cual
+    // contradecía si el usuario lo movía manualmente.)
+    return;
+  }
+  // Doesn't exist — create it as first habit
+  const days = getDaysInMonth(currentMonth, currentYear);
+  state.dailyHabits.unshift({
+    name: NICOTINE_HABIT_NAME,
+    days: Array(days).fill(0)
+  });
+}
+
+// Cache for previous-month nicotine data to avoid re-fetching every render
+const _nicotineMonthCache = {};
+
+function getNicotineCleanDays() {
+  // Compute streak from the nicotine habit, walking back through months if needed.
+  // Uses cached data from previous months (loaded by preloadPreviousNicotineMonths).
+  const habit = findNicotineHabit();
+  if (!habit) return 0;
+  const today = getToday();
+  const isCurrentMonth = today.getMonth() === currentMonth && today.getFullYear() === currentYear;
+  const daysCount = getDaysInMonth(currentMonth, currentYear);
+  const todayDay = isCurrentMonth ? today.getDate() : daysCount;
+  const userStart = getUserStartDay();
+  
+  // Step 1: count streak in current month
+  let streak = calcStreak(habit.days, todayDay, Math.max(userStart - 1, 0));
+  
+  // Step 2: if streak reached the beginning of the month (and userStart was day 1),
+  // walk backward through previous months using cached data
+  const reachedMonthStart = streak >= (todayDay - Math.max(userStart - 1, 0));
+  if (!reachedMonthStart) return streak;
+  
+  // Walk back month by month
+  let m = currentMonth - 1;
+  let y = currentYear;
+  if (m < 0) { m = 11; y--; }
+  
+  while (true) {
+    const cacheKey = `${y}_${m}`;
+    const prevData = _nicotineMonthCache[cacheKey];
+    if (!prevData || !prevData.days) break; // no cached data, stop here
+    
+    const prevDays = prevData.days;
+    // Get user's start day in THIS specific previous month
+    const userStartInPrevMonth = (typeof getUserStartDayFor === 'function')
+      ? getUserStartDayFor(m, y)
+      : 1;
+    if (userStartInPrevMonth === 999) break; // user wasn't active this month
+    const startIdx = Math.max(userStartInPrevMonth - 1, 0);
+    
+    let monthStreak = 0;
+    let brokeChain = false;
+    // count from last day backward, but stop at startIdx (don't count pre-registration days)
+    for (let i = prevDays.length - 1; i >= startIdx; i--) {
+      const v = prevDays[i];
+      if (v === 1 || v === true) monthStreak++;
+      else if (v === 2 || v === 3) continue; // skip = neutral
+      else { brokeChain = true; break; }
+    }
+    streak += monthStreak;
+    // Si rompió cadena O el mes no estuvo "completo" desde startIdx hasta el final, paramos
+    const expectedFullMonth = prevDays.length - startIdx;
+    if (brokeChain || monthStreak < expectedFullMonth) break;
+    
+    // Continue further back
+    m--;
+    if (m < 0) { m = 11; y--; }
+    // Safety: don't loop more than 36 months back
+    if (currentYear - y > 3) break;
+  }
+  
+  return streak;
+}
+
+// Preload nicotine data from previous months into cache (called on login + month change)
+async function preloadPreviousNicotineMonths(monthsBack = 12) {
+  if (!currentUser) return;
+  let m = currentMonth - 1;
+  let y = currentYear;
+  if (m < 0) { m = 11; y--; }
+  
+  let didLoadAny = false;
+  
+  for (let i = 0; i < monthsBack; i++) {
+    const cacheKey = `${y}_${m}`;
+    if (_nicotineMonthCache[cacheKey]) {
+      // already cached, but check if it broke the chain — if so, stop
+      if (_nicotineMonthCache[cacheKey].brokeChain) break;
+    } else {
+      try {
+        const { data, error } = await supabaseClient
+          .from('habits')
+          .select('data')
+          .eq('user_id', currentUser.id)
+          .eq('year', y)
+          .eq('month', m)
+          .maybeSingle();
+        
+        if (error || !data?.data?.dailyHabits) {
+          _nicotineMonthCache[cacheKey] = { days: null, brokeChain: true };
+          break;
+        }
+        
+        const norm = (s) => (s||'').toString().toLowerCase().trim();
+        const nicHabit = data.data.dailyHabits.find(h => {
+          const n = norm(h.name);
+          return n === 'libre de nicotina' || n === 'libre' || n.startsWith('libre ') || n.includes('sin nicotina') || n.includes('no fumar') || n.includes('sin tabaco') || n.includes('sin vape') || n.includes('no vapeo');
+        });
+        
+        if (!nicHabit || !nicHabit.days) {
+          _nicotineMonthCache[cacheKey] = { days: null, brokeChain: true };
+          break;
+        }
+        
+        // Determinar el día de inicio del usuario en este mes específico.
+        // Si user se registró día 15 abril, los días 1-14 deben tratarse como
+        // "antes del registro" (no como fallos), no como rotura de cadena.
+        const userStartInMonth = (typeof getUserStartDayFor === 'function')
+          ? getUserStartDayFor(m, y)
+          : 1;
+        // Si el usuario no había empezado en este mes, no hay cadena que continuar
+        if (userStartInMonth === 999) {
+          _nicotineMonthCache[cacheKey] = { days: nicHabit.days, brokeChain: true };
+          break;
+        }
+        const startIdx = Math.max(userStartInMonth - 1, 0);
+        
+        // Check si el mes está completamente clean DESDE el día de registro hacia el final
+        // (los días antes del registro se ignoran, no rompen cadena)
+        let brokeChain = false;
+        for (let j = nicHabit.days.length - 1; j >= startIdx; j--) {
+          const v = nicHabit.days[j];
+          // Skip (2) y NA (3) no rompen la cadena, son neutrales
+          if (v === 2 || v === 3) continue;
+          // Done (1 o true) continúa la cadena
+          if (v === 1 || v === true) continue;
+          // Cualquier otra cosa (0, false, undefined, null) en día post-registro = rompe
+          brokeChain = true;
+          break;
+        }
+        
+        _nicotineMonthCache[cacheKey] = { days: nicHabit.days, brokeChain };
+        didLoadAny = true;
+        if (brokeChain) break;
+      } catch(e) {
+        break;
+      }
+    }
+    
+    m--;
+    if (m < 0) { m = 11; y--; }
+  }
+  
+  // After preload completes, re-render UI components that depend on streak.
+  // Re-render ALWAYS (not just when didLoadAny) because the FIRST call to
+  // getNicotineCleanDays() during render() likely returned a partial value
+  // (cache wasn't populated yet). Even if cache hasn't changed, the user
+  // may have just refreshed the page and the hero needs the post-cache value.
+  if (typeof renderNicotineHero === 'function') {
+    try { renderNicotineHero(); } catch(e) {}
+  }
+  if (typeof renderNicotineCounter === 'function') {
+    try { renderNicotineCounter(); } catch(e) {}
+  }
+}
+
+function getCurrentMilestone(days) {
+  return NICOTINE_MILESTONES.find(m => m.day === days) || null;
+}
+function getActiveTier(days) {
+  let reached = null;
+  for (const m of NICOTINE_MILESTONES) {
+    if (days >= m.day) reached = m;
+  }
+  return reached;
+}
+
+// ════════════════════════════════════════════════════════
+// NICOTINE HERO — rediseño Design Handoff
+// ════════════════════════════════════════════════════════
+// Renderiza 3 estados:
+//   - Estado A (is-day-zero): Día 0, silencio contemplativo
+//   - Estado B (default): Día normal entre milestones, con horizonte
+//   - Estado C (is-milestone): Día exacto de milestone, halo amarillo
+//
+// TODO: Carlos llenará array MOTIVATIONAL_QUOTES con 60 frases
+// (6 categorías × 10) — por ahora hay placeholders para no romper.
+const MOTIVATIONAL_QUOTES = [
+  // Identidad (10) — TODO Carlos
+  "ya no eres quien eras",
+  // Soberanía (10) — TODO Carlos
+  "el dragón ya no te posee",
+  // Cuerpo (10) — TODO Carlos
+  "tus pulmones recuerdan",
+  // Tiempo (10) — TODO Carlos
+  "un día, otro día, otro día",
+  // Filosofía (10) — TODO Carlos
+  "lo que se construye lentamente, dura",
+  // Comunidad / Presente (10) — TODO Carlos
+  "aquí, ahora, libre"
+  // (54 más por venir)
+];
+
+function getMotivationalQuoteForDay(day) {
+  // Pseudo-random pero estable por día — la misma frase aparece todo el día
+  if (MOTIVATIONAL_QUOTES.length === 0) return '';
+  const today = getToday();
+  const seed = today.getFullYear() * 1000 + today.getMonth() * 31 + today.getDate() + (day || 0);
+  return MOTIVATIONAL_QUOTES[seed % MOTIVATIONAL_QUOTES.length];
+}
+
+// Find next milestone day given current days
+function getNextMilestone(days) {
+  return NICOTINE_MILESTONES.find(m => m.day > days) || null;
+}
+function getLastMilestone(days) {
+  let last = null;
+  for (const m of NICOTINE_MILESTONES) {
+    if (days >= m.day) last = m;
+    else break;
+  }
+  return last;
+}
+
+function renderNicotineHero() {
+  const hero = document.getElementById('nicotineHero');
+  if (!hero) return;
+  const habit = findNicotineHabit();
+  if (!habit) {
+    hero.style.display = 'none';
+    return;
+  }
+  hero.style.display = '';
+
+  const days = getNicotineCleanDays();
+  const isExactMilestone = !!getCurrentMilestone(days);
+  const isDayZero = days === 0;
+
+  // Reset classes
+  hero.className = 'nicotine-hero';
+  if (isDayZero) hero.classList.add('is-day-zero');
+  if (isExactMilestone) hero.classList.add('is-milestone');
+
+  // Build inner HTML based on state
+  if (isDayZero) {
+    // ── Estado A · Día 0 silencioso ──
+    hero.innerHTML = `
+      <div class="nh-eyebrow">Días libre de nicotina</div>
+      <span class="nh-count">0</span>
+      <div class="nh-invitation">Tu camino comienza ahora.</div>
+      <div class="nh-signature">— La Decisión</div>
+    `;
+    return;
+  }
+
+  const lastMs = getLastMilestone(days);
+  const nextMs = getNextMilestone(days);
+  const currentMs = getCurrentMilestone(days);
+
+  // Compute horizon progress between last and next milestone
+  let horizonHTML = '';
+  if (lastMs && nextMs) {
+    const range = nextMs.day - lastMs.day;
+    const progress = days - lastMs.day;
+    const pct = Math.max(0, Math.min(100, Math.round((progress / range) * 100)));
+    horizonHTML = `
+      <div class="horizon">
+        <div class="horizon__line">
+          <div class="horizon__progress" style="width:${pct}%"></div>
+        </div>
+        <div class="horizon__marks">
+          <span class="now">${lastMs.name} · ${lastMs.day}</span>
+          <span class="next">${nextMs.name} · ${nextMs.day}</span>
+        </div>
+      </div>
+    `;
+  } else if (nextMs) {
+    // Before first milestone (days 1-2 before "La Decisión" at day 1)
+    // Or last milestone reached and next is far
+    const range = nextMs.day;
+    const pct = Math.max(0, Math.min(100, Math.round((days / range) * 100)));
+    horizonHTML = `
+      <div class="horizon">
+        <div class="horizon__line">
+          <div class="horizon__progress" style="width:${pct}%"></div>
+        </div>
+        <div class="horizon__marks">
+          <span class="now">Hoy · ${days}</span>
+          <span class="next">${nextMs.name} · ${nextMs.day}</span>
+        </div>
+      </div>
+    `;
+  }
+
+  if (isExactMilestone) {
+    // ── Estado C · Milestone celebratorio ──
+    hero.innerHTML = `
+      <div class="nh-eyebrow">Días libre de nicotina</div>
+      <span class="nh-count">${days}</span>
+      <div class="nh-milestone">Hoy alcanzas · <strong>${currentMs.name}</strong></div>
+      ${horizonHTML}
+    `;
+  } else {
+    // ── Estado B · Día normal ──
+    const milestoneText = lastMs
+      ? `Última señal · <strong>${lastMs.name}</strong>`
+      : `<strong>Camino iniciado</strong>`;
+    hero.innerHTML = `
+      <div class="nh-eyebrow">Días libre de nicotina</div>
+      <span class="nh-count">${days}</span>
+      <div class="nh-milestone">${milestoneText}</div>
+      ${horizonHTML}
+    `;
+  }
+}
+
+// Backward-compat: la función vieja sigue funcionando pero ahora delega al hero nuevo
+function renderNicotineCounter() {
+  // Hide legacy counter (it's no longer used)
+  const el = document.getElementById('nicotineCounter');
+  if (el) el.style.display = 'none';
+  // Render the new hero instead
+  renderNicotineHero();
+}
+
+// Re-render on DOM load + periodic refresh
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(renderNicotineHero, 100);
+});
+setInterval(renderNicotineHero, 60 * 60 * 1000);
+
+// Dismiss delete buttons on tap outside
+document.addEventListener('touchstart', (e) => {
+  if (!e.target.closest('.mobile-habit-row.show-delete') && !e.target.closest('.mobile-delete-btn')) {
+    document.querySelectorAll('.mobile-habit-row.show-delete').forEach(r => r.classList.remove('show-delete'));
+  }
+}, { passive: true });
+
+// Auth state change handles init
+
+// ── PUSH NOTIFICATIONS ──────────────────────────────────────
+// REMOVED: web push notifications system (was non-functional —
+// no backend was sending notifications, just a dead toggle).
+// Will be replaced by Telegram Bot API notifications when the
+// Mini App is deployed (Phase 5 of post-launch roadmap).
+//
+// The functions below remain as no-ops to avoid errors from
+// any leftover invocations (initApp etc. call them).
+
+function initNotifToggle() { return; }
+async function maybePromptNotifications() { return; }
+
+// One-time cleanup: unregister stale service workers from previous version
+// (the old "Recordatorios diarios" toggle registered SWs that no longer have a backend)
+if ('serviceWorker' in navigator && navigator.serviceWorker.getRegistrations) {
+  navigator.serviceWorker.getRegistrations().then(regs => {
+    regs.forEach(r => r.unregister().catch(()=>{}));
+  }).catch(()=>{});
+}
+</script>
+</body>
+</html>
