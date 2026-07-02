@@ -37,7 +37,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Zen+Kaku+Gothic+New:wght@300;400&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.108.2"></script>
 <script>
   !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+" (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureFlagEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
   posthog.init('phc_W3eR3Ok8bKEsh3xnV7y6S7NaiXJNayiooH9h69cHGVX', {
@@ -1667,13 +1667,9 @@ body::after {
     background: var(--gold-veil) !important;
     color: var(--gold-deep) !important;
   }
-  .habit-table thead .perfect-day-header::before {
-    content: '★';
-    display: block;
-    font-size: 9px;
-    color: var(--gold);
-    margin-bottom: 2px;
-  }
+  /* FIX mini-bug doble estrella: este ::before duplicaba la ★ que el JS ya
+     inyecta como <span> en el header de días perfectos (renderDailyTable).
+     Se elimina el pseudo-elemento y queda solo la estrella del JS. */
   
   /* Veil dorado vertical en celdas perfect day */
   .habit-table .perfect-day-cell {
@@ -2029,6 +2025,22 @@ body::after {
   padding-top: 8px;
   font-size: 14px;
 }
+/* FIX C1: estado skip (rayita "no aplica") ahora visible en móvil */
+.m-cell[data-state="skip"] { background: var(--blue-bg); border-color: var(--blue); }
+.m-cell[data-state="skip"]::after {
+  content: '–';
+  color: var(--blue);
+  padding-top: 6px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.m-cell[data-state="na"] { background: rgba(15,25,35,0.03); border-color: transparent; }
+.m-cell[data-state="na"]::after {
+  content: '–';
+  color: var(--ash-dim, rgba(15,25,35,0.3));
+  padding-top: 6px;
+  font-size: 14px;
+}
 .m-cell[data-state="future"] {
   border: 1px dashed var(--ink-faint);
   background: transparent;
@@ -2320,6 +2332,10 @@ async function handleAuth() {
   const btn = document.getElementById('authSubmitBtn');
   const errEl = document.getElementById('authError');
 
+  // FIX R4: guard de vuelo — Enter repetido durante un login lento disparaba
+  // múltiples requests concurrentes y podía activar el rate limit de Supabase
+  if (btn.disabled) return;
+
   if (!email || !password) { errEl.textContent = 'Ingresa tu email y contraseña.'; return; }
 
   btn.disabled = true;
@@ -2334,7 +2350,7 @@ async function handleAuth() {
     } else {
       const res = await supabaseClient.auth.signUp({ email, password });
       error = res.error;
-      if (!error) { errEl.textContent = 'Revisa tu email para confirmar tu cuenta.'; btn.disabled = false; btn.textContent = 'Crear cuenta'; return; }
+      if (!error) { errEl.textContent = 'Creando tu cuenta...'; return; }
     }
 
     if (error) {
@@ -2369,6 +2385,14 @@ async function handleResetHabits() {
   const daysCount = getDaysInMonth(currentMonth, currentYear);
   const oldHabits = state.dailyHabits || [];
   
+  // FIX M5b: tombstonear los hábitos que el reset elimina. Sin esto, el merge
+  // con el servidor los resucitaba y el botón "Resetear" era un no-op efectivo.
+  if (!Array.isArray(state.deletedHabits)) state.deletedHabits = [];
+  for (const oh of oldHabits) {
+    if (oh.name && !DEFAULT_DAILY.includes(oh.name) && !state.deletedHabits.includes(oh.name)) {
+      state.deletedHabits.push(oh.name);
+    }
+  }
   state.dailyHabits = DEFAULT_DAILY.map(name => {
     // Try to match existing habit by similar name (case insensitive, partial match)
     const norm = (s) => (s||'').toLowerCase().trim();
@@ -2382,6 +2406,12 @@ async function handleResetHabits() {
       days: match && match.days ? match.days.slice(0, daysCount).concat(Array(Math.max(0, daysCount - (match.days.length||0))).fill(0)) : Array(daysCount).fill(0)
     };
   });
+  
+  // FIX C2: al restaurar los defaults, quitar sus nombres de los tombstones —
+  // si no, el próximo merge los volvería a borrar
+  if (Array.isArray(state.deletedHabits)) {
+    state.deletedHabits = state.deletedHabits.filter(n => !DEFAULT_DAILY.includes(n));
+  }
   
   saveState();
   render();
@@ -2470,6 +2500,17 @@ async function precacheAllMonths() {
           const key = `atomic_${row.year}_${row.month}`;
           // Don't overwrite current month (loadState already handled it)
           if (row.year === currentYear && row.month === currentMonth) return;
+          // FIX R3: no pisar ediciones offline de meses pasados. Si el
+          // localStorage local tiene MÁS completions que la fila del servidor,
+          // el local es más nuevo (edición offline sin sincronizar) — se respeta.
+          try {
+            const localRaw = localStorage.getItem(key);
+            if (localRaw) {
+              const localData = JSON.parse(localRaw);
+              const _cnt = (d) => (d && d.dailyHabits) ? d.dailyHabits.reduce((s, h) => s + (h.days ? h.days.filter(v => v === 1 || v === true).length : 0), 0) : 0;
+              if (_cnt(localData) > _cnt(row.data)) return; // local gana
+            }
+          } catch(e) { /* local corrupto → servidor gana */ }
           localStorage.setItem(key, JSON.stringify(row.data));
         }
       });
@@ -2494,6 +2535,11 @@ async function initApp() {
     // First try to refresh the session (handles expired tokens)
     const { data: refreshData } = await supabaseClient.auth.refreshSession();
     if (refreshData?.session?.user) {
+      // FIX A2: reclamar el flag ANTES de los awaits. refreshSession dispara
+      // TOKEN_REFRESHED y el handler de onAuthStateChange corría la init en
+      // paralelo (doble loadState, doble render, métricas PostHog infladas 2x).
+      if (appInitialized) { clearTimeout(_initTimeout); document.getElementById('loadingScreen').style.display = 'none'; return; }
+      appInitialized = true;
       currentUser = refreshData.session.user;
       try {
         await loadStartDate();
@@ -2504,7 +2550,6 @@ async function initApp() {
       await precacheAllMonths();
       initCurrentWeek();
       render();
-      appInitialized = true;
       clearTimeout(_initTimeout);
       posthog.identify(currentUser.id, { email: currentUser.email });
       posthog.capture('app_opened', { method: 'session_refresh' });
@@ -2521,6 +2566,9 @@ async function initApp() {
   try {
     const { data: { session } } = await supabaseClient.auth.getSession();
     if (session?.user) {
+      // FIX A2: mismo guard que la ruta de refreshSession
+      if (appInitialized) { clearTimeout(_initTimeout); document.getElementById('loadingScreen').style.display = 'none'; return; }
+      appInitialized = true;
       currentUser = session.user;
       try {
         await loadStartDate();
@@ -2531,7 +2579,6 @@ async function initApp() {
       await precacheAllMonths();
       initCurrentWeek();
       render();
-      appInitialized = true;
       clearTimeout(_initTimeout);
       posthog.identify(currentUser.id, { email: currentUser.email });
       posthog.capture('app_opened', { method: 'get_session' });
@@ -2554,7 +2601,11 @@ async function initApp() {
 
 const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
 const MONTH_NAMES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
-const DEFAULT_DAILY = ['Libre de Nicotina','Dominus','Meditación','Lectura matutina','Ejercicio','Siddarta','Journaling'];
+// FIX M5: los defaults ahora son SOLO los 2 hábitos del programa.
+// Antes eran 7 y el manual pedía borrar 5 a mano (paso frágil que además
+// disparaba los bugs de resurrección). Usuarias nuevas ya nacen con la
+// configuración correcta y el botón "Resetear" restaura estos 2, no 7.
+const DEFAULT_DAILY = ['Libre de Nicotina','Dominus'];
 const DEFAULT_WEEKLY = ['Ir al gym 3x','Revisar metas','Planear la semana','Compromiso social'];
 
 let state = {};
@@ -2682,6 +2733,12 @@ async function loadState() {
       });
       if (!serverState.weeklyHabits) serverState.weeklyHabits = DEFAULT_WEEKLY.map(n => ({ name: n, weeks: [false,false,false,false] }));
       // MERGE: if we had local data, combine with server (OR logic, by habit name)
+      // FIX C2: unión de tombstones local + servidor. Los hábitos borrados
+      // en cualquier dispositivo ya NO resucitan en el merge.
+      const _tombUnion = new Set([
+        ...(Array.isArray(serverState.deletedHabits) ? serverState.deletedHabits : []),
+        ...(Array.isArray(state.deletedHabits) ? state.deletedHabits : [])
+      ]);
       if (hasLocalMonth && state.dailyHabits && state.dailyHabits.length > 0) {
         const localByName = {};
         state.dailyHabits.forEach(h => { if (h.name) localByName[h.name] = h; });
@@ -2695,14 +2752,17 @@ async function loadState() {
             }
           }
         }
-        // Add local habits that don't exist on server
+        // Add local habits that don't exist on server — excepto tombstoneados
         const serverNames = new Set(serverState.dailyHabits.map(h => h.name));
         for (const localH of state.dailyHabits) {
-          if (localH.name && !serverNames.has(localH.name)) {
+          if (localH.name && !serverNames.has(localH.name) && !_tombUnion.has(localH.name)) {
             serverState.dailyHabits.push(localH);
           }
         }
       }
+      // Aplicar tombstones al resultado final (borrados locales matan hábitos del server)
+      serverState.dailyHabits = serverState.dailyHabits.filter(h => !h.name || !_tombUnion.has(h.name));
+      serverState.deletedHabits = [..._tombUnion];
       state = serverState;
     } else if (!hasLocalMonth) {
       // Only carry over if we don't already have valid local data
@@ -2742,7 +2802,11 @@ async function _carryOverHabits() {
     if (data?.data?.dailyHabits?.length > 0) {
       state = {
         dailyHabits: data.data.dailyHabits.map(h => ({ name: h.name, days: Array(days).fill(0) })),
-        weeklyHabits: (data.data.weeklyHabits || DEFAULT_WEEKLY.map(n => ({ name: n }))).map(h => ({ name: h.name, weeks: [false,false,false,false] }))
+        weeklyHabits: (data.data.weeklyHabits || DEFAULT_WEEKLY.map(n => ({ name: n }))).map(h => ({ name: h.name, weeks: [false,false,false,false] })),
+        // FIX R2: los tombstones cruzan al mes nuevo. Sin esto, un dispositivo
+        // desincronizado con la lista vieja resucitaba los hábitos borrados
+        // en la fila del mes nuevo (que nacía sin tombstones).
+        deletedHabits: Array.isArray(data.data.deletedHabits) ? [...data.data.deletedHabits] : []
       };
       // Trigger nicotine streak preload (cross-month)
       preloadPreviousNicotineMonths().catch(e => console.warn('preload err:', e));
@@ -2831,36 +2895,50 @@ async function _saveToCloud(snapshotMonth, snapshotYear, snapshotPayload) {
         .eq('month', month)
         .maybeSingle();
       if (existing?.data?.dailyHabits) {
-        const existingDone = existing.data.dailyHabits.reduce((sum, h) =>
-          sum + (h.days ? h.days.filter(d => d !== 0).length : 0), 0);
-        const localDone = parsed.dailyHabits.reduce((sum, h) =>
-          sum + (h.days ? h.days.filter(d => d !== 0).length : 0), 0);
+        // FIX C2: unión de tombstones antes de cualquier comparación o merge
+        const _tombUnion = new Set([
+          ...(Array.isArray(existing.data.deletedHabits) ? existing.data.deletedHabits : []),
+          ...(Array.isArray(parsed.deletedHabits) ? parsed.deletedHabits : [])
+        ]);
+        const serverByName = {};
+        existing.data.dailyHabits.forEach(h => { if (h.name) serverByName[h.name] = h; });
+        // FIX M3: el guard de conteo ahora (a) solo cuenta d===1 (antes contaba
+        // skips y n/a como completions) y (b) compara SOLO hábitos presentes en
+        // ambos lados — borrar o renombrar un hábito ya no bloquea el save.
+        const _commonNames = parsed.dailyHabits
+          .map(h => h.name)
+          .filter(n => n && serverByName[n] && !_tombUnion.has(n));
+        const _countDone = (h) => (h && h.days) ? h.days.filter(d => d === 1 || d === true).length : 0;
+        const existingDone = _commonNames.reduce((sum, n) => sum + _countDone(serverByName[n]), 0);
+        const _localByName = {};
+        parsed.dailyHabits.forEach(h => { if (h.name) _localByName[h.name] = h; });
+        const localDone = _commonNames.reduce((sum, n) => sum + _countDone(_localByName[n]), 0);
         if (existingDone > localDone + 3) {
           console.warn('Skipping cloud save: Supabase has more completions (' + existingDone + ') than local (' + localDone + ')');
           return;
         }
         // MERGE: combine local + server completions (OR logic by habit name)
-        if (existing.data.dailyHabits && parsed.dailyHabits) {
-          const serverByName = {};
-          existing.data.dailyHabits.forEach(h => { if (h.name) serverByName[h.name] = h; });
-          for (const localH of parsed.dailyHabits) {
-            const serverH = serverByName[localH.name];
-            if (serverH && serverH.days && localH.days) {
-              for (let d = 0; d < localH.days.length && d < serverH.days.length; d++) {
-                if (serverH.days[d] && !localH.days[d]) {
-                  localH.days[d] = serverH.days[d];
-                }
+        for (const localH of parsed.dailyHabits) {
+          const serverH = serverByName[localH.name];
+          if (serverH && serverH.days && localH.days) {
+            for (let d = 0; d < localH.days.length && d < serverH.days.length; d++) {
+              if (serverH.days[d] && !localH.days[d]) {
+                localH.days[d] = serverH.days[d];
               }
             }
           }
-          // Add server habits that don't exist locally
-          const localNames = new Set(parsed.dailyHabits.map(h => h.name));
-          for (const serverH of existing.data.dailyHabits) {
-            if (serverH.name && !localNames.has(serverH.name)) {
-              parsed.dailyHabits.push(serverH);
-            }
+        }
+        // Add server habits that don't exist locally — excepto tombstoneados
+        // (FIX C2: aquí era donde los hábitos borrados resucitaban)
+        const localNames = new Set(parsed.dailyHabits.map(h => h.name));
+        for (const serverH of existing.data.dailyHabits) {
+          if (serverH.name && !localNames.has(serverH.name) && !_tombUnion.has(serverH.name)) {
+            parsed.dailyHabits.push(serverH);
           }
         }
+        // Persistir la unión de tombstones en el payload
+        parsed.dailyHabits = parsed.dailyHabits.filter(h => !h.name || !_tombUnion.has(h.name));
+        parsed.deletedHabits = [..._tombUnion];
       }
     } catch(e) { /* proceed with save if check fails */ }
     window[syncKey] = true;
@@ -2895,7 +2973,14 @@ function getWeekGroups(daysCount) {
 
 function calcStreak(days, todayDay, floor) {
   let streak = 0;
-  const end = todayDay > 0 ? todayDay - 1 : days.length - 1;
+  let end = todayDay > 0 ? todayDay - 1 : days.length - 1;
+  // FIX C3: si HOY aún no está marcado (0/undefined), no rompe la racha —
+  // se ignora hoy y se cuenta desde ayer. Antes, cada mañana el contador
+  // de "días libre de nicotina" mostraba 0 hasta que marcaran el día.
+  if (todayDay > 0 && end >= 0) {
+    const tv = days[end];
+    if (!(tv === 1 || tv === true || tv === 2 || tv === 3)) end--;
+  }
   const stop = floor || 0;
   for (let i = end; i >= stop; i--) {
     const v = days[i];
@@ -2906,7 +2991,7 @@ function calcStreak(days, todayDay, floor) {
   return streak;
 }
 
-function escHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function escHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
 
 // Migrate boolean days → numeric (true→1, false→0). Idempotent.
 function migrateDays(habits) {
@@ -3829,7 +3914,7 @@ function renderDesktopTable() {
     const row = document.createElement('tr');
     const isNicotine = findNicotineHabit() === habit;
     row.className = 'habit-row' + (isNicotine ? ' is-nicotine' : '');
-    row.innerHTML = `<td class="habit-name"><input class="habit-name-input" value="${escHtml(habit.name)}" placeholder="Agregar hábito..." onchange="renameHabit(${hi},this.value)"/><button class="delete-habit-btn" onclick="removeHabit(${hi})" title="Remove habit">×</button></td>`;
+    row.innerHTML = `<td class="habit-name"><input class="habit-name-input" value="${escHtml(habit.name)}" placeholder="Agregar hábito..." onchange="renameHabit(${hi},this.value)"/><button class="delete-habit-btn" onclick="confirmRemoveHabit(${hi})" title="Eliminar hábito">×</button></td>`;
     weeks.forEach((week, wi) => {
       week.forEach(d => {
         const idx = d-1;
@@ -3969,6 +4054,8 @@ function renderMobileView() {
       if (isPreReg) state_ = 'pre';
       else if (isFuture) state_ = 'future';
       else if (val === 1) state_ = 'done';
+      else if (val === 2) state_ = 'skip'; /* FIX C1: la rayita ahora se ve en móvil */
+      else if (val === 3) state_ = 'na';
       else if (isPast && val === 0) state_ = 'fail';
 
       cell.dataset.state = state_;
@@ -4076,15 +4163,11 @@ function toggleDay(hi, di) {
   // (they may want to add data for the start of the month even if they joined mid-month)
   if (userStart === 999) { _showCannotMarkToast('Este mes es anterior a tu registro'); return; }
   
-  // Mobile: simple done/undone toggle. Desktop: 3-state cycle.
+  // FIX C1: ciclo de 3 estados en TODAS las vistas (antes móvil era binario
+  // y el estado 2 "no aplica" era inalcanzable desde teléfono — rompía el
+  // flujo del programa: nicotina en rayita + Dominus en estrella)
   const current = state.dailyHabits[hi].days[di] || 0;
-  let next;
-  const isMobile = window.innerWidth <= 640;
-  if (isMobile) {
-    next = current === 1 ? 0 : 1;
-  } else {
-    next = (current + 1) % 3;
-  }
+  const next = (current + 1) % 3;
   state.dailyHabits[hi].days[di] = next;
   if (navigator.vibrate) navigator.vibrate(next === 1 ? 15 : 8);
   buildPerfectDaysCache();
@@ -4198,6 +4281,27 @@ function renameHabit(i, v) {
     .trim()
     .slice(0, 50);                 // max 50 chars
   if (!sanitized) return;          // no permitir nombre vacío
+  const oldName = state.dailyHabits[i].name;
+  if (oldName === sanitized) return; // sin cambio real
+  // FIX R5: rechazar nombres duplicados. El sync indexa hábitos por nombre;
+  // dos hábitos con el mismo nombre colisionan en el merge y uno pierde
+  // sus marcas de forma impredecible.
+  const _dup = state.dailyHabits.some((h, idx) => idx !== i && (h.name||'').toLowerCase().trim() === sanitized.toLowerCase().trim());
+  if (_dup) {
+    alert('Ya tienes un hábito con ese nombre. Elige otro.');
+    render(); // restaurar el nombre anterior en el input
+    return;
+  }
+  // FIX A1: tombstone del nombre viejo — sin esto, el merge por nombre
+  // re-agregaba el hábito con el nombre anterior y quedaban duplicados
+  if (oldName) {
+    if (!Array.isArray(state.deletedHabits)) state.deletedHabits = [];
+    if (!state.deletedHabits.includes(oldName)) state.deletedHabits.push(oldName);
+  }
+  // Des-tombstonear el nombre nuevo (por si el usuario re-crea un hábito borrado)
+  if (Array.isArray(state.deletedHabits)) {
+    state.deletedHabits = state.deletedHabits.filter(n => n !== sanitized);
+  }
   state.dailyHabits[i].name = sanitized;
   _globalStatsCache = null;        // Invalidate cache
   saveState();
@@ -4219,10 +4323,28 @@ function addHabit() {
 }
 function removeHabit(i) {
   if (state.dailyHabits.length <= 1) return;
+  // FIX C2: tombstone — registrar el nombre borrado para que los merges
+  // de sync (loadState y _saveToCloud) no lo resuciten
+  const removedName = state.dailyHabits[i] && state.dailyHabits[i].name;
+  if (removedName) {
+    if (!Array.isArray(state.deletedHabits)) state.deletedHabits = [];
+    if (!state.deletedHabits.includes(removedName)) state.deletedHabits.push(removedName);
+  }
   state.dailyHabits.splice(i, 1);
   _globalStatsCache = null; // Invalidate cache
   posthog.capture('habit_removed', { type: 'daily', total: state.dailyHabits.length });
   saveState(); render();
+}
+// FIX A3: confirmación al borrar desde desktop (el botón × llamaba
+// removeHabit directo — un misclick eliminaba el hábito sin aviso).
+// El long-press móvil ya confirma por su cuenta, por eso este wrapper
+// es solo para el onclick del botón × de la tabla desktop.
+function confirmRemoveHabit(i) {
+  const h = state.dailyHabits && state.dailyHabits[i];
+  const nombre = h && h.name ? h.name : 'este hábito';
+  if (confirm(`¿Eliminar el hábito "${nombre}"? Se borran sus marcas de este mes.`)) {
+    removeHabit(i);
+  }
 }
 function addWeeklyHabit() {
   state.weeklyHabits.push({ name: '', weeks: [false,false,false,false] });
@@ -4233,14 +4355,8 @@ function removeWeeklyHabit(i) {
   state.weeklyHabits.splice(i, 1);
   saveState(); renderWeeklyTable();
 }
-function changeWeek(dir) {
-  const weeks = getWeekGroups(getDaysInMonth(currentMonth, currentYear));
-  currentWeek = Math.max(0, Math.min(weeks.length-1, currentWeek+dir));
-  renderMobileView();
-  document.getElementById('weekLabel').textContent = `SEMANA ${currentWeek+1}`;
-  document.getElementById('prevWeekBtn').disabled = currentWeek===0;
-  document.getElementById('nextWeekBtn').disabled = currentWeek>=weeks.length-1;
-}
+// changeWeek() eliminada — código muerto: no tenía llamadas y sus IDs
+// (weekLabel, prevWeekBtn, nextWeekBtn) no existen en el DOM.
 
 // ── INIT ──────────────────────────────────────────────────────
 // Set current week to the week containing today
@@ -4327,6 +4443,17 @@ function ensureNicotineHabit() {
     return;
   }
   // Doesn't exist — create it as first habit
+  // FIX R1: des-tombstonear al re-crear. Este hábito es permanente por diseño
+  // (ensure lo re-crea en cada render); si quedara tombstoneado, el filtro de
+  // sync eliminaría sus marcas de cada save a la nube → pérdida silenciosa
+  // de la racha de nicotina. La re-creación es autoritativa.
+  if (Array.isArray(state.deletedHabits)) {
+    const _norm = (s) => (s||'').toString().toLowerCase().trim();
+    state.deletedHabits = state.deletedHabits.filter(n => {
+      const nn = _norm(n);
+      return !(nn === 'libre de nicotina' || nn === 'libre' || nn.startsWith('libre ') || nn.includes('sin nicotina') || nn.includes('no fumar') || nn.includes('sin tabaco') || nn.includes('sin vape') || nn.includes('no vapeo'));
+    });
+  }
   const days = getDaysInMonth(currentMonth, currentYear);
   state.dailyHabits.unshift({
     name: NICOTINE_HABIT_NAME,
@@ -4353,7 +4480,14 @@ function getNicotineCleanDays() {
   
   // Step 2: if streak reached the beginning of the month (and userStart was day 1),
   // walk backward through previous months using cached data
-  const reachedMonthStart = streak >= (todayDay - Math.max(userStart - 1, 0));
+  // FIX C3b: si hoy no está marcado, el día efectivo es ayer — sin esto,
+  // el cruce a meses anteriores fallaba cada mañana
+  let effToday = todayDay;
+  if (isCurrentMonth && todayDay > 0) {
+    const tv = habit.days[todayDay - 1];
+    if (!(tv === 1 || tv === true || tv === 2 || tv === 3)) effToday = todayDay - 1;
+  }
+  const reachedMonthStart = streak >= (effToday - Math.max(userStart - 1, 0));
   if (!reachedMonthStart) return streak;
   
   // Walk back month by month
